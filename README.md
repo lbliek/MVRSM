@@ -1,29 +1,25 @@
-# README #
+### MVDONE ###
 
-This README would normally document whatever steps are necessary to get your application up and running.
+MVDONE uses a piece-wise linear surrogate model for optimization of expensive cost functions with continuous and discrete variables.
 
-### What is this repository for? ###
+`MVDONE_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals)` solves the minimization problem
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+**min** *f(x)*
 
-### How do I get set up? ###
+**st.** *lb<=x<=ub, the first num_int variables of x are integer*
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+where `obj` is the objective function, `x0` the initial guess,
+`lb` and `ub` are the bounds, `num_int` is the number of integer variables,
+and `max_evals` is the maximum number of objective evaluations (`rand_evals` of these
+are random evaluations).
 
-### Contribution guidelines ###
+It is the mixed-variable version of the [DONE algorithm](https://bitbucket.org/csi-dcsc/donecpp/src/master/), 
+meant for problems with both continuous and discrete variables.
 
-* Writing tests
-* Code review
-* Other guidelines
+Laurens Bliek, 06-03-2019
 
-### Who do I talk to? ###
+Dependencies:
 
-* Repo owner or admin
-* Other community or team contact
+* numpy
+
+Please contact l.bliek@tudelft.nl if you have any questions.
