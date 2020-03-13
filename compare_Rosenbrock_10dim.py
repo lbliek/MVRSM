@@ -120,13 +120,13 @@ def read_cocabo(folder, num_runs,num_iters):
 	cocabodata = []
 	for i in range(num_runs):
 
-		filename = folder + 'CoCaBO_1_best_vals_LCB_ARD_False_mix_0.5_df_s' + str(i)
+		filename = os.path.join(folder,'CoCaBO_1_best_vals_LCB_ARD_False_mix_0.5_df_s' + str(i))
 		f = open(filename,'rb')
 		cl = pickle.load(f)
 		cocabodata.append(cl.best_value)
 		#outname = 'run' + str(i) + '.xlsx'
 		#cl.to_excel(outname)
-	filename = folder + 'Cocabo_timeperiteration.txt'
+	filename = os.path.join(folder, 'Cocabo_timeperiteration.txt')
 	with open(filename, 'r') as f:
 		Ctimes = f.readlines()
 		Ctimes = np.copy(Ctimes[0:num_iters*num_runs+1])
@@ -146,7 +146,7 @@ def read_logs(folder):
 	allbests = []
 	MVtimes = []
 	for log in logfiles:
-		with open('' + folder + log,'r') as f:
+		with open(os.path.join(folder,log),'r') as f:
 			MVDONEfile = f.readlines()
 			MVDONE_best = []
 			MVDONE_time = []
@@ -177,7 +177,7 @@ def read_logs(folder):
 def plot_results(folderCoCaBO, folderMVDONE):
 	import matplotlib.pyplot as plt
 	MVDONE_ev, MVtimes=read_logs(folderMVDONE)
-	#print(MVtimes.shape)
+	print(MVtimes.shape)
 	rand_iters = rand_evals
 	total_iters = MVtimes.shape[1]
 	#print(total_iters)
@@ -236,7 +236,7 @@ if __name__ == '__main__':
 						help='Mixture weight for production and summation kernel. Default = 0.0', default=0.5,
 						type=float)
 	parser.add_argument('-n', '--max_itr', help='Max Optimisation iterations. Default = 100',
-						default=100, type=int)
+						default=1, type=int)
 	parser.add_argument('-tl', '--trials', help='Number of random trials. Default = 20',
 						default=1, type=int)
 	parser.add_argument('-b', '--batch', help='Batch size (>1 for batch CoCaBO and =1 for sequential CoCaBO). Default = 1',
@@ -254,7 +254,9 @@ if __name__ == '__main__':
 
 	CoCaBO_Exps(obj_func=obj_func, budget=n_itrs,trials=n_trials, kernel_mix = kernel_mix, batch=batch)
 	
-	folder = '.\data\syntheticFns\dim10Rosenbrock\\'
+	
+	folder = os.path.join(os.path.curdir, 'data',  'syntheticFns', 'dim10Rosenbrock')
+	#folder = '.\data\syntheticFns\dim10Rosenbrock\\'
 	
 	if obj_func == 'dim10Rosenbrock':
 		ff = testFunctions.syntheticFunctions.dim10Rosenbrock
@@ -276,7 +278,7 @@ if __name__ == '__main__':
 		return ff(h,x[num_int:])
 	def run_MVDONE():
 		solX, solY, model, logfile = MVDONE.MVDONE_minimize(obj_MVDONE, x0, lb, ub, num_int, max_evals, rand_evals)
-		os.rename(logfile, folder+logfile)
+		os.rename(logfile, os.path.join(folder,logfile))
 		print("Solution found: ")
 		print(f"X = {solX}")
 		print(f"Y = {solY}")
