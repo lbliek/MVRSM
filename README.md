@@ -21,5 +21,8 @@ Laurens Bliek, 06-03-2019
 Dependencies:
 
 * numpy
+* scipy
+* matplotlib
+* For comparison with other methods: hyperopt, gpy, pandas
 
 Please contact l.bliek@tudelft.nl if you have any questions.
