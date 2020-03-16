@@ -1,3 +1,26 @@
+# MVDONE on 10-dimensional Rosenbrock example
+# By Laurens Bliek, 16-03-2020
+
+
+import sys
+# sys.path.append('../bayesopt')
+# sys.path.append('../ml_utils')
+import argparse
+import os
+import numpy as np
+import pickle
+import time
+import testFunctions.syntheticFunctions
+from methods.CoCaBO import CoCaBO
+from methods.BatchCoCaBO import BatchCoCaBO
+import MVDONE
+from hyperopt import fmin, tpe, rand, hp, STATUS_OK, Trials
+from functools import partial
+
+from scipy.optimize import rosen
+
+
+# CoCaBO code taken from:
 # -*- coding: utf-8 -*-
 #==========================================
 # Title:  run_cocabo_exps.py
@@ -9,20 +32,6 @@
 # =============================================================================
 #  CoCaBO Algorithms 
 # =============================================================================
-import sys
-# sys.path.append('../bayesopt')
-# sys.path.append('../ml_utils')
-import argparse
-import os
-import testFunctions.syntheticFunctions
-from methods.CoCaBO import CoCaBO
-from methods.BatchCoCaBO import BatchCoCaBO
-import MVDONE
-import numpy as np
-import os
-import pickle
-from scipy.optimize import rosen
-
 
 def CoCaBO_Exps(obj_func, budget, initN=24 ,trials=40, kernel_mix = 0.5, batch=None):
 
@@ -158,7 +167,7 @@ def read_logs(folder):
 					temp = temp.split('] , ')
 					temp = temp[1]
 					MVDONE_best.append(float(temp))
-				searchterm2 = 'Total computation time for this iteration:'
+				searchterm2 = 'Total computation time for this iteration:	 '
 				if searchterm2 in lines:
 					#print('Hello', MVDONEfile)
 					temp = MVDONEfile[i]
@@ -177,9 +186,14 @@ def read_logs(folder):
 def plot_results(folderCoCaBO, folderMVDONE):
 	import matplotlib.pyplot as plt
 	MVDONE_ev, MVtimes=read_logs(folderMVDONE)
-	print(MVtimes.shape)
+	print(MVtimes)
+	MVDONE_ev = MVDONE_ev.astype(float)
+	MVtimes = MVtimes.astype(float)
+	#print(MVtimes.shape)
+	
 	rand_iters = rand_evals
-	total_iters = MVtimes.shape[1]
+	#total_iters = MVtimes.shape[1]
+	total_iters = max_evals
 	#print(total_iters)
 	#print(MVDONE_ev[0])
 	avs_M = -np.mean(MVDONE_ev,0)
@@ -270,10 +284,10 @@ if __name__ == '__main__':
 	x0 =np.zeros(d)
 	x0[0:num_int] = np.round(np.random.rand(num_int)*(ub[0:num_int]-lb[0:num_int]) + lb[0:num_int]) # Random initial guess (integer)
 	x0[num_int:d] = np.random.rand(d-num_int)*(ub[num_int:d]-lb[num_int:d]) + lb[num_int:d] # Random initial guess (continuous)
-	rand_evals = 24 # Number of random iterations, same as initN above
+	rand_evals = 2 # Number of random iterations, same as initN above (24)
 	max_evals = n_itrs+rand_evals # Maximum number of MVDONE iterations
 	def obj_MVDONE(x):
-		print(x[0:num_int])
+		#print(x[0:num_int])
 		h = np.copy(x[0:num_int]).astype(int)
 		return ff(h,x[num_int:])
 	def run_MVDONE():
@@ -286,6 +300,57 @@ if __name__ == '__main__':
 		print(f"Testing MVDONE on the {d}-dimensional Rosenbrock function with integer constraints.")
 		print("The known global minimum is f(1,1,...,1)=0")
 		run_MVDONE()
+		
+		
+	############
+	# HyperOpt #
+	############
+	
+	current_time = time.time() # time when starting the HO and RS algorithm
+	
+	# HyperOpt and RS objective
+	def hyp_obj(x):
+		f = obj_MVDONE(x)
+		print('Objective value: ', f)
+		return {'loss': f, 'status': STATUS_OK }
+	
+	# Two algorithms used within HyperOpt framework (random search and TPE)
+	algo = rand.suggest
+	algo2 = partial(tpe.suggest, n_startup_jobs=rand_evals)
+	
+	# Define search space for HyperOpt
+	var = [ None ] * d #variable for hyperopt and random search
+	for i in list(range(0,d)):
+		if i<num_int:
+			var[i] = hp.quniform('var_d'+str(i), lb[i], ub[i], 1) # Integer variables
+		else:
+			var[i] = hp.uniform('var_c'+str(i), lb[i], ub[i]) # Continuous variables
+	
+	
+	trials_HO = Trials()
+	time_start = time.time() # Start timer
+	hypOpt = fmin(hyp_obj, var, algo2, max_evals=n_itrs, trials=trials_HO) # Run HyperOpt
+	total_time_HypOpt = time.time()-time_start # End timer
+
+	logfileHO = 'log_HypOpt_'+ str(current_time) + ".log"
+	with open(logfileHO, 'a') as f:
+		print(trials_HO.trials, file=f) # Save log
+	os.rename(logfileHO, os.path.join(folder,logfileHO)) # Move log to data folder
+
+
+
+	
+	## Random search
+	trials_RS = Trials()
+
+	time_start = time.time()
+	RS = fmin(hyp_obj, var, algo, max_evals=n_itrs+rand_evals, trials = trials_RS)
+	total_time_RS = time.time()-time_start
+
+	logfileRS = 'log_RS_'+ str(current_time) + ".log"
+	with open(logfileRS, 'a') as f:
+		print(trials_RS.trials, file=f) # Save log
+	os.rename(logfileRS, os.path.join(folder,logfileRS)) # Move log to data folder
 		
 	
 	
