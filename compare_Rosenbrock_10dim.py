@@ -139,22 +139,21 @@ def read_cocabo(folder, num_runs,num_iters):
 	with open(filename, 'r') as f:
 		Ctimes = f.readlines()
 		Ctimes = np.copy(Ctimes[0:num_iters*num_runs+1])
-		print(Ctimes[0])
 		Ctimes = Ctimes.astype(float)
-	print(Ctimes.shape)
+	#print(Ctimes.shape)
 	Ctimes = Ctimes.reshape((num_runs,num_iters))
 	return cocabodata, Ctimes
 
 
 
 # Read data from log file (this reads the best found objective values at each iteration)
-def read_logs(folder):
+def read_logs_MVDONE(folder):
 	#folder = 'MVDONE/'
 	allfiles = os.listdir(folder)
-	logfiles = [f for f in allfiles if '.log' in f]
-	allbests = []
+	logfilesMV = [f for f in allfiles if ('.log' in f and 'MVDONE' in f)]
+	MVbests = []
 	MVtimes = []
-	for log in logfiles:
+	for log in logfilesMV:
 		with open(os.path.join(folder,log),'r') as f:
 			MVDONEfile = f.readlines()
 			MVDONE_best = []
@@ -173,37 +172,118 @@ def read_logs(folder):
 					temp = MVDONEfile[i]
 					temp = temp.split(':')
 					temp = temp[1]
-					MVDONE_time.append(float(temp))
-		allbests.append(MVDONE_best)
+					if temp[0]:
+						MVDONE_time.append(float(temp))
+		MVbests.append(MVDONE_best)
 		# print(np.copy(allbests))
 		# print(np.copy(allbests).shape)
 		# exit()
 		MVtimes.append(MVDONE_time)
-	return np.copy(allbests), np.copy(MVtimes)
+	return np.copy(MVbests), np.copy(MVtimes)
+	
+	
+# Read data from log file (this reads the best found objective values at each iteration)
+def read_logs_HO(folder, num_runs,num_iters):
+	allfiles = os.listdir(folder)
+	logfilesHO = [f for f in allfiles if ('.log' in f and 'HypOpt' in f)]
+	HObests = []
+	for log in logfilesHO:
+		with open(os.path.join(folder,log),'r') as f:
+			best = 10e9
+			HOfile = f.readlines()
+			HOfile = HOfile[0]
+			HOfile = HOfile.split(',')
+			HO_ev = []
+			for i, lines in enumerate(HOfile):
+				searchterm1 = "'result': {'loss': "
+				if searchterm1 in lines:
+					temp1 = lines
+					temp1 = temp1.split(searchterm1)
+					temp1 = temp1[1]
+					temp1 = float(temp1)
+					if temp1 < best:
+						best = temp1
+						HO_ev.append(temp1)
+					else:
+						HO_ev.append(best)
+		HObests.append(HO_ev)
+						
+	filename = os.path.join(folder, 'HO_timeperiteration.txt')
+	with open(filename, 'r') as f:
+		HOtimes = f.readlines()
+		HOtimes = np.copy(HOtimes[0:num_iters*num_runs+1])
+		HOtimes = HOtimes.astype(float)
+	HOtimes = HOtimes.reshape((num_runs,num_iters))
+	return HObests, HOtimes
+	
+def read_logs_RS(folder, num_runs,num_iters):
+	allfiles = os.listdir(folder)
+	logfilesRS = [f for f in allfiles if ('.log' in f and 'RS' in f)]
+	RSbests = []
+	for log in logfilesRS:
+		with open(os.path.join(folder,log),'r') as f:
+			best = 10e9
+			RSfile = f.readlines()
+			RSfile = RSfile[0]
+			RSfile = RSfile.split(',')
+			RS_ev = []
+			for i, lines in enumerate(RSfile):
+				searchterm1 = "'result': {'loss': "
+				if searchterm1 in lines:
+					temp1 = lines
+					temp1 = temp1.split(searchterm1)
+					temp1 = temp1[1]
+					temp1 = float(temp1)
+					if temp1 < best:
+						best = temp1
+						RS_ev.append(temp1)
+					else:
+						RS_ev.append(best)
+		RSbests.append(RS_ev)
+						
+	filename = os.path.join(folder, 'RS_timeperiteration.txt')
+	with open(filename, 'r') as f:
+		RStimes = f.readlines()
+		RStimes = np.copy(RStimes[0:num_iters*num_runs+1])
+		RStimes = RStimes.astype(float)
+	RStimes = RStimes.reshape((num_runs,num_iters))
+	return RSbests, RStimes
 	
 	
 # Plot the best found objective values at each iteration
-def plot_results(folderCoCaBO, folderMVDONE):
+def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS):
 	import matplotlib.pyplot as plt
-	MVDONE_ev, MVtimes=read_logs(folderMVDONE)
-	print(MVtimes)
+	MVDONE_ev, MVtimes=read_logs_MVDONE(folderMVDONE)
 	MVDONE_ev = MVDONE_ev.astype(float)
 	MVtimes = MVtimes.astype(float)
-	#print(MVtimes.shape)
 	
 	rand_iters = rand_evals
-	#total_iters = MVtimes.shape[1]
 	total_iters = max_evals
-	#print(total_iters)
-	#print(MVDONE_ev[0])
 	avs_M = -np.mean(MVDONE_ev,0)
 	avs_Mtime = np.mean(MVtimes,0)
 	stds_M = np.std(MVDONE_ev,0)
 	stds_Mtime = np.std(MVtimes,0)
 	
-	cocabodata, ctimes = read_cocabo(folderCoCaBO,n_trials,n_itrs)
-	avs_C = np.mean(cocabodata,0)
 	
+	HO_ev, HOtimes = read_logs_HO(folderHO,n_trials,n_itrs)
+	avs_HO = -np.mean(HO_ev,0)
+	avs_HOtime = np.std(HOtimes,0)
+	stds_HO = np.std(HO_ev,0)
+	stds_HOtime = np.std(HOtimes,0)
+	
+	
+	
+	RS_ev, RStimes = read_logs_RS(folderRS,n_trials,n_itrs)
+	avs_RS = -np.mean(RS_ev,0)
+	avs_RStime = np.std(RStimes,0)
+	stds_RS = np.std(RS_ev,0)
+	stds_RStime = np.std(RStimes,0)
+	
+	#print(MVtimes.shape)
+	
+	
+	cocabodata, ctimes = read_cocabo(folderCoCaBO,n_trials,n_itrs)
+	avs_C = np.mean(cocabodata,0)	
 	stds_C = np.std(cocabodata,0)
 	avs_Ctime = np.mean(ctimes,0)
 	stds_Ctime = np.std(ctimes,0)
@@ -213,15 +293,22 @@ def plot_results(folderCoCaBO, folderMVDONE):
 	#print('hoi', avs_Ctime.shape)
 	
 	plt.subplot(121)
+	plt.errorbar(range(0,n_itrs,1), avs_RS[np.arange(0,n_itrs,1)], yerr=stds_RS[np.arange(0,n_itrs,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='o', capsize=5, label='RS')
+	plt.errorbar(range(0,n_itrs,1), avs_HO[np.arange(0,n_itrs,1)], yerr=stds_HO[np.arange(0,n_itrs,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='d', capsize=5, label='RS')
 	plt.errorbar(range(0,total_iters-rand_iters,1), avs_M[np.arange(rand_iters,total_iters,1)], yerr=stds_M[np.arange(rand_iters,total_iters,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='s', capsize=5, label='MVDONE')
-	plt.errorbar(range(1,C_iters,1), avs_C[np.arange(1,C_iters,1)], yerr=stds_C[np.arange(1,C_iters,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='^', capsize=5, label='CoCaBO')
+	
+	plt.errorbar(range(0,C_iters,1), avs_C[np.arange(0,C_iters,1)], yerr=stds_C[np.arange(0,C_iters,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='^', capsize=5, label='CoCaBO')
 	plt.xlabel('Iteration')
 	plt.ylabel('Objective')
 	#plt.ylim((-20,0))
 	plt.grid()
 	plt.legend()
+	if leg:
+		leg.set_draggable(True)
 	
 	plt.subplot(122)
+	plt.errorbar(range(0,n_itrs,1), avs_RStime[np.arange(0,n_itrs,1)], yerr=stds_RStime[np.arange(0,n_itrs,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='o', capsize=5, label='RS')
+	plt.errorbar(range(0,n_itrs,1), avs_HOtime[np.arange(0,n_itrs,1)], yerr=stds_HOtime[np.arange(0,n_itrs,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='d', capsize=5, label='RS')
 	plt.errorbar(range(0,total_iters-rand_iters,1), avs_Mtime[np.arange(rand_iters,total_iters,1)], yerr=stds_Mtime[np.arange(rand_iters,total_iters,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='s', capsize=5, label='MVDONE')
 	plt.errorbar(range(0,C_iters,1), avs_Ctime[np.arange(0,C_iters,1)], yerr=stds_Ctime[np.arange(0,C_iters,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='^', capsize=5, label='CoCaBO')
 	plt.xlabel('Iteration')
@@ -306,12 +393,12 @@ if __name__ == '__main__':
 	# HyperOpt #
 	############
 	
-	current_time = time.time() # time when starting the HO and RS algorithm
+	
 	
 	# HyperOpt and RS objective
 	def hyp_obj(x):
 		f = obj_MVDONE(x)
-		print('Objective value: ', f)
+		#print('Objective value: ', f)
 		return {'loss': f, 'status': STATUS_OK }
 	
 	# Two algorithms used within HyperOpt framework (random search and TPE)
@@ -327,34 +414,59 @@ if __name__ == '__main__':
 			var[i] = hp.uniform('var_c'+str(i), lb[i], ub[i]) # Continuous variables
 	
 	
-	trials_HO = Trials()
-	time_start = time.time() # Start timer
-	hypOpt = fmin(hyp_obj, var, algo2, max_evals=n_itrs, trials=trials_HO) # Run HyperOpt
-	total_time_HypOpt = time.time()-time_start # End timer
+	
+	print("Start HyperOpt trials")
+	for i in range(n_trials):
+		current_time = time.time() # time when starting the HO and RS algorithm
+		
+		
+		trials_HO = Trials()
+		time_start = time.time() # Start timer
+		hypOpt = fmin(hyp_obj, var, algo2, max_evals=n_itrs, trials=trials_HO) # Run HyperOpt
+		total_time_HypOpt = time.time()-time_start # End timer
 
-	logfileHO = 'log_HypOpt_'+ str(current_time) + ".log"
-	with open(logfileHO, 'a') as f:
-		print(trials_HO.trials, file=f) # Save log
-	os.rename(logfileHO, os.path.join(folder,logfileHO)) # Move log to data folder
+		logfileHO = os.path.join(folder, 'log_HypOpt_'+ str(current_time) + ".log")
+		with open(logfileHO, 'a') as f:
+			print(trials_HO.trials, file=f) # Save log
+	
+	
+		#write times per iteration to log
+		logHOtimeperiteration = os.path.join(folder, 'HO_timeperiteration.txt')
+		with open(logHOtimeperiteration, 'a') as f: 
+			for i in range(0,n_itrs):
+				if i==0:
+					print(trials_HO.trials[i]['book_time'].timestamp()+3600- time_start, file=f) #something wrong with my clock which causes 1 hour difference
+				else:
+					print((trials_HO.trials[i]['book_time']- trials_HO.trials[i-1]['book_time']).total_seconds(), file=f)
 
-
+	
 
 	
 	## Random search
-	trials_RS = Trials()
+	print("Start Random Search trials")
+	for i in range(n_trials):
+		trials_RS = Trials()
 
-	time_start = time.time()
-	RS = fmin(hyp_obj, var, algo, max_evals=n_itrs+rand_evals, trials = trials_RS)
-	total_time_RS = time.time()-time_start
+		time_start = time.time()
+		RS = fmin(hyp_obj, var, algo, max_evals=n_itrs+rand_evals, trials = trials_RS)
+		total_time_RS = time.time()-time_start
 
-	logfileRS = 'log_RS_'+ str(current_time) + ".log"
-	with open(logfileRS, 'a') as f:
-		print(trials_RS.trials, file=f) # Save log
-	os.rename(logfileRS, os.path.join(folder,logfileRS)) # Move log to data folder
-		
-	
-	
-	plot_results(folder, folder)
+		logfileRS = os.path.join(folder, 'log_RS_'+ str(current_time) + ".log")
+		with open(logfileRS, 'a') as f:
+			print(trials_RS.trials, file=f) # Save log
+			
+		#write times per iteration to log
+		logRStimeperiteration = os.path.join(folder, 'RS_timeperiteration.txt')
+		with open(logRStimeperiteration, 'a') as f: 
+			for i in range(0,n_itrs):
+				if i==0:
+					print(trials_RS.trials[i]['book_time'].timestamp()+3600- time_start, file=f) #something wrong with my clock which causes 1 hour difference
+				else:
+					print((trials_RS.trials[i]['book_time']- trials_RS.trials[i-1]['book_time']).total_seconds(), file=f)
+
+	####################
+	# Plot results
+	plot_results(folder, folder, folder, folder)
 		
 
 # Visualise the results
