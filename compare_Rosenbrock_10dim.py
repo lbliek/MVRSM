@@ -251,7 +251,7 @@ def read_logs_RS(folder, num_runs,num_iters):
 	
 	
 # Plot the best found objective values at each iteration
-def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS):
+def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand_evals, n_itrs=n_itrs, n_trials=n_trials):
 	import matplotlib.pyplot as plt
 	MVDONE_ev, MVtimes=read_logs_MVDONE(folderMVDONE)
 	MVDONE_ev = MVDONE_ev.astype(float)
@@ -294,7 +294,7 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS):
 	
 	plt.subplot(121)
 	plt.errorbar(range(0,n_itrs,1), avs_RS[np.arange(0,n_itrs,1)], yerr=stds_RS[np.arange(0,n_itrs,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='o', capsize=5, label='RS')
-	plt.errorbar(range(0,n_itrs,1), avs_HO[np.arange(0,n_itrs,1)], yerr=stds_HO[np.arange(0,n_itrs,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='d', capsize=5, label='RS')
+	plt.errorbar(range(0,n_itrs,1), avs_HO[np.arange(0,n_itrs,1)], yerr=stds_HO[np.arange(0,n_itrs,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='d', capsize=5, label='HO')
 	plt.errorbar(range(0,total_iters-rand_iters,1), avs_M[np.arange(rand_iters,total_iters,1)], yerr=stds_M[np.arange(rand_iters,total_iters,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='s', capsize=5, label='MVDONE')
 	
 	plt.errorbar(range(0,C_iters,1), avs_C[np.arange(0,C_iters,1)], yerr=stds_C[np.arange(0,C_iters,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='^', capsize=5, label='CoCaBO')
@@ -302,13 +302,13 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS):
 	plt.ylabel('Objective')
 	#plt.ylim((-20,0))
 	plt.grid()
-	plt.legend()
+	leg = plt.legend()
 	if leg:
 		leg.set_draggable(True)
 	
 	plt.subplot(122)
 	plt.errorbar(range(0,n_itrs,1), avs_RStime[np.arange(0,n_itrs,1)], yerr=stds_RStime[np.arange(0,n_itrs,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='o', capsize=5, label='RS')
-	plt.errorbar(range(0,n_itrs,1), avs_HOtime[np.arange(0,n_itrs,1)], yerr=stds_HOtime[np.arange(0,n_itrs,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='d', capsize=5, label='RS')
+	plt.errorbar(range(0,n_itrs,1), avs_HOtime[np.arange(0,n_itrs,1)], yerr=stds_HOtime[np.arange(0,n_itrs,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='d', capsize=5, label='HO')
 	plt.errorbar(range(0,total_iters-rand_iters,1), avs_Mtime[np.arange(rand_iters,total_iters,1)], yerr=stds_Mtime[np.arange(rand_iters,total_iters,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='s', capsize=5, label='MVDONE')
 	plt.errorbar(range(0,C_iters,1), avs_Ctime[np.arange(0,C_iters,1)], yerr=stds_Ctime[np.arange(0,C_iters,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='^', capsize=5, label='CoCaBO')
 	plt.xlabel('Iteration')
@@ -445,6 +445,7 @@ if __name__ == '__main__':
 	## Random search
 	print("Start Random Search trials")
 	for i in range(n_trials):
+		current_time = time.time() # time when starting the HO and RS algorithm
 		trials_RS = Trials()
 
 		time_start = time.time()

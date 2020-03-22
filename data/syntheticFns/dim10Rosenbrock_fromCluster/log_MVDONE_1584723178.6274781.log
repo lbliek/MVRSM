@@ -1,0 +1,2506 @@
+
+
+ MVDONE iteration:  0
+Time spent training the model:				  0.0014693737030029297
+Time spent finding the minimum of the model:  0.18622064590454102
+Total computation time for this iteration:	 0.18840527534484863
+Current time:  1584723178.8209088
+Evaluated data point and evaluation:						    [ 1.          1.          1.          1.11335197  1.5216253  -0.56157479
+  1.82434767  0.1683262  -0.8180817   0.69984332] ,  9.847512889824173
+Predicted value at evaluated data point (after learning)        [ 1.          1.          1.          1.11335197  1.5216253  -0.56157479
+  1.82434767  0.1683262  -0.8180817   0.69984332] ,  9.84751292019796
+Best found data point and evaluation so far:				    [ 1.          1.          1.          1.11335197  1.5216253  -0.56157479
+  1.82434767  0.1683262  -0.8180817   0.69984332] ,  9.847512889824173
+Best data point according to the model and predicted value:	    [ 1.          1.          1.          1.11335197  1.5216253  -0.56157479
+  1.82434767  0.1683262  -0.8180817   0.69984332] ,  9.847512920197957
+Best rounded	 point according to the model and predicted value: [ 1.          1.          1.          1.11335197  1.5216253  -0.56157479
+  1.82434767  0.1683262  -0.8180817   0.69984332] ,  9.84751292019796
+Suggested next data point and predicted value:				    [ 3.          2.          3.          0.11422405  1.22392845 -1.97363853
+  1.25477497  1.81498086 -0.77822252  1.90805596] ,  103.3778454580883
+
+
+ MVDONE iteration:  1
+Time spent training the model:				  0.001466512680053711
+Time spent finding the minimum of the model:  0.23424530029296875
+Total computation time for this iteration:	 0.23642492294311523
+Current time:  1584723179.066879
+Evaluated data point and evaluation:						    [ 3.          2.          3.          0.11422405  1.22392845 -1.97363853
+  1.25477497  1.81498086 -0.77822252  1.90805596] ,  13.919775710528857
+Predicted value at evaluated data point (after learning)        [ 3.          2.          3.          0.11422405  1.22392845 -1.97363853
+  1.25477497  1.81498086 -0.77822252  1.90805596] ,  13.919775726030364
+Best found data point and evaluation so far:				    [ 1.          1.          1.          1.11335197  1.5216253  -0.56157479
+  1.82434767  0.1683262  -0.8180817   0.69984332] ,  9.847512889824173
+Best data point according to the model and predicted value:	    [ 1.99999934  1.42480026  1.9992271   1.29976171  1.76999024 -0.67597995
+  2.         -0.0505319  -0.50614178  0.42337483] ,  -9.378816053592075
+Best rounded	 point according to the model and predicted value: [ 2.          1.          2.          1.29976171  1.76999024 -0.67597995
+  2.         -0.0505319  -0.50614178  0.42337483] ,  -8.175895801714255
+Suggested next data point and predicted value:				    [ 4.          2.          3.         -0.77160558 -1.92635123  0.19835332
+  1.42311391 -0.21922199  0.22951479 -0.50506103] ,  49.63982109544989
+
+
+ MVDONE iteration:  2
+Time spent training the model:				  0.0014810562133789062
+Time spent finding the minimum of the model:  0.2885556221008301
+Total computation time for this iteration:	 0.290722131729126
+Current time:  1584723179.3743007
+Evaluated data point and evaluation:						    [ 4.          2.          3.         -0.77160558 -1.92635123  0.19835332
+  1.42311391 -0.21922199  0.22951479 -0.50506103] ,  15.432568106637252
+Predicted value at evaluated data point (after learning)        [ 4.          2.          3.         -0.77160558 -1.92635123  0.19835332
+  1.42311391 -0.21922199  0.22951479 -0.50506103] ,  15.432568126026275
+Best found data point and evaluation so far:				    [ 1.          1.          1.          1.11335197  1.5216253  -0.56157479
+  1.82434767  0.1683262  -0.8180817   0.69984332] ,  9.847512889824173
+Best data point according to the model and predicted value:	    [ 2.20869874  1.20735358  1.08081419  1.20395351  1.66096123 -0.19261054
+  2.         -0.11596417 -0.26563159 -0.0433376 ] ,  -21.072682132572144
+Best rounded	 point according to the model and predicted value: [ 2.          1.          1.          1.20395351  1.66096123 -0.19261054
+  2.         -0.11596417 -0.26563159 -0.0433376 ] ,  -22.55958905030245
+Suggested next data point and predicted value:				    [ 2.          0.          1.          1.26181059  1.79782233 -0.24516987
+  1.96648603 -0.08661237 -0.02572479 -0.16720418] ,  4.683835005105502
+
+
+ MVDONE iteration:  3
+Time spent training the model:				  0.0014684200286865234
+Time spent finding the minimum of the model:  0.22593069076538086
+Total computation time for this iteration:	 0.22815203666687012
+Current time:  1584723179.6121469
+Evaluated data point and evaluation:						    [ 2.          0.          1.          1.26181059  1.79782233 -0.24516987
+  1.96648603 -0.08661237 -0.02572479 -0.16720418] ,  20.23068906405506
+Predicted value at evaluated data point (after learning)        [ 2.          0.          1.          1.26181059  1.79782233 -0.24516987
+  1.96648603 -0.08661237 -0.02572479 -0.16720418] ,  20.230689058101085
+Best found data point and evaluation so far:				    [ 1.          1.          1.          1.11335197  1.5216253  -0.56157479
+  1.82434767  0.1683262  -0.8180817   0.69984332] ,  9.847512889824173
+Best data point according to the model and predicted value:	    [ 2.90516886  1.96069948  1.97846044  1.18559895  2.          1.91098743
+  1.51594704 -1.40959466  2.         -2.        ] ,  -44.34217459934416
+Best rounded	 point according to the model and predicted value: [ 3.          2.          2.          1.18559895  2.          1.91098743
+  1.51594704 -1.40959466  2.         -2.        ] ,  -45.27267441047591
+Suggested next data point and predicted value:				    [ 4.          2.          2.          1.21554063  1.74223892  1.83931471
+  1.62130883 -1.52649472  1.90826188 -1.99309507] ,  -25.852843694966488
+
+
+ MVDONE iteration:  4
+Time spent training the model:				  0.0014576911926269531
+Time spent finding the minimum of the model:  0.1958005428314209
+Total computation time for this iteration:	 0.19788885116577148
+Current time:  1584723179.8194873
+Evaluated data point and evaluation:						    [ 4.          2.          2.          1.21554063  1.74223892  1.83931471
+  1.62130883 -1.52649472  1.90826188 -1.99309507] ,  23.797481371793232
+Predicted value at evaluated data point (after learning)        [ 4.          2.          2.          1.21554063  1.74223892  1.83931471
+  1.62130883 -1.52649472  1.90826188 -1.99309507] ,  23.797481333801557
+Best found data point and evaluation so far:				    [ 1.          1.          1.          1.11335197  1.5216253  -0.56157479
+  1.82434767  0.1683262  -0.8180817   0.69984332] ,  9.847512889824173
+Best data point according to the model and predicted value:	    [ 2.00048479  1.0012678   1.9926835   0.93652725  1.29689481 -0.35732385
+  1.75270489  0.14703988 -0.72464371  0.45029512] ,  -12.0987191185163
+Best rounded	 point according to the model and predicted value: [ 2.          1.          2.          0.93652725  1.29689481 -0.35732385
+  1.75270489  0.14703988 -0.72464371  0.45029512] ,  -12.219397021977361
+Suggested next data point and predicted value:				    [ 2.          1.          2.          0.85509399  1.24846287 -0.29399203
+  1.85803017  0.2410003  -0.71233982  0.40209486] ,  -12.712428296628833
+
+
+ MVDONE iteration:  5
+Time spent training the model:				  0.001489400863647461
+Time spent finding the minimum of the model:  0.22136187553405762
+Total computation time for this iteration:	 0.2234961986541748
+Current time:  1584723180.0521023
+Evaluated data point and evaluation:						    [ 2.          1.          2.          0.85509399  1.24846287 -0.29399203
+  1.85803017  0.2410003  -0.71233982  0.40209486] ,  6.868865003997008
+Predicted value at evaluated data point (after learning)        [ 2.          1.          2.          0.85509399  1.24846287 -0.29399203
+  1.85803017  0.2410003  -0.71233982  0.40209486] ,  6.868864912919977
+Best found data point and evaluation so far:				    [ 2.          1.          2.          0.85509399  1.24846287 -0.29399203
+  1.85803017  0.2410003  -0.71233982  0.40209486] ,  6.868865003997008
+Best data point according to the model and predicted value:	    [ 2.46011532  0.99999414  1.01366905  0.63257876  0.90648206 -0.30100012
+  1.68927791  0.23664487 -0.73204896  0.40991724] ,  -2.1758039048340496
+Best rounded	 point according to the model and predicted value: [ 2.          1.          1.          0.63257876  0.90648206 -0.30100012
+  1.68927791  0.23664487 -0.73204896  0.40991724] ,  -3.7646122116777043
+Suggested next data point and predicted value:				    [ 3.          1.          1.          0.75809726  0.90911576 -0.29393897
+  1.57617841  0.2049658  -0.86940532  0.2595988 ] ,  -0.42650070388049954
+
+
+ MVDONE iteration:  6
+Time spent training the model:				  0.0014777183532714844
+Time spent finding the minimum of the model:  0.2121875286102295
+Total computation time for this iteration:	 0.21432852745056152
+Current time:  1584723180.275559
+Evaluated data point and evaluation:						    [ 3.          1.          1.          0.75809726  0.90911576 -0.29393897
+  1.57617841  0.2049658  -0.86940532  0.2595988 ] ,  6.019881540033052
+Predicted value at evaluated data point (after learning)        [ 3.          1.          1.          0.75809726  0.90911576 -0.29393897
+  1.57617841  0.2049658  -0.86940532  0.2595988 ] ,  6.019881526106412
+Best found data point and evaluation so far:				    [ 3.          1.          1.          0.75809726  0.90911576 -0.29393897
+  1.57617841  0.2049658  -0.86940532  0.2595988 ] ,  6.019881540033052
+Best data point according to the model and predicted value:	    [ 2.35908448  1.35928667  1.3592936   0.68537674  0.79239301 -0.27816346
+  1.52701341  0.21285181 -0.85269501  0.2369802 ] ,  1.874539454006496
+Best rounded	 point according to the model and predicted value: [ 2.          1.          1.          0.68537674  0.79239301 -0.27816346
+  1.52701341  0.21285181 -0.85269501  0.2369802 ] ,  -0.20647413080896904
+Suggested next data point and predicted value:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  -0.3097591123605721
+
+
+ MVDONE iteration:  7
+Time spent training the model:				  0.0014786720275878906
+Time spent finding the minimum of the model:  0.18629121780395508
+Total computation time for this iteration:	 0.1884138584136963
+Current time:  1584723180.4737003
+Evaluated data point and evaluation:						    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Predicted value at evaluated data point (after learning)        [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542792323518
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542792323518
+Best rounded	 point according to the model and predicted value: [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542792323518
+Suggested next data point and predicted value:				    [ 2.          1.          1.          0.96056643  0.58667465 -0.2087432
+  1.56908543  0.07336524 -1.1607458  -0.04920467] ,  4.518202664331042
+
+
+ MVDONE iteration:  8
+Time spent training the model:				  0.0014834403991699219
+Time spent finding the minimum of the model:  0.18845200538635254
+Total computation time for this iteration:	 0.1905677318572998
+Current time:  1584723180.6735423
+Evaluated data point and evaluation:						    [ 2.          1.          1.          0.96056643  0.58667465 -0.2087432
+  1.56908543  0.07336524 -1.1607458  -0.04920467] ,  5.642703179562817
+Predicted value at evaluated data point (after learning)        [ 2.          1.          1.          0.96056643  0.58667465 -0.2087432
+  1.56908543  0.07336524 -1.1607458  -0.04920467] ,  5.642701608249197
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.42454437662109
+Best rounded	 point according to the model and predicted value: [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.42454437662109
+Suggested next data point and predicted value:				    [ 3.          1.          1.          1.12856654  0.71750541 -0.10175085
+  1.64833788  0.33138294 -1.12544586 -0.10763749] ,  8.611198810325636
+
+
+ MVDONE iteration:  9
+Time spent training the model:				  0.0014979839324951172
+Time spent finding the minimum of the model:  0.1880807876586914
+Total computation time for this iteration:	 0.19023942947387695
+Current time:  1584723180.875587
+Evaluated data point and evaluation:						    [ 3.          1.          1.          1.12856654  0.71750541 -0.10175085
+  1.64833788  0.33138294 -1.12544586 -0.10763749] ,  6.8805557114368465
+Predicted value at evaluated data point (after learning)        [ 3.          1.          1.          1.12856654  0.71750541 -0.10175085
+  1.64833788  0.33138294 -1.12544586 -0.10763749] ,  6.880555974647256
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.4245448608916425
+Best rounded	 point according to the model and predicted value: [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.4245448608916425
+Suggested next data point and predicted value:				    [ 3.          1.          4.          0.90072372  0.53580459 -0.22680772
+  1.59628992  0.28591027 -1.11574756 -0.16593452] ,  92.70954288430634
+
+
+ MVDONE iteration:  10
+Time spent training the model:				  0.0014643669128417969
+Time spent finding the minimum of the model:  0.18649744987487793
+Total computation time for this iteration:	 0.1886131763458252
+Current time:  1584723181.0803313
+Evaluated data point and evaluation:						    [ 3.          1.          4.          0.90072372  0.53580459 -0.22680772
+  1.59628992  0.28591027 -1.11574756 -0.16593452] ,  8.664963925891412
+Predicted value at evaluated data point (after learning)        [ 3.          1.          4.          0.90072372  0.53580459 -0.22680772
+  1.59628992  0.28591027 -1.11574756 -0.16593452] ,  8.664963988364953
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.42454524645264
+Best rounded	 point according to the model and predicted value: [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.42454524645264
+Suggested next data point and predicted value:				    [ 2.          1.          0.          0.9958141   0.64928227 -0.27968724
+  1.44780332  0.13054084 -0.94502755 -0.15976019] ,  33.52385733281085
+
+
+ MVDONE iteration:  11
+Time spent training the model:				  0.0014758110046386719
+Time spent finding the minimum of the model:  0.1870267391204834
+Total computation time for this iteration:	 0.18918681144714355
+Current time:  1584723181.2861786
+Evaluated data point and evaluation:						    [ 2.          1.          0.          0.9958141   0.64928227 -0.27968724
+  1.44780332  0.13054084 -0.94502755 -0.15976019] ,  9.204150625952748
+Predicted value at evaluated data point (after learning)        [ 2.          1.          0.          0.9958141   0.64928227 -0.27968724
+  1.44780332  0.13054084 -0.94502755 -0.15976019] ,  9.204150691767545
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.37827698  1.00871676  3.00024096 -0.14253696 -1.68377435  0.68371107
+ -2.          2.          2.          0.51236845] ,  -33.46826892082542
+Best rounded	 point according to the model and predicted value: [ 2.          1.          3.         -0.14253696 -1.68377435  0.68371107
+ -2.          2.          2.          0.51236845] ,  -34.015915353077645
+Suggested next data point and predicted value:				    [ 2.          1.          3.         -0.07524111 -1.56076642  0.69702998
+ -1.92868372  1.94650963  1.92639296  0.54147111] ,  -33.03636986660559
+
+
+ MVDONE iteration:  12
+Time spent training the model:				  0.0015096664428710938
+Time spent finding the minimum of the model:  0.18729662895202637
+Total computation time for this iteration:	 0.18961238861083984
+Current time:  1584723181.4899466
+Evaluated data point and evaluation:						    [ 2.          1.          3.         -0.07524111 -1.56076642  0.69702998
+ -1.92868372  1.94650963  1.92639296  0.54147111] ,  10.11819497799133
+Predicted value at evaluated data point (after learning)        [ 2.          1.          3.         -0.07524111 -1.56076642  0.69702998
+ -1.92868372  1.94650963  1.92639296  0.54147111] ,  10.118194844899783
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.86229931  0.9999488   1.26747356  2.          0.20414984 -2.
+  0.43598818  2.          2.          1.74401401] ,  -11.801592356993748
+Best rounded	 point according to the model and predicted value: [ 3.          1.          1.          2.          0.20414984 -2.
+  0.43598818  2.          2.          1.74401401] ,  -12.3557469015118
+Suggested next data point and predicted value:				    [ 3.          1.          1.          1.96139261  0.11525949 -1.87671844
+  0.36548128  1.85540331  1.93646993  1.77375913] ,  -11.820484511931276
+
+
+ MVDONE iteration:  13
+Time spent training the model:				  0.0014977455139160156
+Time spent finding the minimum of the model:  0.20722723007202148
+Total computation time for this iteration:	 0.20959877967834473
+Current time:  1584723181.7097647
+Evaluated data point and evaluation:						    [ 3.          1.          1.          1.96139261  0.11525949 -1.87671844
+  0.36548128  1.85540331  1.93646993  1.77375913] ,  15.241603269508968
+Predicted value at evaluated data point (after learning)        [ 3.          1.          1.          1.96139261  0.11525949 -1.87671844
+  0.36548128  1.85540331  1.93646993  1.77375913] ,  15.2416019552811
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.64090557  1.08539009  1.10119222  0.19910818  2.         -2.
+ -1.86691508  1.29539607  2.         -1.09601033] ,  -17.23770038330379
+Best rounded	 point according to the model and predicted value: [ 3.          1.          1.          0.19910818  2.         -2.
+ -1.86691508  1.29539607  2.         -1.09601033] ,  -17.010007590615416
+Suggested next data point and predicted value:				    [ 3.          1.          1.          0.36928056  1.8297176  -1.91274548
+ -1.74536579  1.52641308  1.86462418 -1.03717692] ,  -15.928443405312851
+
+
+ MVDONE iteration:  14
+Time spent training the model:				  0.001750946044921875
+Time spent finding the minimum of the model:  0.21387815475463867
+Total computation time for this iteration:	 0.21628832817077637
+Current time:  1584723181.9352388
+Evaluated data point and evaluation:						    [ 3.          1.          1.          0.36928056  1.8297176  -1.91274548
+ -1.74536579  1.52641308  1.86462418 -1.03717692] ,  30.435389806099906
+Predicted value at evaluated data point (after learning)        [ 3.          1.          1.          0.36928056  1.8297176  -1.91274548
+ -1.74536579  1.52641308  1.86462418 -1.03717692] ,  30.43538855424229
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.66285307  1.66235635  1.09438666  2.          1.51705394  1.35345745
+  2.          0.76308216 -0.92744624  2.        ] ,  -21.349008018264684
+Best rounded	 point according to the model and predicted value: [ 3.          2.          1.          2.          1.51705394  1.35345745
+  2.          0.76308216 -0.92744624  2.        ] ,  -19.250577077953945
+Suggested next data point and predicted value:				    [ 3.          2.          1.          1.97389559  1.68567225  1.21701557
+  1.90498983  0.73929706 -0.85250988  1.81825871] ,  -17.244022651312218
+
+
+ MVDONE iteration:  15
+Time spent training the model:				  0.0014781951904296875
+Time spent finding the minimum of the model:  0.23991036415100098
+Total computation time for this iteration:	 0.2420356273651123
+Current time:  1584723182.1866193
+Evaluated data point and evaluation:						    [ 3.          2.          1.          1.97389559  1.68567225  1.21701557
+  1.90498983  0.73929706 -0.85250988  1.81825871] ,  7.420218800443959
+Predicted value at evaluated data point (after learning)        [ 3.          2.          1.          1.97389559  1.68567225  1.21701557
+  1.90498983  0.73929706 -0.85250988  1.81825871] ,  7.420218632736837
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 1.99765455  0.54543528  0.49420637  2.          2.          1.52163213
+  2.          0.2203066  -0.87327554  2.        ] ,  -21.924316456645382
+Best rounded	 point according to the model and predicted value: [ 2.          1.          0.          2.          2.          1.52163213
+  2.          0.2203066  -0.87327554  2.        ] ,  -18.891666290976552
+Suggested next data point and predicted value:				    [ 2.          1.          0.          1.99219471  1.89943338  1.32187069
+  1.96331124  0.28399737 -0.86190904  1.97974668] ,  -18.093395200738193
+
+
+ MVDONE iteration:  16
+Time spent training the model:				  0.0014672279357910156
+Time spent finding the minimum of the model:  0.18672847747802734
+Total computation time for this iteration:	 0.18881821632385254
+Current time:  1584723182.3848927
+Evaluated data point and evaluation:						    [ 2.          1.          0.          1.99219471  1.89943338  1.32187069
+  1.96331124  0.28399737 -0.86190904  1.97974668] ,  12.98716263884293
+Predicted value at evaluated data point (after learning)        [ 2.          1.          0.          1.99219471  1.89943338  1.32187069
+  1.96331124  0.28399737 -0.86190904  1.97974668] ,  12.987160252741713
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 3.01236742  2.14250779  1.15263184  0.31006507 -1.17097188 -1.60465702
+  2.          1.59970909 -0.86405821  0.36144301] ,  -14.329332494740623
+Best rounded	 point according to the model and predicted value: [ 3.          2.          1.          0.31006507 -1.17097188 -1.60465702
+  2.          1.59970909 -0.86405821  0.36144301] ,  -14.355617378964986
+Suggested next data point and predicted value:				    [ 3.          2.          1.          0.34294517 -1.26984057 -1.49606822
+  1.83174635  1.52740789 -0.87318285  0.10612385] ,  -11.31294415617105
+
+
+ MVDONE iteration:  17
+Time spent training the model:				  0.0014705657958984375
+Time spent finding the minimum of the model:  0.20518016815185547
+Total computation time for this iteration:	 0.2072741985321045
+Current time:  1584723182.6015856
+Evaluated data point and evaluation:						    [ 3.          2.          1.          0.34294517 -1.26984057 -1.49606822
+  1.83174635  1.52740789 -0.87318285  0.10612385] ,  9.483147423602267
+Predicted value at evaluated data point (after learning)        [ 3.          2.          1.          0.34294517 -1.26984057 -1.49606822
+  1.83174635  1.52740789 -0.87318285  0.10612385] ,  9.483145628340315
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.69149496  1.99956506  1.99867466  2.          0.07045859 -1.22769729
+  2.         -0.10510114  0.10527715 -0.01578957] ,  -15.166114106650813
+Best rounded	 point according to the model and predicted value: [ 3.          2.          2.          2.          0.07045859 -1.22769729
+  2.         -0.10510114  0.10527715 -0.01578957] ,  -14.398074339327252
+Suggested next data point and predicted value:				    [ 3.          2.          2.          1.914014   -0.01278272 -1.24882473
+  1.7081989  -0.09690856  0.09971429 -0.18481344] ,  -14.287618750540467
+
+
+ MVDONE iteration:  18
+Time spent training the model:				  0.0014688968658447266
+Time spent finding the minimum of the model:  0.26868724822998047
+Total computation time for this iteration:	 0.27087998390197754
+Current time:  1584723182.8815107
+Evaluated data point and evaluation:						    [ 3.          2.          2.          1.914014   -0.01278272 -1.24882473
+  1.7081989  -0.09690856  0.09971429 -0.18481344] ,  9.66998535037807
+Predicted value at evaluated data point (after learning)        [ 3.          2.          2.          1.914014   -0.01278272 -1.24882473
+  1.7081989  -0.09690856  0.09971429 -0.18481344] ,  9.669984602369734
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.10092732  1.86347569  0.8636736   1.99996411  0.08870799 -1.85969894
+  2.          0.42036176 -0.23036071  0.17331751] ,  -7.006424341805005
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          1.99996411  0.08870799 -1.85969894
+  2.          0.42036176 -0.23036071  0.17331751] ,  -6.616697256679757
+Suggested next data point and predicted value:				    [ 2.          2.          1.          1.76952243 -0.00489282 -1.89572157
+  1.81764511  0.2727878  -0.28967696  0.30081381] ,  -4.409971895174927
+
+
+ MVDONE iteration:  19
+Time spent training the model:				  0.0014851093292236328
+Time spent finding the minimum of the model:  0.23040032386779785
+Total computation time for this iteration:	 0.232666015625
+Current time:  1584723183.123688
+Evaluated data point and evaluation:						    [ 2.          2.          1.          1.76952243 -0.00489282 -1.89572157
+  1.81764511  0.2727878  -0.28967696  0.30081381] ,  9.243688552625507
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          1.76952243 -0.00489282 -1.89572157
+  1.81764511  0.2727878  -0.28967696  0.30081381] ,  9.243688419135891
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.12435545  1.09572564  0.86754325  1.95315306  0.4795204  -1.48121956
+  2.          0.27825322 -0.1948996   0.42802944] ,  -5.271730368547862
+Best rounded	 point according to the model and predicted value: [ 2.          1.          1.          1.95315306  0.4795204  -1.48121956
+  2.          0.27825322 -0.1948996   0.42802944] ,  -4.421037717986339
+Suggested next data point and predicted value:				    [ 2.          1.          1.          1.95628027  0.37561997 -1.45580969
+  1.75070755  0.4265978  -0.05826002  0.50037298] ,  -2.171045370018266
+
+
+ MVDONE iteration:  20
+Time spent training the model:				  0.001482248306274414
+Time spent finding the minimum of the model:  0.24800372123718262
+Total computation time for this iteration:	 0.2501187324523926
+Current time:  1584723183.3849506
+Evaluated data point and evaluation:						    [ 2.          1.          1.          1.95628027  0.37561997 -1.45580969
+  1.75070755  0.4265978  -0.05826002  0.50037298] ,  9.320653222141123
+Predicted value at evaluated data point (after learning)        [ 2.          1.          1.          1.95628027  0.37561997 -1.45580969
+  1.75070755  0.4265978  -0.05826002  0.50037298] ,  9.320650664175714
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.99534692  1.29198822  0.9710795   0.21007901 -0.7199324   0.81819251
+  1.77698417 -0.19264468  0.67532379  1.48322335] ,  -11.53050011603657
+Best rounded	 point according to the model and predicted value: [ 3.          1.          1.          0.21007901 -0.7199324   0.81819251
+  1.77698417 -0.19264468  0.67532379  1.48322335] ,  -11.450862279808728
+Suggested next data point and predicted value:				    [ 3.          1.          1.          0.21387639 -0.76291959  0.81347742
+  1.74687963 -0.42101605  0.87503164  1.56683418] ,  -11.552549335416632
+
+
+ MVDONE iteration:  21
+Time spent training the model:				  0.0014955997467041016
+Time spent finding the minimum of the model:  0.1951005458831787
+Total computation time for this iteration:	 0.19722700119018555
+Current time:  1584723183.5921252
+Evaluated data point and evaluation:						    [ 3.          1.          1.          0.21387639 -0.76291959  0.81347742
+  1.74687963 -0.42101605  0.87503164  1.56683418] ,  7.94475327611476
+Predicted value at evaluated data point (after learning)        [ 3.          1.          1.          0.21387639 -0.76291959  0.81347742
+  1.74687963 -0.42101605  0.87503164  1.56683418] ,  7.944751609643703
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.61752887  0.62407466  2.36826825 -0.15693146  0.89882313  0.24661776
+ -2.          0.05377339 -2.          1.38319283] ,  -44.09921130220483
+Best rounded	 point according to the model and predicted value: [ 3.          1.          2.         -0.15693146  0.89882313  0.24661776
+ -2.          0.05377339 -2.          1.38319283] ,  -23.42522605843292
+Suggested next data point and predicted value:				    [ 3.          1.          2.          0.08888856  1.11204652  0.29335224
+ -1.96658565  0.14664971 -1.82826185  1.4826193 ] ,  -23.925434704993826
+
+
+ MVDONE iteration:  22
+Time spent training the model:				  0.0014657974243164062
+Time spent finding the minimum of the model:  0.198502779006958
+Total computation time for this iteration:	 0.2005906105041504
+Current time:  1584723183.802295
+Evaluated data point and evaluation:						    [ 3.          1.          2.          0.08888856  1.11204652  0.29335224
+ -1.96658565  0.14664971 -1.82826185  1.4826193 ] ,  10.764751608430023
+Predicted value at evaluated data point (after learning)        [ 3.          1.          2.          0.08888856  1.11204652  0.29335224
+ -1.96658565  0.14664971 -1.82826185  1.4826193 ] ,  10.764750770470432
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.58208467  1.33200648  0.35024673 -0.04557841  1.58828848 -0.70548633
+  2.          1.89207049 -0.69100428  0.79591985] ,  -10.083840408466923
+Best rounded	 point according to the model and predicted value: [ 3.          1.          0.         -0.04557841  1.58828848 -0.70548633
+  2.          1.89207049 -0.69100428  0.79591985] ,  -5.7782032524246265
+Suggested next data point and predicted value:				    [ 3.          1.          0.          0.11839033  1.73586915 -0.51842328
+  1.85323798  1.93109149 -0.75561055  0.9676939 ] ,  -4.438937041596494
+
+
+ MVDONE iteration:  23
+Time spent training the model:				  0.0014560222625732422
+Time spent finding the minimum of the model:  0.18878674507141113
+Total computation time for this iteration:	 0.19093632698059082
+Current time:  1584723184.0025296
+Evaluated data point and evaluation:						    [ 3.          1.          0.          0.11839033  1.73586915 -0.51842328
+  1.85323798  1.93109149 -0.75561055  0.9676939 ] ,  22.919427784487155
+Predicted value at evaluated data point (after learning)        [ 3.          1.          0.          0.11839033  1.73586915 -0.51842328
+  1.85323798  1.93109149 -0.75561055  0.9676939 ] ,  22.91941765813131
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.4813193   1.8465866   1.00848618  1.9897019  -0.41095982 -0.79396477
+ -0.28890524 -1.22754475 -0.2027228   0.1604061 ] ,  -11.996905750833168
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          1.9897019  -0.41095982 -0.79396477
+ -0.28890524 -1.22754475 -0.2027228   0.1604061 ] ,  -8.984756936618307
+Suggested next data point and predicted value:				    [ 2.          2.          1.          1.992387   -0.19873935 -0.73757769
+ -0.33749942 -0.84148977 -0.34285782  0.00405132] ,  -6.192690360276007
+
+
+ MVDONE iteration:  24
+Time spent training the model:				  0.001459360122680664
+Time spent finding the minimum of the model:  0.18851685523986816
+Total computation time for this iteration:	 0.190629243850708
+Current time:  1584723184.2022336
+Evaluated data point and evaluation:						    [ 2.          2.          1.          1.992387   -0.19873935 -0.73757769
+ -0.33749942 -0.84148977 -0.34285782  0.00405132] ,  7.651762755825559
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          1.992387   -0.19873935 -0.73757769
+ -0.33749942 -0.84148977 -0.34285782  0.00405132] ,  7.651743194764678
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.96468793  2.06224747  1.07487147  1.87576703  0.40316901 -0.51312009
+  1.49532404 -1.7116108   1.3284256  -1.71250319] ,  -25.87189078261965
+Best rounded	 point according to the model and predicted value: [ 3.          2.          1.          1.87576703  0.40316901 -0.51312009
+  1.49532404 -1.7116108   1.3284256  -1.71250319] ,  -27.281098285814814
+Suggested next data point and predicted value:				    [ 3.          2.          1.          1.8378782   0.3289216  -0.72510429
+  1.48226802 -1.93044191  1.2902899  -1.54613189] ,  -24.35146575842859
+
+
+ MVDONE iteration:  25
+Time spent training the model:				  0.0014600753784179688
+Time spent finding the minimum of the model:  0.19742751121520996
+Total computation time for this iteration:	 0.19953441619873047
+Current time:  1584723184.4108498
+Evaluated data point and evaluation:						    [ 3.          2.          1.          1.8378782   0.3289216  -0.72510429
+  1.48226802 -1.93044191  1.2902899  -1.54613189] ,  15.690014667351392
+Predicted value at evaluated data point (after learning)        [ 3.          2.          1.          1.8378782   0.3289216  -0.72510429
+  1.48226802 -1.93044191  1.2902899  -1.54613189] ,  15.690010886246698
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 1.83655161  0.91741771  1.11212796  2.          0.70341995 -0.23649744
+  1.99823148 -0.40482939  2.         -0.79554907] ,  -35.33416107544045
+Best rounded	 point according to the model and predicted value: [ 2.          1.          1.          2.          0.70341995 -0.23649744
+  1.99823148 -0.40482939  2.         -0.79554907] ,  -35.0828094554669
+Suggested next data point and predicted value:				    [ 2.          1.          1.          1.90980811  1.00533949 -0.25156475
+  1.90325879 -0.16541746  1.75003253 -1.01695413] ,  -31.15540158845996
+
+
+ MVDONE iteration:  26
+Time spent training the model:				  0.0014770030975341797
+Time spent finding the minimum of the model:  0.18892717361450195
+Total computation time for this iteration:	 0.191025972366333
+Current time:  1584723184.6111665
+Evaluated data point and evaluation:						    [ 2.          1.          1.          1.90980811  1.00533949 -0.25156475
+  1.90325879 -0.16541746  1.75003253 -1.01695413] ,  17.295395149200413
+Predicted value at evaluated data point (after learning)        [ 2.          1.          1.          1.90980811  1.00533949 -0.25156475
+  1.90325879 -0.16541746  1.75003253 -1.01695413] ,  17.295388772165527
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.12615257  1.129209    1.57513795  1.16647616  0.62922646 -0.45122535
+  1.69222608 -0.6874538  -0.46233754  0.13050711] ,  -9.63888449764885
+Best rounded	 point according to the model and predicted value: [ 2.          1.          2.          1.16647616  0.62922646 -0.45122535
+  1.69222608 -0.6874538  -0.46233754  0.13050711] ,  -0.19482982457120102
+Suggested next data point and predicted value:				    [ 2.          1.          2.          1.04947469  0.49655771 -0.48362193
+  1.77091299 -0.66343834 -0.39129666  0.036223  ] ,  0.9494767339597061
+
+
+ MVDONE iteration:  27
+Time spent training the model:				  0.0014603137969970703
+Time spent finding the minimum of the model:  0.22426152229309082
+Total computation time for this iteration:	 0.22635507583618164
+Current time:  1584723184.8466969
+Evaluated data point and evaluation:						    [ 2.          1.          2.          1.04947469  0.49655771 -0.48362193
+  1.77091299 -0.66343834 -0.39129666  0.036223  ] ,  7.214032177852725
+Predicted value at evaluated data point (after learning)        [ 2.          1.          2.          1.04947469  0.49655771 -0.48362193
+  1.77091299 -0.66343834 -0.39129666  0.036223  ] ,  7.214003005666694
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.06012163  1.26307046  1.35169985  1.27399203  0.78579763 -0.67875961
+  1.65292295 -0.3691989  -0.39017513  0.03260628] ,  -4.667559945761697
+Best rounded	 point according to the model and predicted value: [ 2.          1.          1.          1.27399203  0.78579763 -0.67875961
+  1.65292295 -0.3691989  -0.39017513  0.03260628] ,  -4.579876015336122
+Suggested next data point and predicted value:				    [ 2.          1.          1.          1.38541901  0.65030814 -0.83587713
+  1.57053313 -0.26510243 -0.14113021 -0.01661813] ,  -5.437114452461991
+
+
+ MVDONE iteration:  28
+Time spent training the model:				  0.0014832019805908203
+Time spent finding the minimum of the model:  0.1887068748474121
+Total computation time for this iteration:	 0.1908586025238037
+Current time:  1584723185.0468376
+Evaluated data point and evaluation:						    [ 2.          1.          1.          1.38541901  0.65030814 -0.83587713
+  1.57053313 -0.26510243 -0.14113021 -0.01661813] ,  5.5901728914882405
+Predicted value at evaluated data point (after learning)        [ 2.          1.          1.          1.38541901  0.65030814 -0.83587713
+  1.57053313 -0.26510243 -0.14113021 -0.01661813] ,  5.590023985062463
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 1.91563502  0.          3.00002292  2.         -2.          0.38236844
+  2.         -1.00082879 -2.          2.        ] ,  -172.89005499633666
+Best rounded	 point according to the model and predicted value: [ 2.          0.          3.          2.         -2.          0.38236844
+  2.         -1.00082879 -2.          2.        ] ,  -172.7400769823012
+Suggested next data point and predicted value:				    [ 2.          0.          3.          1.93698836 -1.92065908  0.43246727
+  1.9270144  -0.94938458 -1.90793472  1.98802765] ,  -169.90477266724113
+
+
+ MVDONE iteration:  29
+Time spent training the model:				  0.0014667510986328125
+Time spent finding the minimum of the model:  0.2218763828277588
+Total computation time for this iteration:	 0.22401976585388184
+Current time:  1584723185.2800531
+Evaluated data point and evaluation:						    [ 2.          0.          3.          1.93698836 -1.92065908  0.43246727
+  1.9270144  -0.94938458 -1.90793472  1.98802765] ,  30.79327602114665
+Predicted value at evaluated data point (after learning)        [ 2.          0.          3.          1.93698836 -1.92065908  0.43246727
+  1.9270144  -0.94938458 -1.90793472  1.98802765] ,  30.793274427982276
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.59640025  0.0090026   2.0090018   0.705413   -0.56856028 -1.96404566
+  1.55141703 -1.93101607 -1.96640645  1.9503459 ] ,  -48.24475950846168
+Best rounded	 point according to the model and predicted value: [ 3.          0.          2.          0.705413   -0.56856028 -1.96404566
+  1.55141703 -1.93101607 -1.96640645  1.9503459 ] ,  -44.99340150311203
+Suggested next data point and predicted value:				    [ 3.          0.          2.          0.64311121 -0.43016534 -1.78968746
+  1.52743376 -1.70336156 -1.97752886  1.84615169] ,  -42.05826766512309
+
+
+ MVDONE iteration:  30
+Time spent training the model:				  0.0014700889587402344
+Time spent finding the minimum of the model:  0.23938345909118652
+Total computation time for this iteration:	 0.24162793159484863
+Current time:  1584723185.5308766
+Evaluated data point and evaluation:						    [ 3.          0.          2.          0.64311121 -0.43016534 -1.78968746
+  1.52743376 -1.70336156 -1.97752886  1.84615169] ,  25.85187710203629
+Predicted value at evaluated data point (after learning)        [ 3.          0.          2.          0.64311121 -0.43016534 -1.78968746
+  1.52743376 -1.70336156 -1.97752886  1.84615169] ,  25.85187682761026
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 4.          1.98143915  4.          2.         -2.          0.52957896
+  1.84307829 -0.31915946 -0.37402605 -0.15934572] ,  -188.10262568469489
+Best rounded	 point according to the model and predicted value: [ 4.          2.          4.          2.         -2.          0.52957896
+  1.84307829 -0.31915946 -0.37402605 -0.15934572] ,  -191.90136619839652
+Suggested next data point and predicted value:				    [ 4.          2.          4.          1.9048177  -1.96402991  0.44559098
+  1.70877909 -0.19456189 -0.37538976  0.02293722] ,  -199.93218443665472
+
+
+ MVDONE iteration:  31
+Time spent training the model:				  0.0014581680297851562
+Time spent finding the minimum of the model:  0.2404773235321045
+Total computation time for this iteration:	 0.24263811111450195
+Current time:  1584723185.7835877
+Evaluated data point and evaluation:						    [ 4.          2.          4.          1.9048177  -1.96402991  0.44559098
+  1.70877909 -0.19456189 -0.37538976  0.02293722] ,  26.545885271845293
+Predicted value at evaluated data point (after learning)        [ 4.          2.          4.          1.9048177  -1.96402991  0.44559098
+  1.70877909 -0.19456189 -0.37538976  0.02293722] ,  26.54587842873493
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 3.38916075  0.41233171  1.41231591  2.          0.78951462 -2.
+  2.         -1.67489636 -2.          2.        ] ,  -87.40717471948832
+Best rounded	 point according to the model and predicted value: [ 3.          0.          1.          2.          0.78951462 -2.
+  2.         -1.67489636 -2.          2.        ] ,  -77.46767190489705
+Suggested next data point and predicted value:				    [ 3.          0.          1.          1.87788117  0.80111609 -1.80980264
+  1.88129372 -1.61226121 -1.96294286  1.86272303] ,  -72.31097649201948
+
+
+ MVDONE iteration:  32
+Time spent training the model:				  0.0014526844024658203
+Time spent finding the minimum of the model:  0.19468951225280762
+Total computation time for this iteration:	 0.19684553146362305
+Current time:  1584723185.9953883
+Evaluated data point and evaluation:						    [ 3.          0.          1.          1.87788117  0.80111609 -1.80980264
+  1.88129372 -1.61226121 -1.96294286  1.86272303] ,  33.949181697760544
+Predicted value at evaluated data point (after learning)        [ 3.          0.          1.          1.87788117  0.80111609 -1.80980264
+  1.88129372 -1.61226121 -1.96294286  1.86272303] ,  33.9491771010614
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.24495358  1.15219965  1.10202167  2.          0.1057322  -0.8357085
+  1.76588273 -0.07636728 -0.46024295  0.59855841] ,  -2.6692266929723925
+Best rounded	 point according to the model and predicted value: [ 2.          1.          1.          2.          0.1057322  -0.8357085
+  1.76588273 -0.07636728 -0.46024295  0.59855841] ,  -4.299442656495023
+Suggested next data point and predicted value:				    [ 2.          1.          1.          1.74929906  0.20011245 -0.90077679
+  1.77518802 -0.17132274 -0.34686724  0.54260041] ,  -0.6423794742346125
+
+
+ MVDONE iteration:  33
+Time spent training the model:				  0.0014641284942626953
+Time spent finding the minimum of the model:  0.20575761795043945
+Total computation time for this iteration:	 0.20788002014160156
+Current time:  1584723186.2178164
+Evaluated data point and evaluation:						    [ 2.          1.          1.          1.74929906  0.20011245 -0.90077679
+  1.77518802 -0.17132274 -0.34686724  0.54260041] ,  9.030120110060793
+Predicted value at evaluated data point (after learning)        [ 2.          1.          1.          1.74929906  0.20011245 -0.90077679
+  1.77518802 -0.17132274 -0.34686724  0.54260041] ,  9.029854562543548
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 2.0000006   1.0317779   0.98985866  0.94115748  0.62830329 -0.30672579
+  1.45474933  0.12086274 -0.95557964  0.07517015] ,  3.879678076193456
+Best rounded	 point according to the model and predicted value: [ 2.          1.          1.          0.94115748  0.62830329 -0.30672579
+  1.45474933  0.12086274 -0.95557964  0.07517015] ,  4.274651591751083
+Suggested next data point and predicted value:				    [ 2.          3.          1.          0.82392147  0.73437373 -0.27755635
+  1.55236498  0.27051527 -1.10724869  0.14976567] ,  57.852803752024805
+
+
+ MVDONE iteration:  34
+Time spent training the model:				  0.001508951187133789
+Time spent finding the minimum of the model:  0.20624732971191406
+Total computation time for this iteration:	 0.20844173431396484
+Current time:  1584723186.4388306
+Evaluated data point and evaluation:						    [ 2.          3.          1.          0.82392147  0.73437373 -0.27755635
+  1.55236498  0.27051527 -1.10724869  0.14976567] ,  5.042146941347157
+Predicted value at evaluated data point (after learning)        [ 2.          3.          1.          0.82392147  0.73437373 -0.27755635
+  1.55236498  0.27051527 -1.10724869  0.14976567] ,  5.0421470366438905
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 1.88239403  1.28312013  0.9620805   0.94526637  0.57610777 -0.29867412
+  1.40196664  0.10592268 -0.93303212  0.04315445] ,  2.2607118820041245
+Best rounded	 point according to the model and predicted value: [ 2.          1.          1.          0.94526637  0.57610777 -0.29867412
+  1.40196664  0.10592268 -0.93303212  0.04315445] ,  3.992777951091525
+Suggested next data point and predicted value:				    [ 3.          1.          1.          0.73662675  0.4283022  -0.08196821
+  1.45783743  0.3794142  -0.72393581  0.22359976] ,  9.869512552493914
+
+
+ MVDONE iteration:  35
+Time spent training the model:				  0.0014574527740478516
+Time spent finding the minimum of the model:  0.24879884719848633
+Total computation time for this iteration:	 0.2509162425994873
+Current time:  1584723186.700681
+Evaluated data point and evaluation:						    [ 3.          1.          1.          0.73662675  0.4283022  -0.08196821
+  1.45783743  0.3794142  -0.72393581  0.22359976] ,  4.7605222133403124
+Predicted value at evaluated data point (after learning)        [ 3.          1.          1.          0.73662675  0.4283022  -0.08196821
+  1.45783743  0.3794142  -0.72393581  0.22359976] ,  4.761542524115277
+Best found data point and evaluation so far:				    [ 2.          1.          1.          0.93914576  0.62557898 -0.30674642
+  1.46172578  0.13117198 -0.96107267  0.08055703] ,  4.424542849902435
+Best data point according to the model and predicted value:	    [ 1.72766073  1.999668    0.91753137  0.67529395  0.55842768 -0.44440956
+  1.68065955 -0.01835915 -0.57434811  0.14290894] ,  -9.800810117075919
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.67529395  0.55842768 -0.44440956
+  1.68065955 -0.01835915 -0.57434811  0.14290894] ,  -7.490683835603981
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.74710713  0.57287612 -0.27591684
+  1.60214156 -0.14536623 -0.45782394  0.1176385 ] ,  -8.496200229354066
+
+
+ MVDONE iteration:  36
+Time spent training the model:				  0.0014646053314208984
+Time spent finding the minimum of the model:  0.2218925952911377
+Total computation time for this iteration:	 0.2239992618560791
+Current time:  1584723186.9348955
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.74710713  0.57287612 -0.27591684
+  1.60214156 -0.14536623 -0.45782394  0.1176385 ] ,  3.8228597463672074
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.74710713  0.57287612 -0.27591684
+  1.60214156 -0.14536623 -0.45782394  0.1176385 ] ,  3.822709630864219
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74710713  0.57287612 -0.27591684
+  1.60214156 -0.14536623 -0.45782394  0.1176385 ] ,  3.8228597463672074
+Best data point according to the model and predicted value:	    [ 1.74728857  2.11781055  0.99263708  0.63113622  0.13920164 -0.64823229
+  1.41843597 -0.08141541 -0.46455793  0.52045063] ,  -8.858418654550793
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.63113622  0.13920164 -0.64823229
+  1.41843597 -0.08141541 -0.46455793  0.52045063] ,  -6.033352418898703
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.63774662  0.25933657 -0.59560793
+  1.60981561 -0.06452709 -0.73575016  0.63314639] ,  -2.5329441830685937
+
+
+ MVDONE iteration:  37
+Time spent training the model:				  0.0014586448669433594
+Time spent finding the minimum of the model:  0.2216625213623047
+Total computation time for this iteration:	 0.2237567901611328
+Current time:  1584723187.168088
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.63774662  0.25933657 -0.59560793
+  1.60981561 -0.06452709 -0.73575016  0.63314639] ,  3.638461705923703
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.63774662  0.25933657 -0.59560793
+  1.60981561 -0.06452709 -0.73575016  0.63314639] ,  3.638410558420486
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.63774662  0.25933657 -0.59560793
+  1.60981561 -0.06452709 -0.73575016  0.63314639] ,  3.638461705923703
+Best data point according to the model and predicted value:	    [ 1.85205047  2.11106205  1.01023796  0.58160896  0.17505254 -0.56838438
+  1.42428235  0.00343839 -0.46331421  0.56021038] ,  -4.111497535860318
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.58160896  0.17505254 -0.56838438
+  1.42428235  0.00343839 -0.46331421  0.56021038] ,  -2.9633926575442846
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.69921866  0.22095593 -0.37081259
+  1.46899214  0.14014383 -0.5900976   0.62273908] ,  -1.8422702164443514
+
+
+ MVDONE iteration:  38
+Time spent training the model:				  0.0014789104461669922
+Time spent finding the minimum of the model:  0.20375919342041016
+Total computation time for this iteration:	 0.20587372779846191
+Current time:  1584723187.3832002
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.69921866  0.22095593 -0.37081259
+  1.46899214  0.14014383 -0.5900976   0.62273908] ,  2.5835018309082702
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.69921866  0.22095593 -0.37081259
+  1.46899214  0.14014383 -0.5900976   0.62273908] ,  2.583242372012452
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.69921866  0.22095593 -0.37081259
+  1.46899214  0.14014383 -0.5900976   0.62273908] ,  2.5835018309082702
+Best data point according to the model and predicted value:	    [ 2.00106464  1.99675099  0.98479411  0.54721452  0.34504887 -0.4523741
+  1.42673019  0.07534032 -0.46972679  0.63085625] ,  0.0761657279574095
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.54721452  0.34504887 -0.4523741
+  1.42673019  0.07534032 -0.46972679  0.63085625] ,  0.1649255114180317
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.7934897   0.26153573 -0.36590975
+  1.66412423  0.26657645 -0.57219208  0.58070151] ,  3.992909229270647
+
+
+ MVDONE iteration:  39
+Time spent training the model:				  0.0014541149139404297
+Time spent finding the minimum of the model:  0.1859140396118164
+Total computation time for this iteration:	 0.18801069259643555
+Current time:  1584723187.58069
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.7934897   0.26153573 -0.36590975
+  1.66412423  0.26657645 -0.57219208  0.58070151] ,  3.523011750429225
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.7934897   0.26153573 -0.36590975
+  1.66412423  0.26657645 -0.57219208  0.58070151] ,  3.5232044054992917
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.69921866  0.22095593 -0.37081259
+  1.46899214  0.14014383 -0.5900976   0.62273908] ,  2.5835018309082702
+Best data point according to the model and predicted value:	    [ 1.98632884  1.99825285  1.04725944  0.57556772  0.32268165 -0.43405379
+  1.46141588  0.12598328 -0.46361015  0.62401789] ,  0.83563844694417
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.57556772  0.32268165 -0.43405379
+  1.46141588  0.12598328 -0.46361015  0.62401789] ,  0.03831386395833114
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.57801179  0.27386012 -0.34306425
+  1.37396421  0.05000266 -0.40078968  0.87399824] ,  0.09479881754352171
+
+
+ MVDONE iteration:  40
+Time spent training the model:				  0.0014705657958984375
+Time spent finding the minimum of the model:  0.2294483184814453
+Total computation time for this iteration:	 0.23158550262451172
+Current time:  1584723187.822853
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.57801179  0.27386012 -0.34306425
+  1.37396421  0.05000266 -0.40078968  0.87399824] ,  2.366262267518577
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.57801179  0.27386012 -0.34306425
+  1.37396421  0.05000266 -0.40078968  0.87399824] ,  2.365166325382771
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.57801179  0.27386012 -0.34306425
+  1.37396421  0.05000266 -0.40078968  0.87399824] ,  2.366262267518577
+Best data point according to the model and predicted value:	    [ 1.86840942  1.98762959  0.94568898  0.58619054  0.192761   -0.28146232
+  1.23742196  0.10881018 -0.36709964  0.84735457] ,  0.024737926538451305
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.58619054  0.192761   -0.28146232
+  1.23742196  0.10881018 -0.36709964  0.84735457] ,  0.4060013778360201
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.63671039  0.07252744 -0.38210856
+  1.27194482 -0.11047878 -0.36726556  0.84353472] ,  -0.05944163349209042
+
+
+ MVDONE iteration:  41
+Time spent training the model:				  0.0014734268188476562
+Time spent finding the minimum of the model:  0.1940627098083496
+Total computation time for this iteration:	 0.19617867469787598
+Current time:  1584723188.0283904
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.63671039  0.07252744 -0.38210856
+  1.27194482 -0.11047878 -0.36726556  0.84353472] ,  2.138215911892905
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.63671039  0.07252744 -0.38210856
+  1.27194482 -0.11047878 -0.36726556  0.84353472] ,  2.126719851623845
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.63671039  0.07252744 -0.38210856
+  1.27194482 -0.11047878 -0.36726556  0.84353472] ,  2.138215911892905
+Best data point according to the model and predicted value:	    [ 1.98979519  2.03204151  1.0020087   0.43783407  0.03827159 -0.6298585
+  0.9048141  -0.0054174  -0.44249767  1.06733201] ,  -6.108985982682359
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.43783407  0.03827159 -0.6298585
+  0.9048141  -0.0054174  -0.44249767  1.06733201] ,  -6.115273786356097
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.41946149  0.18675319 -0.60602439
+  0.92275245  0.02975572 -0.43444643  1.20037654] ,  -4.66508711840418
+
+
+ MVDONE iteration:  42
+Time spent training the model:				  0.0014982223510742188
+Time spent finding the minimum of the model:  0.25612664222717285
+Total computation time for this iteration:	 0.2582693099975586
+Current time:  1584723188.2959895
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.41946149  0.18675319 -0.60602439
+  0.92275245  0.02975572 -0.43444643  1.20037654] ,  1.3568077301358414
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.41946149  0.18675319 -0.60602439
+  0.92275245  0.02975572 -0.43444643  1.20037654] ,  1.3561941903066757
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.41946149  0.18675319 -0.60602439
+  0.92275245  0.02975572 -0.43444643  1.20037654] ,  1.3568077301358414
+Best data point according to the model and predicted value:	    [ 1.96611767  1.99450291  0.97352019  0.38405022  0.13189287 -0.60160621
+  0.86067912  0.07284617 -0.47778476  1.19488228] ,  -0.3122661932880817
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.38405022  0.13189287 -0.60160621
+  0.86067912  0.07284617 -0.47778476  1.19488228] ,  -0.5580722482709142
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.49472245  0.18124275 -0.71086766
+  0.80619261  0.06315669 -0.33954833  0.98043058] ,  -0.26983548001759594
+
+
+ MVDONE iteration:  43
+Time spent training the model:				  0.0014712810516357422
+Time spent finding the minimum of the model:  0.25601625442504883
+Total computation time for this iteration:	 0.2581322193145752
+Current time:  1584723188.5633414
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.49472245  0.18124275 -0.71086766
+  0.80619261  0.06315669 -0.33954833  0.98043058] ,  1.079798843228419
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.49472245  0.18124275 -0.71086766
+  0.80619261  0.06315669 -0.33954833  0.98043058] ,  1.0781457620956711
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.49472245  0.18124275 -0.71086766
+  0.80619261  0.06315669 -0.33954833  0.98043058] ,  1.079798843228419
+Best data point according to the model and predicted value:	    [ 2.51300959  0.51306827  2.74018667  1.61384492  1.36818644 -0.19745609
+  1.69374765  0.76866561 -1.57403747  0.19257404] ,  -242.75148733521362
+Best rounded	 point according to the model and predicted value: [ 3.          1.          3.          1.61384492  1.36818644 -0.19745609
+  1.69374765  0.76866561 -1.57403747  0.19257404] ,  -322.5070985386267
+Suggested next data point and predicted value:				    [ 3.          1.          3.          1.45521333  1.52145434 -0.18794475
+  1.6635599   0.81026083 -1.50005199  0.28461712] ,  -322.2171818378529
+
+
+ MVDONE iteration:  44
+Time spent training the model:				  0.0014977455139160156
+Time spent finding the minimum of the model:  0.2148137092590332
+Total computation time for this iteration:	 0.21695637702941895
+Current time:  1584723188.7897062
+Evaluated data point and evaluation:						    [ 3.          1.          3.          1.45521333  1.52145434 -0.18794475
+  1.6635599   0.81026083 -1.50005199  0.28461712] ,  8.64950361643947
+Predicted value at evaluated data point (after learning)        [ 3.          1.          3.          1.45521333  1.52145434 -0.18794475
+  1.6635599   0.81026083 -1.50005199  0.28461712] ,  8.649481243832424
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.49472245  0.18124275 -0.71086766
+  0.80619261  0.06315669 -0.33954833  0.98043058] ,  1.079798843228419
+Best data point according to the model and predicted value:	    [ 1.98075762  1.94364934  1.00000377  0.54419675  0.19346523 -0.66050903
+  0.800927    0.14207823 -0.39565202  0.93857514] ,  -2.133960641009404
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.54419675  0.19346523 -0.66050903
+  0.800927    0.14207823 -0.39565202  0.93857514] ,  -1.5034631810054453
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.66093487  0.15898979 -0.88090948
+  0.8152137   0.0113299  -0.45136779  1.1044457 ] ,  0.771780976393444
+
+
+ MVDONE iteration:  45
+Time spent training the model:				  0.0014646053314208984
+Time spent finding the minimum of the model:  0.22214841842651367
+Total computation time for this iteration:	 0.22424840927124023
+Current time:  1584723189.023493
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.66093487  0.15898979 -0.88090948
+  0.8152137   0.0113299  -0.45136779  1.1044457 ] ,  1.1971726181193585
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.66093487  0.15898979 -0.88090948
+  0.8152137   0.0113299  -0.45136779  1.1044457 ] ,  1.1966293711250167
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.49472245  0.18124275 -0.71086766
+  0.80619261  0.06315669 -0.33954833  0.98043058] ,  1.079798843228419
+Best data point according to the model and predicted value:	    [ 1.98551618  1.9507256   0.99448051  0.53440608  0.19026167 -0.66968077
+  0.80112095  0.128218   -0.3933058   0.94658933] ,  -1.8602782272021852
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.53440608  0.19026167 -0.66968077
+  0.80112095  0.128218   -0.3933058   0.94658933] ,  -1.483296776213182
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  -1.916720186322097
+
+
+ MVDONE iteration:  46
+Time spent training the model:				  0.0014712810516357422
+Time spent finding the minimum of the model:  0.23014068603515625
+Total computation time for this iteration:	 0.2322862148284912
+Current time:  1584723189.2650454
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9755234518145812
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 3.18907693  1.18927943  0.79411047  1.60008186  0.92145319 -1.93871345
+  1.58719202 -1.51897935 -1.38464813  1.82817063] ,  -259.9211372412648
+Best rounded	 point according to the model and predicted value: [ 3.          1.          1.          1.60008186  0.92145319 -1.93871345
+  1.58719202 -1.51897935 -1.38464813  1.82817063] ,  -240.12933124757086
+Suggested next data point and predicted value:				    [ 3.          1.          1.          1.50714176  0.78280814 -1.95018632
+  1.50479099 -1.59911642 -1.31582602  1.75706851] ,  -251.18895408074357
+
+
+ MVDONE iteration:  47
+Time spent training the model:				  0.0014748573303222656
+Time spent finding the minimum of the model:  0.2229933738708496
+Total computation time for this iteration:	 0.22518444061279297
+Current time:  1584723189.4993856
+Evaluated data point and evaluation:						    [ 3.          1.          1.          1.50714176  0.78280814 -1.95018632
+  1.50479099 -1.59911642 -1.31582602  1.75706851] ,  17.515432259398
+Predicted value at evaluated data point (after learning)        [ 3.          1.          1.          1.50714176  0.78280814 -1.95018632
+  1.50479099 -1.59911642 -1.31582602  1.75706851] ,  17.51541022843802
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 4.          0.          0.34850446 -1.74595765 -1.35433525 -1.90724755
+ -1.3275048  -1.95235148 -1.83119454  1.90349514] ,  -387.77959449759976
+Best rounded	 point according to the model and predicted value: [ 4.          0.          0.         -1.74595765 -1.35433525 -1.90724755
+ -1.3275048  -1.95235148 -1.83119454  1.90349514] ,  -377.1930575896339
+Suggested next data point and predicted value:				    [ 4.          0.          0.         -1.55573141 -1.17577598 -1.91322846
+ -1.29368593 -1.96785645 -1.7659135   1.94428817] ,  -376.19444225611676
+
+
+ MVDONE iteration:  48
+Time spent training the model:				  0.0014677047729492188
+Time spent finding the minimum of the model:  0.24281954765319824
+Total computation time for this iteration:	 0.24491548538208008
+Current time:  1584723189.7534568
+Evaluated data point and evaluation:						    [ 4.          0.          0.         -1.55573141 -1.17577598 -1.91322846
+ -1.29368593 -1.96785645 -1.7659135   1.94428817] ,  66.07926688590558
+Predicted value at evaluated data point (after learning)        [ 4.          0.          0.         -1.55573141 -1.17577598 -1.91322846
+ -1.29368593 -1.96785645 -1.7659135   1.94428817] ,  66.07926481018264
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 2.82525953  1.96050421  0.66058085  0.28103394  0.23196722 -1.74075197
+  0.88284647 -1.08165492 -0.93552349  1.87143521] ,  -123.77637581030015
+Best rounded	 point according to the model and predicted value: [ 3.          2.          1.          0.28103394  0.23196722 -1.74075197
+  0.88284647 -1.08165492 -0.93552349  1.87143521] ,  -84.5049871142134
+Suggested next data point and predicted value:				    [ 3.          2.          1.          0.58009372  0.36197922 -1.67642121
+  0.71939908 -1.29728649 -1.06030022  1.76702438] ,  -99.60879764999838
+
+
+ MVDONE iteration:  49
+Time spent training the model:				  0.001474142074584961
+Time spent finding the minimum of the model:  0.2835056781768799
+Total computation time for this iteration:	 0.2856123447418213
+Current time:  1584723190.048846
+Evaluated data point and evaluation:						    [ 3.          2.          1.          0.58009372  0.36197922 -1.67642121
+  0.71939908 -1.29728649 -1.06030022  1.76702438] ,  7.090582842637813
+Predicted value at evaluated data point (after learning)        [ 3.          2.          1.          0.58009372  0.36197922 -1.67642121
+  0.71939908 -1.29728649 -1.06030022  1.76702438] ,  7.090445484641729
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 2.36298368  1.93659619  0.8108602   0.63503588 -0.12103056 -1.05579414
+  0.42391672 -0.31943965 -1.32129931  1.14268691] ,  -18.669719868047313
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.63503588 -0.12103056 -1.05579414
+  0.42391672 -0.31943965 -1.32129931  1.14268691] ,  -13.98859857390504
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.6306265  -0.2105706  -1.07300984
+  0.3851545  -0.26627925 -0.93179933  1.19839052] ,  -6.370736218793514
+
+
+ MVDONE iteration:  50
+Time spent training the model:				  0.0014798641204833984
+Time spent finding the minimum of the model:  0.2516040802001953
+Total computation time for this iteration:	 0.2537353038787842
+Current time:  1584723190.3118439
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.6306265  -0.2105706  -1.07300984
+  0.3851545  -0.26627925 -0.93179933  1.19839052] ,  1.601463833519114
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.6306265  -0.2105706  -1.07300984
+  0.3851545  -0.26627925 -0.93179933  1.19839052] ,  1.6004423121616256
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 2.91776299  2.30286417  0.28226561  0.80495427  0.04001708 -0.75407012
+ -0.08769825 -0.4244972  -1.5207497   1.18360906] ,  -37.0189480350219
+Best rounded	 point according to the model and predicted value: [ 3.          2.          0.          0.80495427  0.04001708 -0.75407012
+ -0.08769825 -0.4244972  -1.5207497   1.18360906] ,  -22.803078764143947
+Suggested next data point and predicted value:				    [ 3.          2.          0.          1.00637618  0.09765627 -0.63434505
+ -0.03931951 -0.29270832 -1.46389217  0.93797341] ,  -50.854816009719116
+
+
+ MVDONE iteration:  51
+Time spent training the model:				  0.0014696121215820312
+Time spent finding the minimum of the model:  0.22217822074890137
+Total computation time for this iteration:	 0.22428607940673828
+Current time:  1584723190.5454698
+Evaluated data point and evaluation:						    [ 3.          2.          0.          1.00637618  0.09765627 -0.63434505
+ -0.03931951 -0.29270832 -1.46389217  0.93797341] ,  6.523941684747614
+Predicted value at evaluated data point (after learning)        [ 3.          2.          0.          1.00637618  0.09765627 -0.63434505
+ -0.03931951 -0.29270832 -1.46389217  0.93797341] ,  6.523941234434813
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 2.00630292  1.99818674  0.99818616  0.75119951 -0.06036992 -0.78056386
+  0.65245235 -0.02641987 -0.62038639  0.7754625 ] ,  0.5339279943771
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.75119951 -0.06036992 -0.78056386
+  0.65245235 -0.02641987 -0.62038639  0.7754625 ] ,  0.587862694252367
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.77478587 -0.24921787 -0.57199425
+  0.6896471   0.05704619 -0.45873191  0.72982756] ,  7.395957747637253
+
+
+ MVDONE iteration:  52
+Time spent training the model:				  0.001474142074584961
+Time spent finding the minimum of the model:  0.1870403289794922
+Total computation time for this iteration:	 0.18915390968322754
+Current time:  1584723190.7438564
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.77478587 -0.24921787 -0.57199425
+  0.6896471   0.05704619 -0.45873191  0.72982756] ,  1.0320734128031432
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.77478587 -0.24921787 -0.57199425
+  0.6896471   0.05704619 -0.45873191  0.72982756] ,  1.0418815273843638
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 1.94875922  1.85567791  1.27020572  0.78787972 -0.20423541 -0.85048809
+  0.51121868 -0.07082849 -1.21969192  1.10655232] ,  -10.913905467365872
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.78787972 -0.20423541 -0.85048809
+  0.51121868 -0.07082849 -1.21969192  1.10655232] ,  -4.43629852795536
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.83147156 -0.39354384 -0.8655064
+  0.51852643 -0.01657217 -1.40497232  1.00817045] ,  -6.510393074810995
+
+
+ MVDONE iteration:  53
+Time spent training the model:				  0.0014660358428955078
+Time spent finding the minimum of the model:  0.18650031089782715
+Total computation time for this iteration:	 0.1886157989501953
+Current time:  1584723190.9417481
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.83147156 -0.39354384 -0.8655064
+  0.51852643 -0.01657217 -1.40497232  1.00817045] ,  2.15788337583367
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.83147156 -0.39354384 -0.8655064
+  0.51852643 -0.01657217 -1.40497232  1.00817045] ,  2.133491372367782
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 1.03452714  4.          4.         -1.36022054 -0.72590267  0.6995593
+ -0.71779984 -2.         -0.45368005  1.42743215] ,  -243.07438822262958
+Best rounded	 point according to the model and predicted value: [ 1.          4.          4.         -1.36022054 -0.72590267  0.6995593
+ -0.71779984 -2.         -0.45368005  1.42743215] ,  -243.22443125877336
+Suggested next data point and predicted value:				    [ 2.          4.          4.         -1.3606785  -0.38333396  0.58463666
+ -0.8431415  -1.85525854 -0.41124926  1.36526853] ,  -213.33869130602366
+
+
+ MVDONE iteration:  54
+Time spent training the model:				  0.0014758110046386719
+Time spent finding the minimum of the model:  0.26861095428466797
+Total computation time for this iteration:	 0.27074694633483887
+Current time:  1584723191.2217517
+Evaluated data point and evaluation:						    [ 2.          4.          4.         -1.3606785  -0.38333396  0.58463666
+ -0.8431415  -1.85525854 -0.41124926  1.36526853] ,  22.14401724199104
+Predicted value at evaluated data point (after learning)        [ 2.          4.          4.         -1.3606785  -0.38333396  0.58463666
+ -0.8431415  -1.85525854 -0.41124926  1.36526853] ,  22.14401661386529
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 1.12739741  2.12738581  1.03599008  0.24022523 -0.45673556 -0.73893044
+  0.08992753 -0.06558871 -0.97663392  1.0474142 ] ,  -8.226362881472667
+Best rounded	 point according to the model and predicted value: [ 1.          2.          1.          0.24022523 -0.45673556 -0.73893044
+  0.08992753 -0.06558871 -0.97663392  1.0474142 ] ,  -5.055848204337215
+Suggested next data point and predicted value:				    [ 1.          2.          4.          0.19445719 -0.42439987 -0.71268236
+  0.22769468  0.04172293 -1.2028568   0.98706804] ,  -226.3876460438138
+
+
+ MVDONE iteration:  55
+Time spent training the model:				  0.0014581680297851562
+Time spent finding the minimum of the model:  0.18686151504516602
+Total computation time for this iteration:	 0.18897056579589844
+Current time:  1584723191.4199297
+Evaluated data point and evaluation:						    [ 1.          2.          4.          0.19445719 -0.42439987 -0.71268236
+  0.22769468  0.04172293 -1.2028568   0.98706804] ,  7.471255483878057
+Predicted value at evaluated data point (after learning)        [ 1.          2.          4.          0.19445719 -0.42439987 -0.71268236
+  0.22769468  0.04172293 -1.2028568   0.98706804] ,  7.471253198220765
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 3.00065713  2.99990092  1.09832353  0.23972771 -0.55490877 -0.4683469
+ -0.01019471  0.12281217 -1.02021592  0.76740331] ,  -206.11386994107997
+Best rounded	 point according to the model and predicted value: [ 3.          3.          1.          0.23972771 -0.55490877 -0.4683469
+ -0.01019471  0.12281217 -1.02021592  0.76740331] ,  -204.73343464741828
+Suggested next data point and predicted value:				    [ 3.00000000e+00  4.00000000e+00  1.00000000e+00  1.49025250e-01
+ -6.11991395e-01 -3.47783620e-01 -3.44883976e-02 -2.83214343e-03
+ -1.10093520e+00  9.49893172e-01] ,  -75.71071244089187
+
+
+ MVDONE iteration:  56
+Time spent training the model:				  0.001474618911743164
+Time spent finding the minimum of the model:  0.18784284591674805
+Total computation time for this iteration:	 0.1899566650390625
+Current time:  1584723191.6218266
+Evaluated data point and evaluation:						    [ 3.00000000e+00  4.00000000e+00  1.00000000e+00  1.49025250e-01
+ -6.11991395e-01 -3.47783620e-01 -3.44883976e-02 -2.83214343e-03
+ -1.10093520e+00  9.49893172e-01] ,  9.706461628455417
+Predicted value at evaluated data point (after learning)        [ 3.00000000e+00  4.00000000e+00  1.00000000e+00  1.49025250e-01
+ -6.11991395e-01 -3.47783620e-01 -3.44883976e-02 -2.83214343e-03
+ -1.10093520e+00  9.49893172e-01] ,  9.706461328403199
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 2.99930604  2.99957533  1.11359163  0.24181831 -0.55584471 -0.46396091
+ -0.01051986  0.12641378 -1.02004839  0.7622595 ] ,  -205.0512562685821
+Best rounded	 point according to the model and predicted value: [ 3.          3.          1.          0.24181831 -0.55584471 -0.46396091
+ -0.01051986  0.12641378 -1.02004839  0.7622595 ] ,  -203.40152761377067
+Suggested next data point and predicted value:				    [ 3.          3.          1.          0.34441973 -0.38113931 -0.34846776
+  0.09516266  0.24519717 -0.94959099  0.93854793] ,  -201.09662385392548
+
+
+ MVDONE iteration:  57
+Time spent training the model:				  0.0014576911926269531
+Time spent finding the minimum of the model:  0.2246708869934082
+Total computation time for this iteration:	 0.22677826881408691
+Current time:  1584723191.8581474
+Evaluated data point and evaluation:						    [ 3.          3.          1.          0.34441973 -0.38113931 -0.34846776
+  0.09516266  0.24519717 -0.94959099  0.93854793] ,  2.0447010290393894
+Predicted value at evaluated data point (after learning)        [ 3.          3.          1.          0.34441973 -0.38113931 -0.34846776
+  0.09516266  0.24519717 -0.94959099  0.93854793] ,  2.0446631378051467
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 1.63351404  2.18962469  1.13689381 -0.02723071 -0.63936619 -0.72333306
+ -0.1779507  -0.10487551 -1.14786267  1.1843675 ] ,  -18.045743636385044
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.         -0.02723071 -0.63936619 -0.72333306
+ -0.1779507  -0.10487551 -1.14786267  1.1843675 ] ,  -9.028767393834773
+Suggested next data point and predicted value:				    [ 2.          2.          3.          0.03226231 -0.55000693 -0.87720337
+ -0.27409115 -0.21146273 -1.19134638  1.18436119] ,  -16.479545276757033
+
+
+ MVDONE iteration:  58
+Time spent training the model:				  0.0014691352844238281
+Time spent finding the minimum of the model:  0.18773841857910156
+Total computation time for this iteration:	 0.1898648738861084
+Current time:  1584723192.0573335
+Evaluated data point and evaluation:						    [ 2.          2.          3.          0.03226231 -0.55000693 -0.87720337
+ -0.27409115 -0.21146273 -1.19134638  1.18436119] ,  2.1845614117930863
+Predicted value at evaluated data point (after learning)        [ 2.          2.          3.          0.03226231 -0.55000693 -0.87720337
+ -0.27409115 -0.21146273 -1.19134638  1.18436119] ,  2.1845401093958987
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 1.68332827e+00  2.14719039e+00  1.01663759e+00  1.68927933e-01
+ -5.25859874e-01 -7.25091966e-01 -3.24249572e-04 -6.41483331e-02
+ -1.03523192e+00  1.08882998e+00] ,  -11.256052090607032
+Best rounded	 point according to the model and predicted value: [ 2.00000000e+00  2.00000000e+00  1.00000000e+00  1.68927933e-01
+ -5.25859874e-01 -7.25091966e-01 -3.24249572e-04 -6.41483331e-02
+ -1.03523192e+00  1.08882998e+00] ,  -11.77778579806958
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.17044097 -0.55927124 -0.78179747
+ -0.00488513 -0.18801839 -1.15578874  0.96974007] ,  -12.549022284758188
+
+
+ MVDONE iteration:  59
+Time spent training the model:				  0.0014624595642089844
+Time spent finding the minimum of the model:  0.19569039344787598
+Total computation time for this iteration:	 0.1978144645690918
+Current time:  1584723192.2644055
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.17044097 -0.55927124 -0.78179747
+ -0.00488513 -0.18801839 -1.15578874  0.96974007] ,  1.7979362890569472
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.17044097 -0.55927124 -0.78179747
+ -0.00488513 -0.18801839 -1.15578874  0.96974007] ,  1.402565130896889
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 4.          3.35362053  2.8392685  -2.         -0.4277524   1.50646153
+  2.         -2.         -0.57106683 -2.        ] ,  -378.34640855290934
+Best rounded	 point according to the model and predicted value: [ 4.          3.          3.         -2.         -0.4277524   1.50646153
+  2.         -2.         -0.57106683 -2.        ] ,  -367.76038895182205
+Suggested next data point and predicted value:				    [ 3.          3.          3.         -1.83425354 -0.29700749  1.40765439
+  1.98515789 -1.98996449 -0.63889118 -1.98082866] ,  -394.7782644714745
+
+
+ MVDONE iteration:  60
+Time spent training the model:				  0.0014617443084716797
+Time spent finding the minimum of the model:  0.19388294219970703
+Total computation time for this iteration:	 0.19599294662475586
+Current time:  1584723192.469376
+Evaluated data point and evaluation:						    [ 3.          3.          3.         -1.83425354 -0.29700749  1.40765439
+  1.98515789 -1.98996449 -0.63889118 -1.98082866] ,  28.47887328977421
+Predicted value at evaluated data point (after learning)        [ 3.          3.          3.         -1.83425354 -0.29700749  1.40765439
+  1.98515789 -1.98996449 -0.63889118 -1.98082866] ,  28.478852539959426
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 3.58605422  0.58603883  0.34291259  1.79884189  1.2569012   1.05272293
+  1.62681149 -1.45332869 -1.87046365 -1.0707746 ] ,  -61.190213640423195
+Best rounded	 point according to the model and predicted value: [ 4.          1.          0.          1.79884189  1.2569012   1.05272293
+  1.62681149 -1.45332869 -1.87046365 -1.0707746 ] ,  -132.06537067168247
+Suggested next data point and predicted value:				    [ 4.          1.          0.          1.66175846  1.2527042   1.12438226
+  1.74771474 -1.49952061 -1.97536292 -0.993479  ] ,  -126.55731333467122
+
+
+ MVDONE iteration:  61
+Time spent training the model:				  0.0014693737030029297
+Time spent finding the minimum of the model:  0.2209916114807129
+Total computation time for this iteration:	 0.2230980396270752
+Current time:  1584723192.7017999
+Evaluated data point and evaluation:						    [ 4.          1.          0.          1.66175846  1.2527042   1.12438226
+  1.74771474 -1.49952061 -1.97536292 -0.993479  ] ,  35.00803350314534
+Predicted value at evaluated data point (after learning)        [ 4.          1.          0.          1.66175846  1.2527042   1.12438226
+  1.74771474 -1.49952061 -1.97536292 -0.993479  ] ,  35.007954933216034
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 3.13679034  1.4452464   0.54961823  1.50165564  0.13977764 -0.28644396
+  1.14227191 -0.78846635 -1.83609946  0.21044037] ,  -48.98130345424553
+Best rounded	 point according to the model and predicted value: [ 3.          1.          1.          1.50165564  0.13977764 -0.28644396
+  1.14227191 -0.78846635 -1.83609946  0.21044037] ,  6.1552251773373055
+Suggested next data point and predicted value:				    [ 3.          1.          1.          1.3503468  -0.07469979 -0.2109866
+  1.28980033 -0.73590168 -1.80475339  0.27389998] ,  3.07633842512839
+
+
+ MVDONE iteration:  62
+Time spent training the model:				  0.00147247314453125
+Time spent finding the minimum of the model:  0.1863110065460205
+Total computation time for this iteration:	 0.1884169578552246
+Current time:  1584723192.900036
+Evaluated data point and evaluation:						    [ 3.          1.          1.          1.3503468  -0.07469979 -0.2109866
+  1.28980033 -0.73590168 -1.80475339  0.27389998] ,  11.234251094895034
+Predicted value at evaluated data point (after learning)        [ 3.          1.          1.          1.3503468  -0.07469979 -0.2109866
+  1.28980033 -0.73590168 -1.80475339  0.27389998] ,  11.142034503347512
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 3.16247902  1.9320549   0.94556771  0.9916213   0.17854072 -0.25626319
+  0.77693644 -0.89269485 -1.47278674  0.32414001] ,  -60.19948515281213
+Best rounded	 point according to the model and predicted value: [ 3.          2.          1.          0.9916213   0.17854072 -0.25626319
+  0.77693644 -0.89269485 -1.47278674  0.32414001] ,  -55.62042223303254
+Suggested next data point and predicted value:				    [ 3.          2.          1.          1.04430243 -0.09289551 -0.30331958
+  0.8603888  -0.77065531 -1.57585312  0.37974861] ,  -33.25082228402743
+
+
+ MVDONE iteration:  63
+Time spent training the model:				  0.0014743804931640625
+Time spent finding the minimum of the model:  0.18662190437316895
+Total computation time for this iteration:	 0.18883681297302246
+Current time:  1584723193.097926
+Evaluated data point and evaluation:						    [ 3.          2.          1.          1.04430243 -0.09289551 -0.30331958
+  0.8603888  -0.77065531 -1.57585312  0.37974861] ,  5.227624109113161
+Predicted value at evaluated data point (after learning)        [ 3.          2.          1.          1.04430243 -0.09289551 -0.30331958
+  0.8603888  -0.77065531 -1.57585312  0.37974861] ,  5.1676099689613055
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 3.76801108  1.639435    3.58775615  1.64641361  1.23651805 -1.33916781
+  1.0605969  -0.90098492 -2.          1.21149715] ,  -122.05909575297514
+Best rounded	 point according to the model and predicted value: [ 4.          2.          4.          1.64641361  1.23651805 -1.33916781
+  1.0605969  -0.90098492 -2.          1.21149715] ,  -94.17116518726033
+Suggested next data point and predicted value:				    [ 4.          4.          4.          1.57624958  0.91394817 -1.1709178
+  1.10483391 -0.76188684 -1.81963998  0.92607955] ,  -141.74801496722552
+
+
+ MVDONE iteration:  64
+Time spent training the model:				  0.0014834403991699219
+Time spent finding the minimum of the model:  0.20398783683776855
+Total computation time for this iteration:	 0.20618033409118652
+Current time:  1584723193.3132052
+Evaluated data point and evaluation:						    [ 4.          4.          4.          1.57624958  0.91394817 -1.1709178
+  1.10483391 -0.76188684 -1.81963998  0.92607955] ,  12.00255148041275
+Predicted value at evaluated data point (after learning)        [ 4.          4.          4.          1.57624958  0.91394817 -1.1709178
+  1.10483391 -0.76188684 -1.81963998  0.92607955] ,  12.00254919981478
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 3.40393619  3.33055035  0.          2.         -2.          2.
+ -2.          2.         -2.         -2.        ] ,  -879.4006373188984
+Best rounded	 point according to the model and predicted value: [ 3.  3.  0.  2. -2.  2. -2.  2. -2. -2.] ,  -896.1902935652654
+Suggested next data point and predicted value:				    [ 3.          3.          0.          1.82836266 -1.84880604  1.95631366
+ -1.64135825  1.84785616 -1.90927309 -1.9015018 ] ,  -829.9595156966911
+
+
+ MVDONE iteration:  65
+Time spent training the model:				  0.0014667510986328125
+Time spent finding the minimum of the model:  0.22399401664733887
+Total computation time for this iteration:	 0.2260901927947998
+Current time:  1584723193.5483775
+Evaluated data point and evaluation:						    [ 3.          3.          0.          1.82836266 -1.84880604  1.95631366
+ -1.64135825  1.84785616 -1.90927309 -1.9015018 ] ,  44.295614498214576
+Predicted value at evaluated data point (after learning)        [ 3.          3.          0.          1.82836266 -1.84880604  1.95631366
+ -1.64135825  1.84785616 -1.90927309 -1.9015018 ] ,  44.29560377926767
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 2.24957305  1.92303486  1.33275407  0.91982928  0.04739192 -0.82673377
+  0.63028555 -0.0816     -0.83022391  0.79581146] ,  -2.820501989074968
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.91982928  0.04739192 -0.82673377
+  0.63028555 -0.0816     -0.83022391  0.79581146] ,  -0.7563776047248361
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.91931646 -0.1654014  -0.98328732
+  0.75773437  0.16034433 -0.70622158  0.62070343] ,  1.0423304085774774
+
+
+ MVDONE iteration:  66
+Time spent training the model:				  0.0014529228210449219
+Time spent finding the minimum of the model:  0.24921894073486328
+Total computation time for this iteration:	 0.2516179084777832
+Current time:  1584723193.8096004
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.91931646 -0.1654014  -0.98328732
+  0.75773437  0.16034433 -0.70622158  0.62070343] ,  1.3214723669781456
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.91931646 -0.1654014  -0.98328732
+  0.75773437  0.16034433 -0.70622158  0.62070343] ,  1.2096983541727617
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 2.24146966  1.92721626  1.27686898  0.91115292  0.041771   -0.82233263
+  0.63431969 -0.08051603 -0.81346474  0.80320755] ,  -2.593510556722878
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.91115292  0.041771   -0.82233263
+  0.63431969 -0.08051603 -0.81346474  0.80320755] ,  -0.7416179938854448
+Suggested next data point and predicted value:				    [ 3.          2.          1.          1.0477207   0.05930736 -0.78258708
+  0.80815157 -0.08143403 -0.81342033  0.82432738] ,  34.17744382046365
+
+
+ MVDONE iteration:  67
+Time spent training the model:				  0.0016417503356933594
+Time spent finding the minimum of the model:  0.2843639850616455
+Total computation time for this iteration:	 0.2867913246154785
+Current time:  1584723194.1059117
+Evaluated data point and evaluation:						    [ 3.          2.          1.          1.0477207   0.05930736 -0.78258708
+  0.80815157 -0.08143403 -0.81342033  0.82432738] ,  1.7036457056007723
+Predicted value at evaluated data point (after learning)        [ 3.          2.          1.          1.0477207   0.05930736 -0.78258708
+  0.80815157 -0.08143403 -0.81342033  0.82432738] ,  1.85898428029886
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 4.00000000e+00  0.00000000e+00  1.22567511e-03  2.00000000e+00
+ -7.20425916e-01  6.18140679e-01 -5.94202526e-01  8.48942187e-01
+ -2.00000000e+00  1.90311418e-01] ,  -1336.2335399698525
+Best rounded	 point according to the model and predicted value: [ 4.          0.          0.          2.         -0.72042592  0.61814068
+ -0.59420253  0.84894219 -2.          0.19031142] ,  -1336.2657874097633
+Suggested next data point and predicted value:				    [ 4.          0.          0.          1.8673615  -0.57507979  0.48611202
+ -0.5112316   0.81116997 -1.95342692 -0.0068456 ] ,  -1314.4896684932996
+
+
+ MVDONE iteration:  68
+Time spent training the model:				  0.0014629364013671875
+Time spent finding the minimum of the model:  0.2234477996826172
+Total computation time for this iteration:	 0.225555419921875
+Current time:  1584723194.3411384
+Evaluated data point and evaluation:						    [ 4.          0.          0.          1.8673615  -0.57507979  0.48611202
+ -0.5112316   0.81116997 -1.95342692 -0.0068456 ] ,  38.56744779840845
+Predicted value at evaluated data point (after learning)        [ 4.          0.          0.          1.8673615  -0.57507979  0.48611202
+ -0.5112316   0.81116997 -1.95342692 -0.0068456 ] ,  38.567382311292626
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 3.82207423  0.82608331  0.13731186  1.95273464 -0.48003877  0.61388513
+ -0.38606133  0.84933171 -1.99765526  0.14882794] ,  -696.2831568801573
+Best rounded	 point according to the model and predicted value: [ 4.          1.          0.          1.95273464 -0.48003877  0.61388513
+ -0.38606133  0.84933171 -1.99765526  0.14882794] ,  -699.4979151992217
+Suggested next data point and predicted value:				    [ 4.          1.          0.          1.93492888 -0.52474853  0.45647432
+ -0.42994957  0.85480732 -1.95488711  0.05437603] ,  -696.8289884537064
+
+
+ MVDONE iteration:  69
+Time spent training the model:				  0.0014650821685791016
+Time spent finding the minimum of the model:  0.18601489067077637
+Total computation time for this iteration:	 0.18829059600830078
+Current time:  1584723194.5396304
+Evaluated data point and evaluation:						    [ 4.          1.          0.          1.93492888 -0.52474853  0.45647432
+ -0.42994957  0.85480732 -1.95488711  0.05437603] ,  26.354172059437925
+Predicted value at evaluated data point (after learning)        [ 4.          1.          0.          1.93492888 -0.52474853  0.45647432
+ -0.42994957  0.85480732 -1.95488711  0.05437603] ,  26.35395269848259
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 0.99412803  4.          0.          1.33383965  1.55126328  0.59294207
+  1.75428807 -1.24256696 -2.          2.        ] ,  -426.26473083301573
+Best rounded	 point according to the model and predicted value: [ 1.          4.          0.          1.33383965  1.55126328  0.59294207
+  1.75428807 -1.24256696 -2.          2.        ] ,  -425.8445898133506
+Suggested next data point and predicted value:				    [ 1.          4.          0.          1.39536315  1.57322401  0.61717336
+  1.74312563 -1.23612763 -1.96403926  1.95477281] ,  -424.9092615410259
+
+
+ MVDONE iteration:  70
+Time spent training the model:				  0.001459360122680664
+Time spent finding the minimum of the model:  0.18615961074829102
+Total computation time for this iteration:	 0.18823981285095215
+Current time:  1584723194.737159
+Evaluated data point and evaluation:						    [ 1.          4.          0.          1.39536315  1.57322401  0.61717336
+  1.74312563 -1.23612763 -1.96403926  1.95477281] ,  27.869264014474325
+Predicted value at evaluated data point (after learning)        [ 1.          4.          0.          1.39536315  1.57322401  0.61717336
+  1.74312563 -1.23612763 -1.96403926  1.95477281] ,  27.86926281100582
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 2.1559451   2.99967722  0.          1.02253695  0.93095805  0.20750342
+  0.37635773 -0.65148427 -2.          1.54074125] ,  -257.731068126164
+Best rounded	 point according to the model and predicted value: [ 2.          3.          0.          1.02253695  0.93095805  0.20750342
+  0.37635773 -0.65148427 -2.          1.54074125] ,  -260.1525204614471
+Suggested next data point and predicted value:				    [ 2.          3.          0.          1.01371156  0.95121982  0.1319035
+  0.44157607 -0.83463911 -1.92973876  1.27066785] ,  -254.02343168702848
+
+
+ MVDONE iteration:  71
+Time spent training the model:				  0.0014581680297851562
+Time spent finding the minimum of the model:  0.24709653854370117
+Total computation time for this iteration:	 0.2492520809173584
+Current time:  1584723194.9956164
+Evaluated data point and evaluation:						    [ 2.          3.          0.          1.01371156  0.95121982  0.1319035
+  0.44157607 -0.83463911 -1.92973876  1.27066785] ,  11.302489562422396
+Predicted value at evaluated data point (after learning)        [ 2.          3.          0.          1.01371156  0.95121982  0.1319035
+  0.44157607 -0.83463911 -1.92973876  1.27066785] ,  11.302397487863644
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 3.16173189  0.88276046  0.31435477  1.67819366  0.04042606  0.29981738
+  0.25558305  0.1173273  -1.89097395  0.6308249 ] ,  -234.00516312861896
+Best rounded	 point according to the model and predicted value: [ 3.          1.          0.          1.67819366  0.04042606  0.29981738
+  0.25558305  0.1173273  -1.89097395  0.6308249 ] ,  -195.8478190500354
+Suggested next data point and predicted value:				    [ 3.          1.          0.          1.86587288  0.13135651 -0.0180694
+  0.39949362  0.00663426 -1.60246741  0.79167992] ,  -207.5076668299444
+
+
+ MVDONE iteration:  72
+Time spent training the model:				  0.0014796257019042969
+Time spent finding the minimum of the model:  0.23903155326843262
+Total computation time for this iteration:	 0.24113941192626953
+Current time:  1584723195.246073
+Evaluated data point and evaluation:						    [ 3.          1.          0.          1.86587288  0.13135651 -0.0180694
+  0.39949362  0.00663426 -1.60246741  0.79167992] ,  11.640477841645028
+Predicted value at evaluated data point (after learning)        [ 3.          1.          0.          1.86587288  0.13135651 -0.0180694
+  0.39949362  0.00663426 -1.60246741  0.79167992] ,  11.639861671492698
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 2.23469525  1.88780046  0.84462769  0.94100566  0.0228664  -0.70136755
+  0.63996516 -0.01598289 -0.82837951  0.89549549] ,  -2.6883210788348535
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.94100566  0.0228664  -0.70136755
+  0.63996516 -0.01598289 -0.82837951  0.89549549] ,  -1.9150942391805188
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.94388805 -0.09675382 -0.60771311
+  0.31770432 -0.16926261 -0.61243075  0.79558967] ,  1.2955080360927251
+
+
+ MVDONE iteration:  73
+Time spent training the model:				  0.001478433609008789
+Time spent finding the minimum of the model:  0.23079442977905273
+Total computation time for this iteration:	 0.23290514945983887
+Current time:  1584723195.4881573
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.94388805 -0.09675382 -0.60771311
+  0.31770432 -0.16926261 -0.61243075  0.79558967] ,  1.0550552926104135
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.94388805 -0.09675382 -0.60771311
+  0.31770432 -0.16926261 -0.61243075  0.79558967] ,  1.1631974213221614
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 2.24138277  1.8894425   0.84247207  0.94260182  0.02726398 -0.69655559
+  0.63591562 -0.01849609 -0.83058654  0.89349785] ,  -2.834336320986985
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.94260182  0.02726398 -0.69655559
+  0.63591562 -0.01849609 -0.83058654  0.89349785] ,  -2.0269721614137417
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.9364276  -0.1796356  -0.77085482
+  0.25693724  0.08234622 -0.74453452  0.98231047] ,  17.078199865682524
+
+
+ MVDONE iteration:  74
+Time spent training the model:				  0.001470327377319336
+Time spent finding the minimum of the model:  0.26886701583862305
+Total computation time for this iteration:	 0.27097320556640625
+Current time:  1584723195.7696335
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.9364276  -0.1796356  -0.77085482
+  0.25693724  0.08234622 -0.74453452  0.98231047] ,  1.2588897032420139
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.9364276  -0.1796356  -0.77085482
+  0.25693724  0.08234622 -0.74453452  0.98231047] ,  2.572615392583491
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 1.96872119  2.01320703  0.97224472  0.66627106 -0.0760025  -0.83256339
+  0.73250363 -0.00921011 -0.63415447  0.92562412] ,  -1.4773856223567527
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.66627106 -0.0760025  -0.83256339
+  0.73250363 -0.00921011 -0.63415447  0.92562412] ,  -0.7535992286089535
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.64147023 -0.038842   -1.05924211
+  0.80435614 -0.05304018 -0.69725164  0.68088766] ,  1.9167586830316123
+
+
+ MVDONE iteration:  75
+Time spent training the model:				  0.0014758110046386719
+Time spent finding the minimum of the model:  0.18695640563964844
+Total computation time for this iteration:	 0.18906807899475098
+Current time:  1584723195.9678783
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.64147023 -0.038842   -1.05924211
+  0.80435614 -0.05304018 -0.69725164  0.68088766] ,  1.2434122986383187
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.64147023 -0.038842   -1.05924211
+  0.80435614 -0.05304018 -0.69725164  0.68088766] ,  1.411953067056766
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 1.99278351  2.03076785  0.99841836  0.67580016 -0.0585425  -0.82410018
+  0.71200321 -0.02624261 -0.62385989  0.89747932] ,  -1.9304636074136265
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.67580016 -0.0585425  -0.82410018
+  0.71200321 -0.02624261 -0.62385989  0.89747932] ,  -1.9186980735896721
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.98186851  0.23208691 -0.95724971
+  0.49081213 -0.03830355 -0.69754022  0.88206444] ,  5.584147377600204
+
+
+ MVDONE iteration:  76
+Time spent training the model:				  0.001459360122680664
+Time spent finding the minimum of the model:  0.2070448398590088
+Total computation time for this iteration:	 0.20915651321411133
+Current time:  1584723196.187452
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.98186851  0.23208691 -0.95724971
+  0.49081213 -0.03830355 -0.69754022  0.88206444] ,  1.2029735866728668
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.98186851  0.23208691 -0.95724971
+  0.49081213 -0.03830355 -0.69754022  0.88206444] ,  1.8964893239933334
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 2.01089625e+00  2.02234978e+00  7.15704334e-01  7.62657211e-01
+ -6.71993414e-02 -7.78921471e-01  7.14242333e-01 -5.76313791e-04
+ -7.02884024e-01  9.55052860e-01] ,  -2.270158587737999
+Best rounded	 point according to the model and predicted value: [ 2.00000000e+00  2.00000000e+00  1.00000000e+00  7.62657211e-01
+ -6.71993414e-02 -7.78921471e-01  7.14242333e-01 -5.76313791e-04
+ -7.02884024e-01  9.55052860e-01] ,  -1.142379365762535
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.85183763 -0.23005681 -0.63520398
+  0.77138223  0.0750587  -0.73989166  1.03494089] ,  -0.3887012113657118
+
+
+ MVDONE iteration:  77
+Time spent training the model:				  0.0014760494232177734
+Time spent finding the minimum of the model:  0.1866016387939453
+Total computation time for this iteration:	 0.18873143196105957
+Current time:  1584723196.3874185
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.85183763 -0.23005681 -0.63520398
+  0.77138223  0.0750587  -0.73989166  1.03494089] ,  1.2498106511618339
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.85183763 -0.23005681 -0.63520398
+  0.77138223  0.0750587  -0.73989166  1.03494089] ,  0.3414542615748708
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 1.96642541  2.04046324  0.57115197  0.72671051 -0.1074369  -0.76477846
+  0.71995975  0.02826235 -0.7515639   1.01728629] ,  -3.5235164343976066
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.72671051 -0.1074369  -0.76477846
+  0.71995975  0.02826235 -0.7515639   1.01728629] ,  -0.4406723320213164
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.55289903 -0.26233892 -0.53607952
+  0.93044694  0.0863629  -0.72126125  1.03017015] ,  0.8969790204082528
+
+
+ MVDONE iteration:  78
+Time spent training the model:				  0.0014748573303222656
+Time spent finding the minimum of the model:  0.1965470314025879
+Total computation time for this iteration:	 0.19866061210632324
+Current time:  1584723196.596595
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.55289903 -0.26233892 -0.53607952
+  0.93044694  0.0863629  -0.72126125  1.03017015] ,  1.2800184702272475
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.55289903 -0.26233892 -0.53607952
+  0.93044694  0.0863629  -0.72126125  1.03017015] ,  1.1135595768028654
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 1.95724357  2.03819066  0.5874428   0.72048122 -0.11189054 -0.77562103
+  0.71748399  0.02731243 -0.74879529  1.01529956] ,  -3.6446987741973054
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.72048122 -0.11189054 -0.77562103
+  0.71748399  0.02731243 -0.74879529  1.01529956] ,  -0.3522993137237016
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.71865031 -0.04844593 -0.5922033
+  0.59400162 -0.08163185 -0.80147249  1.09128737] ,  -1.7537570526275186
+
+
+ MVDONE iteration:  79
+Time spent training the model:				  0.0014617443084716797
+Time spent finding the minimum of the model:  0.18700218200683594
+Total computation time for this iteration:	 0.18915653228759766
+Current time:  1584723196.795866
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.71865031 -0.04844593 -0.5922033
+  0.59400162 -0.08163185 -0.80147249  1.09128737] ,  0.9990936322963417
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.71865031 -0.04844593 -0.5922033
+  0.59400162 -0.08163185 -0.80147249  1.09128737] ,  -0.37264123041759056
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 3.23510924  1.93381698  0.          0.38458747 -0.85638755  1.04705094
+  1.63306065 -0.01427294 -2.          1.9444637 ] ,  -35.40687997250365
+Best rounded	 point according to the model and predicted value: [ 3.          2.          0.          0.38458747 -0.85638755  1.04705094
+  1.63306065 -0.01427294 -2.          1.9444637 ] ,  -30.215517184227686
+Suggested next data point and predicted value:				    [ 3.          2.          0.          0.21439517 -0.87000293  1.00732001
+  1.67514919  0.03120197 -1.9669547   1.91671737] ,  -33.32975327104454
+
+
+ MVDONE iteration:  80
+Time spent training the model:				  0.0014772415161132812
+Time spent finding the minimum of the model:  0.15988397598266602
+Total computation time for this iteration:	 0.1620006561279297
+Current time:  1584723196.9670603
+Evaluated data point and evaluation:						    [ 3.          2.          0.          0.21439517 -0.87000293  1.00732001
+  1.67514919  0.03120197 -1.9669547   1.91671737] ,  12.098608227272972
+Predicted value at evaluated data point (after learning)        [ 3.          2.          0.          0.21439517 -0.87000293  1.00732001
+  1.67514919  0.03120197 -1.9669547   1.91671737] ,  12.096920349934088
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.802705839924652
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.8027058399246165
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.8071367  -0.05417088 -0.87949667
+  0.82720311  0.10941593 -0.6566468   0.74557685] ,  1.628867375102823
+
+
+ MVDONE iteration:  81
+Time spent training the model:				  0.0014564990997314453
+Time spent finding the minimum of the model:  0.18670225143432617
+Total computation time for this iteration:	 0.1887831687927246
+Current time:  1584723197.1656053
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.8071367  -0.05417088 -0.87949667
+  0.82720311  0.10941593 -0.6566468   0.74557685] ,  1.1118404528067742
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.8071367  -0.05417088 -0.87949667
+  0.82720311  0.10941593 -0.6566468   0.74557685] ,  1.5137189462590346
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.6866026173335165
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.6866026173335165
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.76394318 -0.28185774 -0.90172667
+  0.75627496  0.05325268 -0.4116144   0.7625195 ] ,  2.2324288047040275
+
+
+ MVDONE iteration:  82
+Time spent training the model:				  0.0014495849609375
+Time spent finding the minimum of the model:  0.18650388717651367
+Total computation time for this iteration:	 0.18857622146606445
+Current time:  1584723197.3633525
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.76394318 -0.28185774 -0.90172667
+  0.75627496  0.05325268 -0.4116144   0.7625195 ] ,  1.235299435527569
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.76394318 -0.28185774 -0.90172667
+  0.75627496  0.05325268 -0.4116144   0.7625195 ] ,  1.974026973244536
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.9812503041734963
+Best data point according to the model and predicted value:	    [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.5290921370652004
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.74842133 -0.06377303 -0.77859777
+  0.6524467  -0.0231877  -0.6140884   0.77198275] ,  0.5290921370652004
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.75368468 -0.07408083 -0.84930956
+  0.43434135 -0.04315678 -0.63866415  0.56723739] ,  1.4912407950599285
+
+
+ MVDONE iteration:  83
+Time spent training the model:				  0.001451253890991211
+Time spent finding the minimum of the model:  0.18570828437805176
+Total computation time for this iteration:	 0.18781256675720215
+Current time:  1584723197.560167
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.75368468 -0.07408083 -0.84930956
+  0.43434135 -0.04315678 -0.63866415  0.56723739] ,  0.974236610113536
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.75368468 -0.07408083 -0.84930956
+  0.43434135 -0.04315678 -0.63866415  0.56723739] ,  1.3780198867006561
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.75368468 -0.07408083 -0.84930956
+  0.43434135 -0.04315678 -0.63866415  0.56723739] ,  0.974236610113536
+Best data point according to the model and predicted value:	    [ 2.          2.          1.          0.75368468 -0.07408083 -0.84930956
+  0.43434135 -0.04315678 -0.63866415  0.56723739] ,  1.3780198867006561
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.75368468 -0.07408083 -0.84930956
+  0.43434135 -0.04315678 -0.63866415  0.56723739] ,  1.3780198867006561
+Suggested next data point and predicted value:				    [ 2.          3.          1.          0.80093207 -0.11696575 -0.96488419
+  0.48284788 -0.00453575 -0.53208516  0.7388566 ] ,  3.070299986042933
+
+
+ MVDONE iteration:  84
+Time spent training the model:				  0.0014638900756835938
+Time spent finding the minimum of the model:  0.18649911880493164
+Total computation time for this iteration:	 0.18860077857971191
+Current time:  1584723197.7578385
+Evaluated data point and evaluation:						    [ 2.          3.          1.          0.80093207 -0.11696575 -0.96488419
+  0.48284788 -0.00453575 -0.53208516  0.7388566 ] ,  2.4861214462836365
+Predicted value at evaluated data point (after learning)        [ 2.          3.          1.          0.80093207 -0.11696575 -0.96488419
+  0.48284788 -0.00453575 -0.53208516  0.7388566 ] ,  2.618066719835676
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.75368468 -0.07408083 -0.84930956
+  0.43434135 -0.04315678 -0.63866415  0.56723739] ,  0.974236610113536
+Best data point according to the model and predicted value:	    [ 2.          2.          1.          0.75368468 -0.07408083 -0.84930956
+  0.43434135 -0.04315678 -0.63866415  0.56723739] ,  1.3442411811400277
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.75368468 -0.07408083 -0.84930956
+  0.43434135 -0.04315678 -0.63866415  0.56723739] ,  1.3442411811400277
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  1.813808974712817
+
+
+ MVDONE iteration:  85
+Time spent training the model:				  0.0014700889587402344
+Time spent finding the minimum of the model:  0.18570923805236816
+Total computation time for this iteration:	 0.1878345012664795
+Current time:  1584723197.9549348
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  0.972810314752488
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  1.5440560207050567
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  0.972810314752488
+Best data point according to the model and predicted value:	    [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  1.5440560207050567
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  1.5440560207050567
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.53790577 -0.11550554 -0.83847494
+  0.52724596 -0.29213053 -0.50170144  0.27036954] ,  2.4569856700589234
+
+
+ MVDONE iteration:  86
+Time spent training the model:				  0.0014815330505371094
+Time spent finding the minimum of the model:  0.18691301345825195
+Total computation time for this iteration:	 0.18904328346252441
+Current time:  1584723198.153151
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.53790577 -0.11550554 -0.83847494
+  0.52724596 -0.29213053 -0.50170144  0.27036954] ,  0.9845974840029239
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.53790577 -0.11550554 -0.83847494
+  0.52724596 -0.29213053 -0.50170144  0.27036954] ,  1.8228504602472722
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  0.972810314752488
+Best data point according to the model and predicted value:	    [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  1.1560966443044371
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  1.1560966443044371
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.44744387 -0.25854135 -0.8715087
+  0.6761959  -0.22415476 -0.2690028   0.23911225] ,  2.6789477823326866
+
+
+ MVDONE iteration:  87
+Time spent training the model:				  0.0014767646789550781
+Time spent finding the minimum of the model:  0.18980979919433594
+Total computation time for this iteration:	 0.19191837310791016
+Current time:  1584723198.354249
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.44744387 -0.25854135 -0.8715087
+  0.6761959  -0.22415476 -0.2690028   0.23911225] ,  1.0477663897037832
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.44744387 -0.25854135 -0.8715087
+  0.6761959  -0.22415476 -0.2690028   0.23911225] ,  2.0330865541636545
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  0.972810314752488
+Best data point according to the model and predicted value:	    [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  0.9219705496399211
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  0.9219705496399211
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.56390487 -0.27264729 -0.88463113
+  0.41926205 -0.28075946 -0.37914892  0.24676316] ,  1.7715177143717113
+
+
+ MVDONE iteration:  88
+Time spent training the model:				  0.001478433609008789
+Time spent finding the minimum of the model:  0.18551969528198242
+Total computation time for this iteration:	 0.1876537799835205
+Current time:  1584723198.5508866
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.56390487 -0.27264729 -0.88463113
+  0.41926205 -0.28075946 -0.37914892  0.24676316] ,  1.0572799056480555
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.56390487 -0.27264729 -0.88463113
+  0.41926205 -0.28075946 -0.37914892  0.24676316] ,  1.5642464720177056
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  0.972810314752488
+Best data point according to the model and predicted value:	    [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  0.8363482022521271
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  0.8363482022521271
+Suggested next data point and predicted value:				    [ 4.          2.          1.          0.75106254 -0.28990625 -0.87378739
+  0.61005485 -0.16360049 -0.56257957  0.58822706] ,  8.492759660561306
+
+
+ MVDONE iteration:  89
+Time spent training the model:				  0.0014603137969970703
+Time spent finding the minimum of the model:  0.1878361701965332
+Total computation time for this iteration:	 0.18993568420410156
+Current time:  1584723198.7499194
+Evaluated data point and evaluation:						    [ 4.          2.          1.          0.75106254 -0.28990625 -0.87378739
+  0.61005485 -0.16360049 -0.56257957  0.58822706] ,  6.530779478759599
+Predicted value at evaluated data point (after learning)        [ 4.          2.          1.          0.75106254 -0.28990625 -0.87378739
+  0.61005485 -0.16360049 -0.56257957  0.58822706] ,  6.5307869874655164
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  0.972810314752488
+Best data point according to the model and predicted value:	    [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  0.8363363675173456
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.59687468 -0.10754294 -0.8408343
+  0.56767459 -0.20022265 -0.55847736  0.43519597] ,  0.8363363675173456
+Suggested next data point and predicted value:				    [ 2.          2.          1.          0.720009   -0.17872743 -0.61175712
+  0.60060467 -0.17849083 -0.5645955   0.51379442] ,  1.4503552925391716
+
+
+ MVDONE iteration:  90
+Time spent training the model:				  0.0014748573303222656
+Time spent finding the minimum of the model:  0.18619751930236816
+Total computation time for this iteration:	 0.18833518028259277
+Current time:  1584723198.9475253
+Evaluated data point and evaluation:						    [ 2.          2.          1.          0.720009   -0.17872743 -0.61175712
+  0.60060467 -0.17849083 -0.5645955   0.51379442] ,  0.9517191080927176
+Predicted value at evaluated data point (after learning)        [ 2.          2.          1.          0.720009   -0.17872743 -0.61175712
+  0.60060467 -0.17849083 -0.5645955   0.51379442] ,  1.3238975244361573
+Best found data point and evaluation so far:				    [ 2.          2.          1.          0.720009   -0.17872743 -0.61175712
+  0.60060467 -0.17849083 -0.5645955   0.51379442] ,  0.9517191080927176
+Best data point according to the model and predicted value:	    [ 2.          2.          1.          0.720009   -0.17872743 -0.61175712
+  0.60060467 -0.17849083 -0.5645955   0.51379442] ,  1.3238975244361573
+Best rounded	 point according to the model and predicted value: [ 2.          2.          1.          0.720009   -0.17872743 -0.61175712
+  0.60060467 -0.17849083 -0.5645955   0.51379442] ,  1.3238975244361573
+Suggested next data point and predicted value:				    [ 2.          2.          2.          0.67427368 -0.24169623 -0.62242114
+  0.86639468 -0.07489659 -0.45461321  0.48655953] ,  58.982964028437756
+
+
+ MVDONE iteration:  91
+Time spent training the model:				  0.0014650821685791016
+Time spent finding the minimum of the model:  0.18807291984558105
+Total computation time for this iteration:	 0.19021201133728027
+Current time:  1584723199.1468394
+Evaluated data point and evaluation:						    [ 2.          2.          2.          0.67427368 -0.24169623 -0.62242114
+  0.86639468 -0.07489659 -0.45461321  0.48655953] ,  0.9032835403180464
+Predicted value at evaluated data point (after learning)        [ 2.          2.          2.          0.67427368 -0.24169623 -0.62242114
+  0.86639468 -0.07489659 -0.45461321  0.48655953] ,  0.9065188825340567
+Best found data point and evaluation so far:				    [ 2.          2.          2.          0.67427368 -0.24169623 -0.62242114
+  0.86639468 -0.07489659 -0.45461321  0.48655953] ,  0.9032835403180464
+Best data point according to the model and predicted value:	    [ 1.63184240e-03  0.00000000e+00  4.00000000e+00  9.06172502e-01
+ -2.00000000e+00  1.99864193e+00  1.69132810e-01  2.00000000e+00
+ -1.93724354e+00 -1.53036007e+00] ,  -951.4139651834643
+Best rounded	 point according to the model and predicted value: [ 0.          0.          4.          0.9061725  -2.          1.99864193
+  0.16913281  2.         -1.93724354 -1.53036007] ,  -951.4721258896402
+Suggested next data point and predicted value:				    [ 0.          0.          4.          0.99522462 -1.91704532  1.97603002
+  0.15845454  1.81033886 -1.98290491 -1.4907493 ] ,  -936.8429180417539
+
+
+ MVDONE iteration:  92
+Time spent training the model:				  0.001477956771850586
+Time spent finding the minimum of the model:  0.21688508987426758
+Total computation time for this iteration:	 0.21901178359985352
+Current time:  1584723199.375769
+Evaluated data point and evaluation:						    [ 0.          0.          4.          0.99522462 -1.91704532  1.97603002
+  0.15845454  1.81033886 -1.98290491 -1.4907493 ] ,  45.01764856107103
+Predicted value at evaluated data point (after learning)        [ 0.          0.          4.          0.99522462 -1.91704532  1.97603002
+  0.15845454  1.81033886 -1.98290491 -1.4907493 ] ,  45.01764604529861
+Best found data point and evaluation so far:				    [ 2.          2.          2.          0.67427368 -0.24169623 -0.62242114
+  0.86639468 -0.07489659 -0.45461321  0.48655953] ,  0.9032835403180464
+Best data point according to the model and predicted value:	    [ 0.53561751  0.53916714  3.53916826  1.69453162 -1.52176857  1.39575255
+ -0.13380338  1.5219109  -1.62148592  0.80670856] ,  -275.5648684409547
+Best rounded	 point according to the model and predicted value: [ 1.          1.          4.          1.69453162 -1.52176857  1.39575255
+ -0.13380338  1.5219109  -1.62148592  0.80670856] ,  -500.16916008595103
+Suggested next data point and predicted value:				    [ 1.          1.          4.          1.78713145 -1.40918942  1.36464307
+ -0.28737718  1.41794347 -1.58686335  0.74761026] ,  -500.6204673304087
+
+
+ MVDONE iteration:  93
+Time spent training the model:				  0.0014612674713134766
+Time spent finding the minimum of the model:  0.1897735595703125
+Total computation time for this iteration:	 0.1919269561767578
+Current time:  1584723199.5783389
+Evaluated data point and evaluation:						    [ 1.          1.          4.          1.78713145 -1.40918942  1.36464307
+ -0.28737718  1.41794347 -1.58686335  0.74761026] ,  18.063879864771394
+Predicted value at evaluated data point (after learning)        [ 1.          1.          4.          1.78713145 -1.40918942  1.36464307
+ -0.28737718  1.41794347 -1.58686335  0.74761026] ,  18.063807138482836
+Best found data point and evaluation so far:				    [ 2.          2.          2.          0.67427368 -0.24169623 -0.62242114
+  0.86639468 -0.07489659 -0.45461321  0.48655953] ,  0.9032835403180464
+Best data point according to the model and predicted value:	    [ 2.70167618  0.99415836  4.          1.97877306  0.1472532   1.17554774
+ -1.00216345  0.11580964 -0.43903194  0.62093787] ,  -298.9422869353434
+Best rounded	 point according to the model and predicted value: [ 3.          1.          4.          1.97877306  0.1472532   1.17554774
+ -1.00216345  0.11580964 -0.43903194  0.62093787] ,  -301.43006882222653
+Suggested next data point and predicted value:				    [ 3.          1.          4.          1.80715771 -0.01310359  1.32668745
+ -1.00074071  0.24520077 -0.27673711  0.45743696] ,  -297.1246465167328
+
+
+ MVDONE iteration:  94
+Time spent training the model:				  0.001455545425415039
+Time spent finding the minimum of the model:  0.27552199363708496
+Total computation time for this iteration:	 0.27760863304138184
+Current time:  1584723199.86519
+Evaluated data point and evaluation:						    [ 3.          1.          4.          1.80715771 -0.01310359  1.32668745
+ -1.00074071  0.24520077 -0.27673711  0.45743696] ,  10.300711601753553
+Predicted value at evaluated data point (after learning)        [ 3.          1.          4.          1.80715771 -0.01310359  1.32668745
+ -1.00074071  0.24520077 -0.27673711  0.45743696] ,  10.300104785094604
+Best found data point and evaluation so far:				    [ 2.          2.          2.          0.67427368 -0.24169623 -0.62242114
+  0.86639468 -0.07489659 -0.45461321  0.48655953] ,  0.9032835403180464
+Best data point according to the model and predicted value:	    [ 1.35827841  1.28988198  2.62700544  1.11488423 -0.83331056  0.17265256
+  0.73227355  0.59840341 -0.96946205  1.07717816] ,  -163.81588914975214
+Best rounded	 point according to the model and predicted value: [ 1.          1.          3.          1.11488423 -0.83331056  0.17265256
+  0.73227355  0.59840341 -0.96946205  1.07717816] ,  -147.71936284402707
+Suggested next data point and predicted value:				    [ 1.          1.          3.          1.12854253 -0.98339015  0.29619289
+  0.81528     0.48566687 -0.9961632   1.08110381] ,  -145.85932092495125
+
+
+ MVDONE iteration:  95
+Time spent training the model:				  0.0014753341674804688
+Time spent finding the minimum of the model:  0.20493030548095703
+Total computation time for this iteration:	 0.20709776878356934
+Current time:  1584723200.081462
+Evaluated data point and evaluation:						    [ 1.          1.          3.          1.12854253 -0.98339015  0.29619289
+  0.81528     0.48566687 -0.9961632   1.08110381] ,  3.938360152166049
+Predicted value at evaluated data point (after learning)        [ 1.          1.          3.          1.12854253 -0.98339015  0.29619289
+  0.81528     0.48566687 -0.9961632   1.08110381] ,  3.936312423626074
+Best found data point and evaluation so far:				    [ 2.          2.          2.          0.67427368 -0.24169623 -0.62242114
+  0.86639468 -0.07489659 -0.45461321  0.48655953] ,  0.9032835403180464
+Best data point according to the model and predicted value:	    [ 0.68217332  1.23800077  4.          0.72543202 -2.         -0.54910261
+  1.50679126  1.77523145 -1.70448435  1.99849477] ,  -718.8819057209702
+Best rounded	 point according to the model and predicted value: [ 1.          1.          4.          0.72543202 -2.         -0.54910261
+  1.50679126  1.77523145 -1.70448435  1.99849477] ,  -668.5866653069266
+Suggested next data point and predicted value:				    [ 1.          1.          4.          0.67089923 -1.84902895 -0.49577716
+  1.48382349  1.84613829 -1.58793918  1.80796605] ,  -667.5948041554013
+
+
+ MVDONE iteration:  96
+Time spent training the model:				  0.0014660358428955078
+Time spent finding the minimum of the model:  0.2661623954772949
+Total computation time for this iteration:	 0.26828813552856445
+Current time:  1584723200.360111
+Evaluated data point and evaluation:						    [ 1.          1.          4.          0.67089923 -1.84902895 -0.49577716
+  1.48382349  1.84613829 -1.58793918  1.80796605] ,  21.36494391542398
+Predicted value at evaluated data point (after learning)        [ 1.          1.          4.          0.67089923 -1.84902895 -0.49577716
+  1.48382349  1.84613829 -1.58793918  1.80796605] ,  21.36465479451533
+Best found data point and evaluation so far:				    [ 2.          2.          2.          0.67427368 -0.24169623 -0.62242114
+  0.86639468 -0.07489659 -0.45461321  0.48655953] ,  0.9032835403180464
+Best data point according to the model and predicted value:	    [ 1.35306795  1.65749314  1.55364967  1.03368437 -0.80441596  0.07526026
+  0.72173509  0.61280472 -0.81226749  0.80830616] ,  -196.07094475780852
+Best rounded	 point according to the model and predicted value: [ 1.          2.          2.          1.03368437 -0.80441596  0.07526026
+  0.72173509  0.61280472 -0.81226749  0.80830616] ,  -179.19863447555124
+Suggested next data point and predicted value:				    [ 1.          2.          0.          0.9506628  -0.7354811  -0.0033215
+  0.79286993  0.6121827  -0.97272963  0.79772879] ,  11.995978693723284
+
+
+ MVDONE iteration:  97
+Time spent training the model:				  0.0014617443084716797
+Time spent finding the minimum of the model:  0.26480650901794434
+Total computation time for this iteration:	 0.2669346332550049
+Current time:  1584723200.6376266
+Evaluated data point and evaluation:						    [ 1.          2.          0.          0.9506628  -0.7354811  -0.0033215
+  0.79286993  0.6121827  -0.97272963  0.79772879] ,  6.656510196316702
+Predicted value at evaluated data point (after learning)        [ 1.          2.          0.          0.9506628  -0.7354811  -0.0033215
+  0.79286993  0.6121827  -0.97272963  0.79772879] ,  6.656572726839083
+Best found data point and evaluation so far:				    [ 2.          2.          2.          0.67427368 -0.24169623 -0.62242114
+  0.86639468 -0.07489659 -0.45461321  0.48655953] ,  0.9032835403180464
+Best data point according to the model and predicted value:	    [ 1.35224126  1.65421449  1.5497864   1.03311154 -0.8050968   0.07249378
+  0.72476759  0.6130377  -0.81184774  0.81185676] ,  -196.397177223625
+Best rounded	 point according to the model and predicted value: [ 1.          2.          2.          1.03311154 -0.8050968   0.07249378
+  0.72476759  0.6130377  -0.81184774  0.81185676] ,  -179.51460644757182
+Suggested next data point and predicted value:				    [ 1.          2.          2.          0.88211559 -1.05043083  0.01210107
+  0.76758607  0.86955995 -0.76926769  0.96097303] ,  -177.39468378809912
+
+
+ MVDONE iteration:  98
+Time spent training the model:				  0.001466989517211914
+Time spent finding the minimum of the model:  0.18586230278015137
+Total computation time for this iteration:	 0.18799400329589844
+Current time:  1584723200.8346689
+Evaluated data point and evaluation:						    [ 1.          2.          2.          0.88211559 -1.05043083  0.01210107
+  0.76758607  0.86955995 -0.76926769  0.96097303] ,  3.1957962862505696
+Predicted value at evaluated data point (after learning)        [ 1.          2.          2.          0.88211559 -1.05043083  0.01210107
+  0.76758607  0.86955995 -0.76926769  0.96097303] ,  3.1923370336209898
+Best found data point and evaluation so far:				    [ 2.          2.          2.          0.67427368 -0.24169623 -0.62242114
+  0.86639468 -0.07489659 -0.45461321  0.48655953] ,  0.9032835403180464
+Best data point according to the model and predicted value:	    [ 1.05548781  1.96322939  2.92380459  1.30018196 -1.33891624  0.47928926
+  0.86769493  0.95203867 -1.24334627  2.        ] ,  -196.06907257075176
+Best rounded	 point according to the model and predicted value: [ 1.          2.          3.          1.30018196 -1.33891624  0.47928926
+  0.86769493  0.95203867 -1.24334627  2.        ] ,  -216.20113625211746
+Suggested next data point and predicted value:				    [ 1.          2.          3.          1.20757884 -1.23519417  0.4616101
+  0.74690433  0.95723983 -1.14940323  1.88896811] ,  -192.74487779002888
+
+
+ MVDONE iteration:  99
+Time spent training the model:				  0.0017414093017578125
+Time spent finding the minimum of the model:  0.18822431564331055
+Total computation time for this iteration:	 0.19074654579162598
+Current time:  1584723201.0347404
+Evaluated data point and evaluation:						    [ 1.          2.          3.          1.20757884 -1.23519417  0.4616101
+  0.74690433  0.95723983 -1.14940323  1.88896811] ,  5.20474273853729
+Predicted value at evaluated data point (after learning)        [ 1.          2.          3.          1.20757884 -1.23519417  0.4616101
+  0.74690433  0.95723983 -1.14940323  1.88896811] ,  5.202807470917688
+Best found data point and evaluation so far:				    [ 2.          2.          2.          0.67427368 -0.24169623 -0.62242114
+  0.86639468 -0.07489659 -0.45461321  0.48655953] ,  0.9032835403180464
+Best data point according to the model and predicted value:	    [ 2.4398174   3.42536746  3.00351594 -0.37854255 -1.86409435  1.85889956
+ -2.          2.         -1.84872878 -2.        ] ,  -1021.7196347428949
+Best rounded	 point according to the model and predicted value: [ 2.          3.          3.         -0.37854255 -1.86409435  1.85889956
+ -2.          2.         -1.84872878 -2.        ] ,  -972.4808992394695
+Suggested next data point and predicted value:				    [ 2.          3.          2.         -0.45171634 -1.59625671  1.83447623
+ -1.9902051   1.90914893 -1.94431159 -1.93724347] ,  -824.6789333088687
+
+
+ MVDONE iteration:  100
+Time spent training the model:				  0.0014913082122802734
+Time spent finding the minimum of the model:  0.1960315704345703
+Total computation time for this iteration:	 0.19793081283569336
+Current time:  1584723201.242258
+Evaluated data point and evaluation:						    [ 2.          3.          2.         -0.45171634 -1.59625671  1.83447623
+ -1.9902051   1.90914893 -1.94431159 -1.93724347] ,  34.35830389027976
+Predicted value at evaluated data point (after learning)        [ 2.          3.          2.         -0.45171634 -1.59625671  1.83447623
+ -1.9902051   1.90914893 -1.94431159 -1.93724347] ,  34.35819305122567
+Best found data point and evaluation so far:				    [ 2.          2.          2.          0.67427368 -0.24169623 -0.62242114
+  0.86639468 -0.07489659 -0.45461321  0.48655953] ,  0.9032835403180464
+Best data point according to the model and predicted value:	    [ 2.91313768  3.10413865  3.47909796  1.34110949  0.75820366 -0.88536591
+  0.95345329 -0.90033966  0.38557229  0.25511562] ,  -155.3918670372839
+Best rounded	 point according to the model and predicted value: [ 3.          3.          3.          1.34110949  0.75820366 -0.88536591
+  0.95345329 -0.90033966  0.38557229  0.25511562] ,  -148.1127755374362
+Suggested next data point and predicted value:				    [ 3.          3.          3.          1.34110949  0.75820366 -0.88536591
+  0.95345329 -0.90033966  0.38557229  0.25511562] ,  -148.1127755374362
+
+
+ MVDONE iteration:  101
+Time spent training the model:				  0.0016963481903076172
+Time spent finding the minimum of the model:  0.21311569213867188
+Total computation time for this iteration:	 0.21524381637573242
+Current time:  1584723201.4665842
+Evaluated data point and evaluation:						    [ 3.          3.          3.          1.34110949  0.75820366 -0.88536591
+  0.95345329 -0.90033966  0.38557229  0.25511562] ,  2.300984530284805
+Predicted value at evaluated data point (after learning)        [ 3.          3.          3.          1.34110949  0.75820366 -0.88536591
+  0.95345329 -0.90033966  0.38557229  0.25511562] ,  2.298261304217009
+Best found data point and evaluation so far:				    [ 2.          2.          2.          0.67427368 -0.24169623 -0.62242114
+  0.86639468 -0.07489659 -0.45461321  0.48655953] ,  0.9032835403180464
+Best data point according to the model and predicted value:	    [ 0.          0.          4.          1.56407685 -1.63206488  1.95798572
+  0.23583579  1.6116128  -1.53612199  1.14721374] ,  -524.3654569276543
+Best rounded	 point according to the model and predicted value: [ 0.          0.          4.          1.56407685 -1.63206488  1.95798572
+  0.23583579  1.6116128  -1.53612199  1.14721374] ,  -524.3654569276543
+Suggested next data point and predicted value:				    [ 0.          0.          4.          1.56407685 -1.63206488  1.95798572
+  0.23583579  1.6116128  -1.53612199  1.14721374] ,  -524.3654569276543
+Model c parameters:  [[ 5.72962748e-01  3.19519815e+00 -1.09433970e+01 -9.32116160e+00
+  -4.96470760e-01  5.52801915e-01 -1.25735957e-01  3.50573984e-01
+   1.09665281e+00  2.37249104e+00  3.09097564e-01  1.10862589e+00
+  -1.57377359e+00 -1.34720798e+00 -1.02905693e+00 -1.37545409e+00
+   1.91935984e+00  2.78668812e+00  5.01408843e-01  1.71513426e+00
+  -3.48534375e+00 -2.84458112e+00  3.17082661e+00  3.23862647e+00
+   1.50516284e+00  2.46914384e+00  8.32134072e+00  9.21752187e+00
+  -9.18418590e+00 -8.86096751e+00  1.66222612e-01 -8.35217412e-02
+   2.70758903e-01 -5.51948156e-01  1.68581997e+01  1.54625299e+01
+  -1.56320961e+01 -1.76007286e+01  3.54159534e+00  1.00000000e+00
+   4.11455791e+00  3.70604793e+00 -1.76007286e+01 -1.54676434e+01
+   7.06528923e-01  2.26665144e+00  1.32417105e+00  2.31133081e+00
+  -2.89428971e-01  1.24768089e-01  6.28386035e-01  4.69620328e-01
+   2.28012187e+00  1.54839345e+00 -9.63870580e+00 -1.09433970e+01
+   1.87765391e+00  6.42706510e+00 -7.18718204e+00  0.00000000e+00
+   1.66362050e+02  0.00000000e+00 -1.93311891e+02  2.41959252e+02
+   1.25113431e+01  9.60334443e+01 -1.40118671e+02  2.55839104e+02
+  -2.97569040e+01 -7.05233682e+00  1.25043531e+01  1.25159336e+01
+  -9.22739092e+01 -1.10321002e+02 -4.20597569e+02 -3.90897372e+01
+   4.69737143e+01  5.59159872e+00  2.93272963e+02 -2.41415621e+02
+  -2.59482933e+02  0.00000000e+00  2.88501952e+02 -1.04124269e+02
+   0.00000000e+00  1.26772446e+02  1.19094622e+01  1.77763849e+01
+   1.98496848e+02  0.00000000e+00  1.21119960e+01 -2.16698124e+02
+   3.06401047e+02  2.10153620e+00  0.00000000e+00 -1.82272046e+02
+   3.97497009e+01  0.00000000e+00  0.00000000e+00 -5.35460642e+00
+  -2.59456563e+01 -5.33871498e+00  0.00000000e+00 -1.82092102e+02
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+  -5.48624604e+00  1.12366335e+01 -5.59303085e+00  0.00000000e+00
+   1.23809583e+02  3.34837546e+02 -1.48012100e+01  0.00000000e+00
+   3.69160975e+02  2.62083833e+00  2.63572565e+00  1.59880497e+01
+   0.00000000e+00  2.60891160e+00 -2.41127069e+02  2.65116261e+00
+   2.71807558e+00 -4.03193708e+01  5.90640448e+01  2.53538837e+00
+   2.69467575e+00  2.53810297e+00  0.00000000e+00  2.71655573e+00
+  -1.22563875e+02 -5.87193393e+00  4.05066237e+01 -6.02386308e+01
+  -3.75996867e+02 -1.14284852e+02  1.56297163e+02 -6.04311328e+02
+   5.37250288e+01 -8.79048167e+01  5.37769181e+01  5.37716995e+01
+  -3.21974779e+00  2.03972425e+02  3.99128608e+00  4.72051126e+01
+   0.00000000e+00  1.84075190e+02  3.50197051e+02  1.91343345e+01
+  -7.64185869e+00  1.25104197e+00  6.16260991e+01 -5.14291297e-01
+   0.00000000e+00  0.00000000e+00  1.58013590e+01  0.00000000e+00
+   0.00000000e+00 -7.91741275e+01 -6.59833069e+01 -2.08905469e+02
+  -7.74747352e+00 -7.63448022e+00  2.33418471e+02  0.00000000e+00
+  -7.66421813e+00  0.00000000e+00 -7.61114334e+00  0.00000000e+00
+   7.98884746e+01 -3.04891128e+02  1.63223740e+02 -5.88676009e+01
+   1.05412811e+02  0.00000000e+00  2.57946463e+01  1.36083999e+02
+  -3.33602942e+01  9.81295201e+01 -5.88257044e+01  9.98962302e+01
+  -1.04999438e+02  1.34705715e+02  0.00000000e+00  0.00000000e+00
+  -6.93157041e+01 -8.25647562e+01]]
+Model W parameters:  [[ 0.00000000e+00  1.00000000e+00 -1.00000000e+00  1.00000000e+00
+  -1.00000000e+00  1.00000000e+00 -1.00000000e+00  1.00000000e+00
+  -1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00 -1.00000000e+00  1.00000000e+00 -1.00000000e+00
+   1.00000000e+00 -1.00000000e+00  1.00000000e+00 -1.00000000e+00
+   1.00000000e+00 -1.00000000e+00  1.00000000e+00 -1.00000000e+00
+   1.00000000e+00 -1.00000000e+00  1.00000000e+00 -1.00000000e+00
+   1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00 -2.57011002e-02 -2.57011002e-02 -2.57011002e-02
+  -2.57011002e-02 -2.57011002e-02 -2.57011002e-02 -2.57011002e-02
+  -2.57011002e-02 -2.57011002e-02 -2.57011002e-02 -2.57011002e-02
+  -2.57011002e-02 -2.57011002e-02 -2.57011002e-02 -2.57011002e-02
+  -2.57011002e-02 -2.57011002e-02 -2.57011002e-02 -2.57011002e-02
+   9.45802854e-02  9.45802854e-02  9.45802854e-02  9.45802854e-02
+   9.45802854e-02  9.45802854e-02  9.45802854e-02  9.45802854e-02
+   9.45802854e-02  9.45802854e-02  9.45802854e-02  9.45802854e-02
+   9.45802854e-02  9.45802854e-02  9.45802854e-02  9.45802854e-02
+   9.45802854e-02  9.45802854e-02  9.45802854e-02  1.44777822e-02
+   1.44777822e-02  1.44777822e-02  1.44777822e-02  1.44777822e-02
+   1.44777822e-02  1.44777822e-02  1.44777822e-02  1.44777822e-02
+   1.44777822e-02  1.44777822e-02  1.44777822e-02  1.44777822e-02
+   1.44777822e-02  1.44777822e-02  1.44777822e-02  1.44777822e-02
+   1.44777822e-02  1.44777822e-02  4.97378091e-02  4.97378091e-02
+   4.97378091e-02  4.97378091e-02  4.97378091e-02  4.97378091e-02
+   4.97378091e-02  4.97378091e-02  4.97378091e-02  4.97378091e-02
+   4.97378091e-02  4.97378091e-02  4.97378091e-02  4.97378091e-02
+   4.97378091e-02  4.97378091e-02  4.97378091e-02  4.97378091e-02
+   4.97378091e-02 -7.68972698e-03 -7.68972698e-03 -7.68972698e-03
+  -7.68972698e-03 -7.68972698e-03 -7.68972698e-03 -7.68972698e-03
+  -7.68972698e-03 -7.68972698e-03 -7.68972698e-03 -7.68972698e-03
+  -7.68972698e-03 -7.68972698e-03 -7.68972698e-03 -7.68972698e-03
+  -7.68972698e-03 -7.68972698e-03 -7.68972698e-03 -7.68972698e-03
+  -6.96916732e-02 -6.96916732e-02 -6.96916732e-02 -6.96916732e-02
+  -6.96916732e-02 -6.96916732e-02 -6.96916732e-02 -6.96916732e-02
+  -6.96916732e-02 -6.96916732e-02 -6.96916732e-02 -6.96916732e-02
+  -6.96916732e-02 -6.96916732e-02 -6.96916732e-02 -6.96916732e-02
+  -6.96916732e-02 -6.96916732e-02 -6.96916732e-02  7.10455580e-02
+   7.10455580e-02  7.10455580e-02  7.10455580e-02  7.10455580e-02
+   7.10455580e-02  7.10455580e-02  7.10455580e-02  7.10455580e-02
+   7.10455580e-02  7.10455580e-02  7.10455580e-02  7.10455580e-02
+   7.10455580e-02  7.10455580e-02  7.10455580e-02  7.10455580e-02
+   7.10455580e-02  7.10455580e-02]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  1.00000000e+00 -1.00000000e+00  1.00000000e+00
+  -1.00000000e+00  1.00000000e+00 -1.00000000e+00  1.00000000e+00
+  -1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  1.00000000e+00 -1.00000000e+00  1.00000000e+00
+  -1.00000000e+00  1.00000000e+00 -1.00000000e+00  1.00000000e+00
+  -1.00000000e+00  1.00000000e+00 -1.00000000e+00  1.00000000e+00
+  -1.00000000e+00  1.00000000e+00 -1.00000000e+00  1.00000000e+00
+  -1.00000000e+00 -1.00000000e+00  1.00000000e+00 -1.00000000e+00
+   1.00000000e+00 -1.00000000e+00  1.00000000e+00 -1.00000000e+00
+   1.00000000e+00 -1.00000000e+00  1.00000000e+00 -1.00000000e+00
+   1.00000000e+00 -1.00000000e+00  1.00000000e+00 -1.00000000e+00
+   1.00000000e+00 -6.38982402e-03 -6.38982402e-03 -6.38982402e-03
+  -6.38982402e-03 -6.38982402e-03 -6.38982402e-03 -6.38982402e-03
+  -6.38982402e-03 -6.38982402e-03 -6.38982402e-03 -6.38982402e-03
+  -6.38982402e-03 -6.38982402e-03 -6.38982402e-03 -6.38982402e-03
+  -6.38982402e-03 -6.38982402e-03 -6.38982402e-03 -6.38982402e-03
+   3.51799158e-02  3.51799158e-02  3.51799158e-02  3.51799158e-02
+   3.51799158e-02  3.51799158e-02  3.51799158e-02  3.51799158e-02
+   3.51799158e-02  3.51799158e-02  3.51799158e-02  3.51799158e-02
+   3.51799158e-02  3.51799158e-02  3.51799158e-02  3.51799158e-02
+   3.51799158e-02  3.51799158e-02  3.51799158e-02 -5.44881583e-02
+  -5.44881583e-02 -5.44881583e-02 -5.44881583e-02 -5.44881583e-02
+  -5.44881583e-02 -5.44881583e-02 -5.44881583e-02 -5.44881583e-02
+  -5.44881583e-02 -5.44881583e-02 -5.44881583e-02 -5.44881583e-02
+  -5.44881583e-02 -5.44881583e-02 -5.44881583e-02 -5.44881583e-02
+  -5.44881583e-02 -5.44881583e-02  1.85459775e-02  1.85459775e-02
+   1.85459775e-02  1.85459775e-02  1.85459775e-02  1.85459775e-02
+   1.85459775e-02  1.85459775e-02  1.85459775e-02  1.85459775e-02
+   1.85459775e-02  1.85459775e-02  1.85459775e-02  1.85459775e-02
+   1.85459775e-02  1.85459775e-02  1.85459775e-02  1.85459775e-02
+   1.85459775e-02 -1.21847944e-02 -1.21847944e-02 -1.21847944e-02
+  -1.21847944e-02 -1.21847944e-02 -1.21847944e-02 -1.21847944e-02
+  -1.21847944e-02 -1.21847944e-02 -1.21847944e-02 -1.21847944e-02
+  -1.21847944e-02 -1.21847944e-02 -1.21847944e-02 -1.21847944e-02
+  -1.21847944e-02 -1.21847944e-02 -1.21847944e-02 -1.21847944e-02
+   4.83610874e-02  4.83610874e-02  4.83610874e-02  4.83610874e-02
+   4.83610874e-02  4.83610874e-02  4.83610874e-02  4.83610874e-02
+   4.83610874e-02  4.83610874e-02  4.83610874e-02  4.83610874e-02
+   4.83610874e-02  4.83610874e-02  4.83610874e-02  4.83610874e-02
+   4.83610874e-02  4.83610874e-02  4.83610874e-02  5.98718246e-04
+   5.98718246e-04  5.98718246e-04  5.98718246e-04  5.98718246e-04
+   5.98718246e-04  5.98718246e-04  5.98718246e-04  5.98718246e-04
+   5.98718246e-04  5.98718246e-04  5.98718246e-04  5.98718246e-04
+   5.98718246e-04  5.98718246e-04  5.98718246e-04  5.98718246e-04
+   5.98718246e-04  5.98718246e-04]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  1.00000000e+00 -1.00000000e+00  1.00000000e+00
+  -1.00000000e+00  1.00000000e+00 -1.00000000e+00  1.00000000e+00
+  -1.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  1.00000000e+00 -1.00000000e+00  1.00000000e+00
+  -1.00000000e+00  1.00000000e+00 -1.00000000e+00  1.00000000e+00
+  -1.00000000e+00  1.00000000e+00 -1.00000000e+00  1.00000000e+00
+  -1.00000000e+00  1.00000000e+00 -1.00000000e+00  1.00000000e+00
+  -1.00000000e+00  2.72844394e-02  2.72844394e-02  2.72844394e-02
+   2.72844394e-02  2.72844394e-02  2.72844394e-02  2.72844394e-02
+   2.72844394e-02  2.72844394e-02  2.72844394e-02  2.72844394e-02
+   2.72844394e-02  2.72844394e-02  2.72844394e-02  2.72844394e-02
+   2.72844394e-02  2.72844394e-02  2.72844394e-02  2.72844394e-02
+  -9.08659327e-02 -9.08659327e-02 -9.08659327e-02 -9.08659327e-02
+  -9.08659327e-02 -9.08659327e-02 -9.08659327e-02 -9.08659327e-02
+  -9.08659327e-02 -9.08659327e-02 -9.08659327e-02 -9.08659327e-02
+  -9.08659327e-02 -9.08659327e-02 -9.08659327e-02 -9.08659327e-02
+  -9.08659327e-02 -9.08659327e-02 -9.08659327e-02  9.86756789e-02
+   9.86756789e-02  9.86756789e-02  9.86756789e-02  9.86756789e-02
+   9.86756789e-02  9.86756789e-02  9.86756789e-02  9.86756789e-02
+   9.86756789e-02  9.86756789e-02  9.86756789e-02  9.86756789e-02
+   9.86756789e-02  9.86756789e-02  9.86756789e-02  9.86756789e-02
+   9.86756789e-02  9.86756789e-02  4.22131266e-02  4.22131266e-02
+   4.22131266e-02  4.22131266e-02  4.22131266e-02  4.22131266e-02
+   4.22131266e-02  4.22131266e-02  4.22131266e-02  4.22131266e-02
+   4.22131266e-02  4.22131266e-02  4.22131266e-02  4.22131266e-02
+   4.22131266e-02  4.22131266e-02  4.22131266e-02  4.22131266e-02
+   4.22131266e-02 -8.78522930e-02 -8.78522930e-02 -8.78522930e-02
+  -8.78522930e-02 -8.78522930e-02 -8.78522930e-02 -8.78522930e-02
+  -8.78522930e-02 -8.78522930e-02 -8.78522930e-02 -8.78522930e-02
+  -8.78522930e-02 -8.78522930e-02 -8.78522930e-02 -8.78522930e-02
+  -8.78522930e-02 -8.78522930e-02 -8.78522930e-02 -8.78522930e-02
+  -9.31897436e-02 -9.31897436e-02 -9.31897436e-02 -9.31897436e-02
+  -9.31897436e-02 -9.31897436e-02 -9.31897436e-02 -9.31897436e-02
+  -9.31897436e-02 -9.31897436e-02 -9.31897436e-02 -9.31897436e-02
+  -9.31897436e-02 -9.31897436e-02 -9.31897436e-02 -9.31897436e-02
+  -9.31897436e-02 -9.31897436e-02 -9.31897436e-02 -3.74625609e-03
+  -3.74625609e-03 -3.74625609e-03 -3.74625609e-03 -3.74625609e-03
+  -3.74625609e-03 -3.74625609e-03 -3.74625609e-03 -3.74625609e-03
+  -3.74625609e-03 -3.74625609e-03 -3.74625609e-03 -3.74625609e-03
+  -3.74625609e-03 -3.74625609e-03 -3.74625609e-03 -3.74625609e-03
+  -3.74625609e-03 -3.74625609e-03]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  5.68705783e-02  5.68705783e-02  5.68705783e-02
+   5.68705783e-02  5.68705783e-02  5.68705783e-02  5.68705783e-02
+   5.68705783e-02  5.68705783e-02  5.68705783e-02  5.68705783e-02
+   5.68705783e-02  5.68705783e-02  5.68705783e-02  5.68705783e-02
+   5.68705783e-02  5.68705783e-02  5.68705783e-02  5.68705783e-02
+   1.33669389e-02  1.33669389e-02  1.33669389e-02  1.33669389e-02
+   1.33669389e-02  1.33669389e-02  1.33669389e-02  1.33669389e-02
+   1.33669389e-02  1.33669389e-02  1.33669389e-02  1.33669389e-02
+   1.33669389e-02  1.33669389e-02  1.33669389e-02  1.33669389e-02
+   1.33669389e-02  1.33669389e-02  1.33669389e-02  5.10046530e-02
+   5.10046530e-02  5.10046530e-02  5.10046530e-02  5.10046530e-02
+   5.10046530e-02  5.10046530e-02  5.10046530e-02  5.10046530e-02
+   5.10046530e-02  5.10046530e-02  5.10046530e-02  5.10046530e-02
+   5.10046530e-02  5.10046530e-02  5.10046530e-02  5.10046530e-02
+   5.10046530e-02  5.10046530e-02 -4.59810844e-02 -4.59810844e-02
+  -4.59810844e-02 -4.59810844e-02 -4.59810844e-02 -4.59810844e-02
+  -4.59810844e-02 -4.59810844e-02 -4.59810844e-02 -4.59810844e-02
+  -4.59810844e-02 -4.59810844e-02 -4.59810844e-02 -4.59810844e-02
+  -4.59810844e-02 -4.59810844e-02 -4.59810844e-02 -4.59810844e-02
+  -4.59810844e-02  7.76056362e-02  7.76056362e-02  7.76056362e-02
+   7.76056362e-02  7.76056362e-02  7.76056362e-02  7.76056362e-02
+   7.76056362e-02  7.76056362e-02  7.76056362e-02  7.76056362e-02
+   7.76056362e-02  7.76056362e-02  7.76056362e-02  7.76056362e-02
+   7.76056362e-02  7.76056362e-02  7.76056362e-02  7.76056362e-02
+  -5.74578828e-02 -5.74578828e-02 -5.74578828e-02 -5.74578828e-02
+  -5.74578828e-02 -5.74578828e-02 -5.74578828e-02 -5.74578828e-02
+  -5.74578828e-02 -5.74578828e-02 -5.74578828e-02 -5.74578828e-02
+  -5.74578828e-02 -5.74578828e-02 -5.74578828e-02 -5.74578828e-02
+  -5.74578828e-02 -5.74578828e-02 -5.74578828e-02 -4.83963877e-04
+  -4.83963877e-04 -4.83963877e-04 -4.83963877e-04 -4.83963877e-04
+  -4.83963877e-04 -4.83963877e-04 -4.83963877e-04 -4.83963877e-04
+  -4.83963877e-04 -4.83963877e-04 -4.83963877e-04 -4.83963877e-04
+  -4.83963877e-04 -4.83963877e-04 -4.83963877e-04 -4.83963877e-04
+  -4.83963877e-04 -4.83963877e-04]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  3.78252427e-02  3.78252427e-02  3.78252427e-02
+   3.78252427e-02  3.78252427e-02  3.78252427e-02  3.78252427e-02
+   3.78252427e-02  3.78252427e-02  3.78252427e-02  3.78252427e-02
+   3.78252427e-02  3.78252427e-02  3.78252427e-02  3.78252427e-02
+   3.78252427e-02  3.78252427e-02  3.78252427e-02  3.78252427e-02
+   7.05750744e-02  7.05750744e-02  7.05750744e-02  7.05750744e-02
+   7.05750744e-02  7.05750744e-02  7.05750744e-02  7.05750744e-02
+   7.05750744e-02  7.05750744e-02  7.05750744e-02  7.05750744e-02
+   7.05750744e-02  7.05750744e-02  7.05750744e-02  7.05750744e-02
+   7.05750744e-02  7.05750744e-02  7.05750744e-02  5.57527463e-02
+   5.57527463e-02  5.57527463e-02  5.57527463e-02  5.57527463e-02
+   5.57527463e-02  5.57527463e-02  5.57527463e-02  5.57527463e-02
+   5.57527463e-02  5.57527463e-02  5.57527463e-02  5.57527463e-02
+   5.57527463e-02  5.57527463e-02  5.57527463e-02  5.57527463e-02
+   5.57527463e-02  5.57527463e-02 -4.86856536e-03 -4.86856536e-03
+  -4.86856536e-03 -4.86856536e-03 -4.86856536e-03 -4.86856536e-03
+  -4.86856536e-03 -4.86856536e-03 -4.86856536e-03 -4.86856536e-03
+  -4.86856536e-03 -4.86856536e-03 -4.86856536e-03 -4.86856536e-03
+  -4.86856536e-03 -4.86856536e-03 -4.86856536e-03 -4.86856536e-03
+  -4.86856536e-03 -4.94176793e-02 -4.94176793e-02 -4.94176793e-02
+  -4.94176793e-02 -4.94176793e-02 -4.94176793e-02 -4.94176793e-02
+  -4.94176793e-02 -4.94176793e-02 -4.94176793e-02 -4.94176793e-02
+  -4.94176793e-02 -4.94176793e-02 -4.94176793e-02 -4.94176793e-02
+  -4.94176793e-02 -4.94176793e-02 -4.94176793e-02 -4.94176793e-02
+  -6.89658803e-02 -6.89658803e-02 -6.89658803e-02 -6.89658803e-02
+  -6.89658803e-02 -6.89658803e-02 -6.89658803e-02 -6.89658803e-02
+  -6.89658803e-02 -6.89658803e-02 -6.89658803e-02 -6.89658803e-02
+  -6.89658803e-02 -6.89658803e-02 -6.89658803e-02 -6.89658803e-02
+  -6.89658803e-02 -6.89658803e-02 -6.89658803e-02  3.50545102e-02
+   3.50545102e-02  3.50545102e-02  3.50545102e-02  3.50545102e-02
+   3.50545102e-02  3.50545102e-02  3.50545102e-02  3.50545102e-02
+   3.50545102e-02  3.50545102e-02  3.50545102e-02  3.50545102e-02
+   3.50545102e-02  3.50545102e-02  3.50545102e-02  3.50545102e-02
+   3.50545102e-02  3.50545102e-02]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  7.02408988e-02  7.02408988e-02  7.02408988e-02
+   7.02408988e-02  7.02408988e-02  7.02408988e-02  7.02408988e-02
+   7.02408988e-02  7.02408988e-02  7.02408988e-02  7.02408988e-02
+   7.02408988e-02  7.02408988e-02  7.02408988e-02  7.02408988e-02
+   7.02408988e-02  7.02408988e-02  7.02408988e-02  7.02408988e-02
+  -7.24284969e-03 -7.24284969e-03 -7.24284969e-03 -7.24284969e-03
+  -7.24284969e-03 -7.24284969e-03 -7.24284969e-03 -7.24284969e-03
+  -7.24284969e-03 -7.24284969e-03 -7.24284969e-03 -7.24284969e-03
+  -7.24284969e-03 -7.24284969e-03 -7.24284969e-03 -7.24284969e-03
+  -7.24284969e-03 -7.24284969e-03 -7.24284969e-03 -7.83582828e-02
+  -7.83582828e-02 -7.83582828e-02 -7.83582828e-02 -7.83582828e-02
+  -7.83582828e-02 -7.83582828e-02 -7.83582828e-02 -7.83582828e-02
+  -7.83582828e-02 -7.83582828e-02 -7.83582828e-02 -7.83582828e-02
+  -7.83582828e-02 -7.83582828e-02 -7.83582828e-02 -7.83582828e-02
+  -7.83582828e-02 -7.83582828e-02  5.88032564e-02  5.88032564e-02
+   5.88032564e-02  5.88032564e-02  5.88032564e-02  5.88032564e-02
+   5.88032564e-02  5.88032564e-02  5.88032564e-02  5.88032564e-02
+   5.88032564e-02  5.88032564e-02  5.88032564e-02  5.88032564e-02
+   5.88032564e-02  5.88032564e-02  5.88032564e-02  5.88032564e-02
+   5.88032564e-02  4.39077550e-02  4.39077550e-02  4.39077550e-02
+   4.39077550e-02  4.39077550e-02  4.39077550e-02  4.39077550e-02
+   4.39077550e-02  4.39077550e-02  4.39077550e-02  4.39077550e-02
+   4.39077550e-02  4.39077550e-02  4.39077550e-02  4.39077550e-02
+   4.39077550e-02  4.39077550e-02  4.39077550e-02  4.39077550e-02
+   5.00740081e-02  5.00740081e-02  5.00740081e-02  5.00740081e-02
+   5.00740081e-02  5.00740081e-02  5.00740081e-02  5.00740081e-02
+   5.00740081e-02  5.00740081e-02  5.00740081e-02  5.00740081e-02
+   5.00740081e-02  5.00740081e-02  5.00740081e-02  5.00740081e-02
+   5.00740081e-02  5.00740081e-02  5.00740081e-02 -9.14744411e-02
+  -9.14744411e-02 -9.14744411e-02 -9.14744411e-02 -9.14744411e-02
+  -9.14744411e-02 -9.14744411e-02 -9.14744411e-02 -9.14744411e-02
+  -9.14744411e-02 -9.14744411e-02 -9.14744411e-02 -9.14744411e-02
+  -9.14744411e-02 -9.14744411e-02 -9.14744411e-02 -9.14744411e-02
+  -9.14744411e-02 -9.14744411e-02]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  2.14570312e-02  2.14570312e-02  2.14570312e-02
+   2.14570312e-02  2.14570312e-02  2.14570312e-02  2.14570312e-02
+   2.14570312e-02  2.14570312e-02  2.14570312e-02  2.14570312e-02
+   2.14570312e-02  2.14570312e-02  2.14570312e-02  2.14570312e-02
+   2.14570312e-02  2.14570312e-02  2.14570312e-02  2.14570312e-02
+  -1.20582097e-02 -1.20582097e-02 -1.20582097e-02 -1.20582097e-02
+  -1.20582097e-02 -1.20582097e-02 -1.20582097e-02 -1.20582097e-02
+  -1.20582097e-02 -1.20582097e-02 -1.20582097e-02 -1.20582097e-02
+  -1.20582097e-02 -1.20582097e-02 -1.20582097e-02 -1.20582097e-02
+  -1.20582097e-02 -1.20582097e-02 -1.20582097e-02  6.22786590e-02
+   6.22786590e-02  6.22786590e-02  6.22786590e-02  6.22786590e-02
+   6.22786590e-02  6.22786590e-02  6.22786590e-02  6.22786590e-02
+   6.22786590e-02  6.22786590e-02  6.22786590e-02  6.22786590e-02
+   6.22786590e-02  6.22786590e-02  6.22786590e-02  6.22786590e-02
+   6.22786590e-02  6.22786590e-02  4.56811288e-02  4.56811288e-02
+   4.56811288e-02  4.56811288e-02  4.56811288e-02  4.56811288e-02
+   4.56811288e-02  4.56811288e-02  4.56811288e-02  4.56811288e-02
+   4.56811288e-02  4.56811288e-02  4.56811288e-02  4.56811288e-02
+   4.56811288e-02  4.56811288e-02  4.56811288e-02  4.56811288e-02
+   4.56811288e-02 -4.92865380e-02 -4.92865380e-02 -4.92865380e-02
+  -4.92865380e-02 -4.92865380e-02 -4.92865380e-02 -4.92865380e-02
+  -4.92865380e-02 -4.92865380e-02 -4.92865380e-02 -4.92865380e-02
+  -4.92865380e-02 -4.92865380e-02 -4.92865380e-02 -4.92865380e-02
+  -4.92865380e-02 -4.92865380e-02 -4.92865380e-02 -4.92865380e-02
+  -8.14619643e-02 -8.14619643e-02 -8.14619643e-02 -8.14619643e-02
+  -8.14619643e-02 -8.14619643e-02 -8.14619643e-02 -8.14619643e-02
+  -8.14619643e-02 -8.14619643e-02 -8.14619643e-02 -8.14619643e-02
+  -8.14619643e-02 -8.14619643e-02 -8.14619643e-02 -8.14619643e-02
+  -8.14619643e-02 -8.14619643e-02 -8.14619643e-02  3.54636848e-02
+   3.54636848e-02  3.54636848e-02  3.54636848e-02  3.54636848e-02
+   3.54636848e-02  3.54636848e-02  3.54636848e-02  3.54636848e-02
+   3.54636848e-02  3.54636848e-02  3.54636848e-02  3.54636848e-02
+   3.54636848e-02  3.54636848e-02  3.54636848e-02  3.54636848e-02
+   3.54636848e-02  3.54636848e-02]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  4.27132610e-02  4.27132610e-02  4.27132610e-02
+   4.27132610e-02  4.27132610e-02  4.27132610e-02  4.27132610e-02
+   4.27132610e-02  4.27132610e-02  4.27132610e-02  4.27132610e-02
+   4.27132610e-02  4.27132610e-02  4.27132610e-02  4.27132610e-02
+   4.27132610e-02  4.27132610e-02  4.27132610e-02  4.27132610e-02
+  -7.51131342e-02 -7.51131342e-02 -7.51131342e-02 -7.51131342e-02
+  -7.51131342e-02 -7.51131342e-02 -7.51131342e-02 -7.51131342e-02
+  -7.51131342e-02 -7.51131342e-02 -7.51131342e-02 -7.51131342e-02
+  -7.51131342e-02 -7.51131342e-02 -7.51131342e-02 -7.51131342e-02
+  -7.51131342e-02 -7.51131342e-02 -7.51131342e-02 -1.37658809e-02
+  -1.37658809e-02 -1.37658809e-02 -1.37658809e-02 -1.37658809e-02
+  -1.37658809e-02 -1.37658809e-02 -1.37658809e-02 -1.37658809e-02
+  -1.37658809e-02 -1.37658809e-02 -1.37658809e-02 -1.37658809e-02
+  -1.37658809e-02 -1.37658809e-02 -1.37658809e-02 -1.37658809e-02
+  -1.37658809e-02 -1.37658809e-02 -6.22793312e-02 -6.22793312e-02
+  -6.22793312e-02 -6.22793312e-02 -6.22793312e-02 -6.22793312e-02
+  -6.22793312e-02 -6.22793312e-02 -6.22793312e-02 -6.22793312e-02
+  -6.22793312e-02 -6.22793312e-02 -6.22793312e-02 -6.22793312e-02
+  -6.22793312e-02 -6.22793312e-02 -6.22793312e-02 -6.22793312e-02
+  -6.22793312e-02  6.11123842e-02  6.11123842e-02  6.11123842e-02
+   6.11123842e-02  6.11123842e-02  6.11123842e-02  6.11123842e-02
+   6.11123842e-02  6.11123842e-02  6.11123842e-02  6.11123842e-02
+   6.11123842e-02  6.11123842e-02  6.11123842e-02  6.11123842e-02
+   6.11123842e-02  6.11123842e-02  6.11123842e-02  6.11123842e-02
+   3.75555529e-02  3.75555529e-02  3.75555529e-02  3.75555529e-02
+   3.75555529e-02  3.75555529e-02  3.75555529e-02  3.75555529e-02
+   3.75555529e-02  3.75555529e-02  3.75555529e-02  3.75555529e-02
+   3.75555529e-02  3.75555529e-02  3.75555529e-02  3.75555529e-02
+   3.75555529e-02  3.75555529e-02  3.75555529e-02 -6.40918940e-02
+  -6.40918940e-02 -6.40918940e-02 -6.40918940e-02 -6.40918940e-02
+  -6.40918940e-02 -6.40918940e-02 -6.40918940e-02 -6.40918940e-02
+  -6.40918940e-02 -6.40918940e-02 -6.40918940e-02 -6.40918940e-02
+  -6.40918940e-02 -6.40918940e-02 -6.40918940e-02 -6.40918940e-02
+  -6.40918940e-02 -6.40918940e-02]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  8.48194237e-02  8.48194237e-02  8.48194237e-02
+   8.48194237e-02  8.48194237e-02  8.48194237e-02  8.48194237e-02
+   8.48194237e-02  8.48194237e-02  8.48194237e-02  8.48194237e-02
+   8.48194237e-02  8.48194237e-02  8.48194237e-02  8.48194237e-02
+   8.48194237e-02  8.48194237e-02  8.48194237e-02  8.48194237e-02
+   2.67194954e-02  2.67194954e-02  2.67194954e-02  2.67194954e-02
+   2.67194954e-02  2.67194954e-02  2.67194954e-02  2.67194954e-02
+   2.67194954e-02  2.67194954e-02  2.67194954e-02  2.67194954e-02
+   2.67194954e-02  2.67194954e-02  2.67194954e-02  2.67194954e-02
+   2.67194954e-02  2.67194954e-02  2.67194954e-02 -1.37380408e-02
+  -1.37380408e-02 -1.37380408e-02 -1.37380408e-02 -1.37380408e-02
+  -1.37380408e-02 -1.37380408e-02 -1.37380408e-02 -1.37380408e-02
+  -1.37380408e-02 -1.37380408e-02 -1.37380408e-02 -1.37380408e-02
+  -1.37380408e-02 -1.37380408e-02 -1.37380408e-02 -1.37380408e-02
+  -1.37380408e-02 -1.37380408e-02  1.32673150e-02  1.32673150e-02
+   1.32673150e-02  1.32673150e-02  1.32673150e-02  1.32673150e-02
+   1.32673150e-02  1.32673150e-02  1.32673150e-02  1.32673150e-02
+   1.32673150e-02  1.32673150e-02  1.32673150e-02  1.32673150e-02
+   1.32673150e-02  1.32673150e-02  1.32673150e-02  1.32673150e-02
+   1.32673150e-02 -3.27444052e-02 -3.27444052e-02 -3.27444052e-02
+  -3.27444052e-02 -3.27444052e-02 -3.27444052e-02 -3.27444052e-02
+  -3.27444052e-02 -3.27444052e-02 -3.27444052e-02 -3.27444052e-02
+  -3.27444052e-02 -3.27444052e-02 -3.27444052e-02 -3.27444052e-02
+  -3.27444052e-02 -3.27444052e-02 -3.27444052e-02 -3.27444052e-02
+   5.75977106e-02  5.75977106e-02  5.75977106e-02  5.75977106e-02
+   5.75977106e-02  5.75977106e-02  5.75977106e-02  5.75977106e-02
+   5.75977106e-02  5.75977106e-02  5.75977106e-02  5.75977106e-02
+   5.75977106e-02  5.75977106e-02  5.75977106e-02  5.75977106e-02
+   5.75977106e-02  5.75977106e-02  5.75977106e-02  1.25540645e-02
+   1.25540645e-02  1.25540645e-02  1.25540645e-02  1.25540645e-02
+   1.25540645e-02  1.25540645e-02  1.25540645e-02  1.25540645e-02
+   1.25540645e-02  1.25540645e-02  1.25540645e-02  1.25540645e-02
+   1.25540645e-02  1.25540645e-02  1.25540645e-02  1.25540645e-02
+   1.25540645e-02  1.25540645e-02]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   0.00000000e+00 -7.51031933e-02 -7.51031933e-02 -7.51031933e-02
+  -7.51031933e-02 -7.51031933e-02 -7.51031933e-02 -7.51031933e-02
+  -7.51031933e-02 -7.51031933e-02 -7.51031933e-02 -7.51031933e-02
+  -7.51031933e-02 -7.51031933e-02 -7.51031933e-02 -7.51031933e-02
+  -7.51031933e-02 -7.51031933e-02 -7.51031933e-02 -7.51031933e-02
+  -1.71581137e-02 -1.71581137e-02 -1.71581137e-02 -1.71581137e-02
+  -1.71581137e-02 -1.71581137e-02 -1.71581137e-02 -1.71581137e-02
+  -1.71581137e-02 -1.71581137e-02 -1.71581137e-02 -1.71581137e-02
+  -1.71581137e-02 -1.71581137e-02 -1.71581137e-02 -1.71581137e-02
+  -1.71581137e-02 -1.71581137e-02 -1.71581137e-02 -4.11336895e-02
+  -4.11336895e-02 -4.11336895e-02 -4.11336895e-02 -4.11336895e-02
+  -4.11336895e-02 -4.11336895e-02 -4.11336895e-02 -4.11336895e-02
+  -4.11336895e-02 -4.11336895e-02 -4.11336895e-02 -4.11336895e-02
+  -4.11336895e-02 -4.11336895e-02 -4.11336895e-02 -4.11336895e-02
+  -4.11336895e-02 -4.11336895e-02 -8.24689876e-02 -8.24689876e-02
+  -8.24689876e-02 -8.24689876e-02 -8.24689876e-02 -8.24689876e-02
+  -8.24689876e-02 -8.24689876e-02 -8.24689876e-02 -8.24689876e-02
+  -8.24689876e-02 -8.24689876e-02 -8.24689876e-02 -8.24689876e-02
+  -8.24689876e-02 -8.24689876e-02 -8.24689876e-02 -8.24689876e-02
+  -8.24689876e-02 -1.45309981e-02 -1.45309981e-02 -1.45309981e-02
+  -1.45309981e-02 -1.45309981e-02 -1.45309981e-02 -1.45309981e-02
+  -1.45309981e-02 -1.45309981e-02 -1.45309981e-02 -1.45309981e-02
+  -1.45309981e-02 -1.45309981e-02 -1.45309981e-02 -1.45309981e-02
+  -1.45309981e-02 -1.45309981e-02 -1.45309981e-02 -1.45309981e-02
+  -3.90763797e-02 -3.90763797e-02 -3.90763797e-02 -3.90763797e-02
+  -3.90763797e-02 -3.90763797e-02 -3.90763797e-02 -3.90763797e-02
+  -3.90763797e-02 -3.90763797e-02 -3.90763797e-02 -3.90763797e-02
+  -3.90763797e-02 -3.90763797e-02 -3.90763797e-02 -3.90763797e-02
+  -3.90763797e-02 -3.90763797e-02 -3.90763797e-02  9.41378092e-02
+   9.41378092e-02  9.41378092e-02  9.41378092e-02  9.41378092e-02
+   9.41378092e-02  9.41378092e-02  9.41378092e-02  9.41378092e-02
+   9.41378092e-02  9.41378092e-02  9.41378092e-02  9.41378092e-02
+   9.41378092e-02  9.41378092e-02  9.41378092e-02  9.41378092e-02
+   9.41378092e-02  9.41378092e-02]]
+Model B parameters:  [[ 1.          0.          1.         -1.          2.         -2.
+   3.         -3.          4.          0.          1.         -1.
+   2.         -2.          3.         -3.          4.          0.
+   1.         -1.          2.         -2.          3.         -3.
+   4.          4.         -3.          3.         -2.          2.
+  -1.          1.          0.          0.          1.         -1.
+   2.         -2.          3.         -3.          4.          4.
+  -3.          3.         -2.          2.         -1.          1.
+   0.          0.          1.         -1.          2.         -2.
+   3.         -3.          4.          0.14829899  0.02816082 -0.78457119
+  -0.13965001 -0.65572793  0.47134482  0.38724764  0.80471382 -0.14031933
+   0.29610412  0.40250223 -0.36481006  0.08750319  0.79251404  0.81272566
+   0.45585846  0.61221928 -0.22955465 -0.35461939  0.08860942 -0.14119835
+  -0.51280699 -0.32237364  0.37198489 -0.95262783 -0.47358285 -0.08382864
+  -0.94131492 -0.36817168  0.61421187 -0.25548637  0.40245382 -0.7035124
+   0.27643348 -0.01632366 -0.0478091  -0.17828653 -0.78648965 -0.38266916
+   0.1296209  -0.66112617 -0.85614069  0.79976375  0.21490881  0.8274993
+  -0.91985329 -0.38266077 -0.78464163 -0.97699225 -0.99855179 -0.91626128
+   0.57001126  0.16139614  0.38363825 -1.00313064 -0.36840332 -0.4132889
+  -0.24071771 -1.06250804 -0.37342036  0.41616622  0.44214927 -0.01916284
+  -0.89283685  0.39535034 -0.4570264   0.46909165  0.58587579  0.08381658
+  -0.42398666  0.2670292   0.54503572  0.27176703 -0.93346815  0.58322318
+  -0.288746   -0.01077034  0.29380428 -0.24367457  0.28109488 -0.31921591
+   0.31976606  0.41332387  0.72013156 -0.37098703  0.81069463  0.80158669
+   0.12096792  0.33045548  0.54458918  0.18018287 -0.6010327  -0.12604369
+   0.37920271  0.27647917  1.3227667   0.13446215  0.17688295  0.33416147
+  -0.60615773 -0.40010858  0.54512747 -0.93451795 -0.5128419   0.04508121
+   0.12268177  0.68621533  1.13843559  1.33564444  0.74182456 -0.32716205
+   1.28374244 -0.32925493  1.37637457 -0.74319755 -0.31637073  0.15042662
+   0.21850643  0.58698788 -0.11873516 -0.95162835 -0.32489549  0.25824902
+   0.46490642 -0.60450693  0.66011036 -0.41280354 -0.31885414  0.26026734
+  -0.86704372 -0.78083784 -0.42325796 -0.21316513]]
