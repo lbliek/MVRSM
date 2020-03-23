@@ -332,7 +332,7 @@ if __name__ == '__main__':
 
 	parser = argparse.ArgumentParser(description="Run BayesOpt Experiments")
 	parser.add_argument('-f', '--func', help='Objective function',
-						default='func3C', type=str)
+						default='func2C', type=str)
 	parser.add_argument('-mix', '--kernel_mix',
 						help='Mixture weight for production and summation kernel. Default = 0.0', default=0.5,
 						type=float)
@@ -362,24 +362,25 @@ if __name__ == '__main__':
 		ff = testFunctions.syntheticFunctions.dim10Rosenbrock
 	elif obj_func == 'func3C':
 		ff = testFunctions.syntheticFunctions.func3C
+	elif obj_func == 'func2C':
+		ff = testFunctions.syntheticFunctions.func2C
 	
-	d = 5 # Total number of variables			
+	d = 4 # Total number of variables			
 	lb = -1*np.ones(d).astype(int) # Lower bound for continuous variables
 	ub = 1*np.ones(d).astype(int) # Upper bound for continuous variables
-	num_int = 3 # number of integer variables
+	num_int = 2 # number of integer variables
 	lb[0:num_int] = 0
 	ub[0]=2
 	ub[1]=4
-	ub[2]=3
 	x0 =np.zeros(d)
 	x0[0:num_int] = np.round(np.random.rand(num_int)*(ub[0:num_int]-lb[0:num_int]) + lb[0:num_int]) # Random initial guess (integer)
 	x0[num_int:d] = np.random.rand(d-num_int)*(ub[num_int:d]-lb[num_int:d]) + lb[num_int:d] # Random initial guess (continuous)
-	rand_evals = 2 # Number of random iterations, same as initN above (24)
+	rand_evals = 24 # Number of random iterations, same as initN above (24)
 	max_evals = n_itrs+rand_evals # Maximum number of MVDONE iterations
 	def obj_MVDONE(x):
 		#print(x[0:num_int])
 		h = np.copy(x[0:num_int]).astype(int)
-		if obj_func == 'func3C':
+		if obj_func == 'func3C' or obj_func == 'func2C':
 			result = ff(h,x[num_int:])[0][0]
 		else:
 			result = ff(h,x[num_int:])
@@ -474,7 +475,7 @@ if __name__ == '__main__':
 
 	####################
 	# Plot results
-	plot_results(folder, folder, folder, folder)
+	#plot_results(folder, folder, folder, folder)
 		
 
 # Visualise the results

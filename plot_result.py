@@ -24,10 +24,12 @@ from scipy.optimize import rosen
 
 
 #folder = os.path.join(os.path.curdir, 'data',  'syntheticFns', 'dim10Rosenbrock')
-folder = 'O:\Postdoc\Code\MVDONE_data\\func3C_fromCluster'
+#folder = 'O:\Postdoc\Code\MVDONE_data\dim10Rosenbrock_fromCluster'
+#folder = 'O:\Postdoc\Code\MVDONE_data\\func3C_fromCluster'
+folder = 'O:\Postdoc\Code\MVDONE_data\linearmivabo_fromCluster'
 rand_evals = 24
-n_itrs = 200
-n_trials = 100
+n_itrs = 100
+n_trials = 16
 max_evals = rand_evals+n_itrs
 
 
@@ -164,14 +166,14 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand
 	MVtimes = MVtimes.astype(float)
 	
 	rand_iters = rand_evals
-	total_iters = max_evals+rand_evals
+	total_iters = max_evals
 	avs_M = -np.mean(MVDONE_ev,0)
 	avs_Mtime = np.mean(MVtimes,0)
 	stds_M = np.std(MVDONE_ev,0)
 	stds_Mtime = np.std(MVtimes,0)
 	
 	
-	HO_ev, HOtimes = read_logs_HO(folderHO,n_trials,n_itrs)
+	HO_ev, HOtimes = read_logs_HO(folderHO,n_trials,total_iters)
 	avs_HO = -np.mean(HO_ev,0)
 	avs_HOtime = np.std(HOtimes,0)
 	stds_HO = np.std(HO_ev,0)
@@ -179,7 +181,7 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand
 	
 	
 	
-	RS_ev, RStimes = read_logs_RS(folderRS,n_trials,n_itrs)
+	RS_ev, RStimes = read_logs_RS(folderRS,n_trials,total_iters)
 	avs_RS = -np.mean(RS_ev,0)
 	avs_RStime = np.std(RStimes,0)
 	stds_RS = np.std(RS_ev,0)
@@ -199,8 +201,8 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand
 	#print(avs_Ctime[np.arange(0,C_iters,1)])
 	#print('hoi', avs_Ctime.shape)
 	
-	total_iters = 200
-	n_itrs = 200-24
+	
+	
 	
 	errorevery = 10
 	markevery = 10
@@ -216,6 +218,8 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand
 	leg = plt.legend()
 	if leg:
 		leg.set_draggable(True)
+	#plt.show()
+	
 	
 	plt.subplot(122)
 	plt.errorbar(range(0,n_itrs,1), avs_RStime[np.arange(rand_iters,total_iters,1)], yerr=stds_RStime[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='o', capsize=5, label='RS')
