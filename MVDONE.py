@@ -246,13 +246,13 @@ def MVDONE_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
 			y0 = y
 			def scale(y):
 				if abs(y0)>1e-8:
-					y = (y-y0)/y0
+					y = (y-y0)/abs(y0)
 				else:
 					y = (y-y0)
 				return y
 			def inv_scale(y):
 				if abs(y0)>1e-8:
-					y = y*y0+y0
+					y = y*abs(y0)+y0
 				else:
 					y = y+y0
 				return y

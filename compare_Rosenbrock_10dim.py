@@ -251,7 +251,7 @@ def read_logs_RS(folder, num_runs,num_iters):
 	
 	
 # Plot the best found objective values at each iteration
-def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand_evals, n_itrs=n_itrs, n_trials=n_trials):
+def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS):
 	import matplotlib.pyplot as plt
 	MVDONE_ev, MVtimes=read_logs_MVDONE(folderMVDONE)
 	MVDONE_ev = MVDONE_ev.astype(float)
@@ -467,7 +467,7 @@ if __name__ == '__main__':
 
 	####################
 	# Plot results
-	plot_results(folder, folder, folder, folder)
+	#plot_results(folder, folder, folder, folder)
 		
 
 # Visualise the results

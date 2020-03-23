@@ -69,6 +69,48 @@ def dim10Rosenbrock(ht_list,x):
 		return rosen(XX)/300 + 1e-6 * np.random.rand()
 #/Laurens
 
+#Laurens
+def dim53Rosenbrock(ht_list,x):
+		XX = []
+		assert len(ht_list) == 50
+		h2 = [1, 2] #convert to these categories, as Cocabo assumes categories in (0,1,2,3,etc.)
+		#print(ht_list)
+		for i in ht_list:
+			if i:
+				XX.append(h2[i])
+			else:
+				XX.append(h2[0])
+		for i in x:
+			XX.append(i)
+		#print(XX)
+		#input('..')
+		XX[0:len(ht_list)]=np.round(XX[0:len(ht_list)]) #To make sure there is no cheating, round the discrete variables before calling the function
+		#print(XX)
+		#print(rosen(XX))
+		#input('..')
+		return rosen(XX)/20000 + 1e-6 * np.random.rand()
+		
+def dim238Rosenbrock(ht_list,x):
+		XX = []
+		assert len(ht_list) == 119
+		h2 = [-2, -1, 0, 1, 2] #convert to these categories, as Cocabo assumes categories in (0,1,2,3,etc.)
+		#print(ht_list)
+		for i in ht_list:
+			if i:
+				XX.append(h2[i])
+			else:
+				XX.append(h2[0])
+		for i in x:
+			XX.append(i)
+		#print(XX)
+		#input('..')
+		XX[0:len(ht_list)]=np.round(XX[0:len(ht_list)]) #To make sure there is no cheating, round the discrete variables before calling the function
+		#print(XX)
+		#print(rosen(XX))
+		#input('..')
+		return rosen(XX)/50000 + 1e-6 * np.random.rand()
+#/Laurens
+
 
 # =============================================================================
 #  Six-hump Camel Function (f_min = - 1.0316 )

@@ -26,10 +26,12 @@ from scipy.optimize import rosen
 #folder = os.path.join(os.path.curdir, 'data',  'syntheticFns', 'dim10Rosenbrock')
 #folder = 'O:\Postdoc\Code\MVDONE_data\dim10Rosenbrock_fromCluster'
 #folder = 'O:\Postdoc\Code\MVDONE_data\\func3C_fromCluster'
-folder = 'O:\Postdoc\Code\MVDONE_data\linearmivabo_fromCluster'
+folder = 'O:\Postdoc\Code\MVDONE_data\\func2C_fromCluster'
+#folder = 'O:\Postdoc\Code\MVDONE_data\linearmivabo_fromCluster'
+#folder = os.path.join(os.path.curdir, 'data',  'syntheticFns', 'dim53Rosenbrock')
 rand_evals = 24
 n_itrs = 100
-n_trials = 16
+n_trials = 100
 max_evals = rand_evals+n_itrs
 
 
