@@ -452,6 +452,7 @@ if __name__ == '__main__':
 	## Random search
 	print("Start Random Search trials")
 	for i in range(n_trials):
+		current_time = time.time() # time when starting the HO and RS algorithm
 		trials_RS = Trials()
 
 		time_start = time.time()
