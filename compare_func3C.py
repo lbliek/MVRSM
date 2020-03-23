@@ -429,7 +429,7 @@ if __name__ == '__main__':
 		
 		trials_HO = Trials()
 		time_start = time.time() # Start timer
-		hypOpt = fmin(hyp_obj, var, algo2, max_evals=n_itrs, trials=trials_HO) # Run HyperOpt
+		hypOpt = fmin(hyp_obj, var, algo2, max_evals=max_evals, trials=trials_HO) # Run HyperOpt
 		total_time_HypOpt = time.time()-time_start # End timer
 
 		logfileHO = os.path.join(folder, 'log_HypOpt_'+ str(current_time) + ".log")
@@ -456,7 +456,7 @@ if __name__ == '__main__':
 		trials_RS = Trials()
 
 		time_start = time.time()
-		RS = fmin(hyp_obj, var, algo, max_evals=n_itrs+rand_evals, trials = trials_RS)
+		RS = fmin(hyp_obj, var, algo, max_evals=max_evals, trials = trials_RS)
 		total_time_RS = time.time()-time_start
 
 		logfileRS = os.path.join(folder, 'log_RS_'+ str(current_time) + ".log")

@@ -26,7 +26,7 @@ from scipy.optimize import rosen
 #folder = os.path.join(os.path.curdir, 'data',  'syntheticFns', 'dim10Rosenbrock')
 folder = 'O:\Postdoc\Code\MVDONE_data\\func3C_fromCluster'
 rand_evals = 24
-n_itrs = 100
+n_itrs = 200
 n_trials = 100
 max_evals = rand_evals+n_itrs
 
@@ -164,7 +164,7 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand
 	MVtimes = MVtimes.astype(float)
 	
 	rand_iters = rand_evals
-	total_iters = max_evals
+	total_iters = max_evals+rand_evals
 	avs_M = -np.mean(MVDONE_ev,0)
 	avs_Mtime = np.mean(MVtimes,0)
 	stds_M = np.std(MVDONE_ev,0)
@@ -199,14 +199,16 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand
 	#print(avs_Ctime[np.arange(0,C_iters,1)])
 	#print('hoi', avs_Ctime.shape)
 	
+	total_iters = 200
+	n_itrs = 200-24
 	
 	errorevery = 10
 	markevery = 10
 	plt.subplot(121)
-	plt.errorbar(range(0,n_itrs,1), avs_RS[np.arange(0,n_itrs,1)], yerr=stds_RS[np.arange(0,n_itrs,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='o', capsize=5, label='RS')
-	plt.errorbar(range(0,n_itrs,1), avs_HO[np.arange(0,n_itrs,1)], yerr=stds_HO[np.arange(0,n_itrs,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='d', capsize=5, label='HO')
-	plt.errorbar(range(0,total_iters-rand_iters,1), avs_M[np.arange(rand_iters,total_iters,1)], yerr=stds_M[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='s', capsize=5, label='MVDONE')
-	plt.errorbar(range(0,C_iters,1), avs_C[np.arange(0,C_iters,1)], yerr=stds_C[np.arange(0,C_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='^', capsize=5, label='CoCaBO')
+	plt.errorbar(range(0,n_itrs,1), avs_RS[np.arange(rand_iters,total_iters,1)], yerr=stds_RS[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='o', capsize=5, label='RS')
+	plt.errorbar(range(0,n_itrs,1), avs_HO[np.arange(rand_iters,total_iters,1)], yerr=stds_HO[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='d', capsize=5, label='HO')
+	plt.errorbar(range(0,n_itrs,1), avs_M[np.arange(rand_iters,total_iters,1)], yerr=stds_M[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='s', capsize=5, label='MVDONE')
+	plt.errorbar(range(0,n_itrs,1), avs_C[np.arange(0,n_itrs,1)], yerr=stds_C[np.arange(0,n_itrs,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='^', capsize=5, label='CoCaBO')
 	plt.xlabel('Iteration')
 	plt.ylabel('Objective')
 	#plt.ylim((-20,0))
@@ -216,10 +218,10 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand
 		leg.set_draggable(True)
 	
 	plt.subplot(122)
-	plt.errorbar(range(0,n_itrs,1), avs_RStime[np.arange(0,n_itrs,1)], yerr=stds_RStime[np.arange(0,n_itrs,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='o', capsize=5, label='RS')
-	plt.errorbar(range(0,n_itrs,1), avs_HOtime[np.arange(0,n_itrs,1)], yerr=stds_HOtime[np.arange(0,n_itrs,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='d', capsize=5, label='HO')
-	plt.errorbar(range(0,total_iters-rand_iters,1), avs_Mtime[np.arange(rand_iters,total_iters,1)], yerr=stds_Mtime[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='s', capsize=5, label='MVDONE')
-	plt.errorbar(range(0,C_iters,1), avs_Ctime[np.arange(0,C_iters,1)], yerr=stds_Ctime[np.arange(0,C_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='^', capsize=5, label='CoCaBO')
+	plt.errorbar(range(0,n_itrs,1), avs_RStime[np.arange(rand_iters,total_iters,1)], yerr=stds_RStime[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='o', capsize=5, label='RS')
+	plt.errorbar(range(0,n_itrs,1), avs_HOtime[np.arange(rand_iters,total_iters,1)], yerr=stds_HOtime[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='d', capsize=5, label='HO')
+	plt.errorbar(range(0,n_itrs,1), avs_Mtime[np.arange(rand_iters,total_iters,1)], yerr=stds_Mtime[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='s', capsize=5, label='MVDONE')
+	plt.errorbar(range(0,n_itrs,1), avs_Ctime[np.arange(0,n_itrs,1)], yerr=stds_Ctime[np.arange(0,n_itrs,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='^', capsize=5, label='CoCaBO')
 	plt.xlabel('Iteration')
 	plt.ylabel('Computation time per iteration [s]')
 	plt.yscale('log')
