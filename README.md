@@ -24,6 +24,6 @@ Dependencies:
 * scipy
 * matplotlib
 * time
-* For comparison with other methods: hyperopt, gpy, pandas
+* For comparison with other methods: hyperopt, gpy, pandas, smac
 
 Please contact l.bliek@tudelft.nl if you have any questions.
