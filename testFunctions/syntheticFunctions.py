@@ -90,6 +90,34 @@ def dim53Rosenbrock(ht_list,x):
 		#input('..')
 		return rosen(XX)/20000 + 1e-6 * np.random.rand()
 		
+def dim53Ackley(ht_list,x):
+		XX = []
+		assert len(ht_list) == 50
+		h2 = [0, 1] #convert to these categories, as Cocabo assumes categories in (0,1,2,3,etc.)
+		#print(ht_list)
+		
+		for i in ht_list:
+			if i:
+				XX.append(h2[i])
+			else:
+				XX.append(h2[0])
+		for i in x:
+			XX.append(i)
+		#print(XX)
+		#input('..')
+		XX[0:len(ht_list)]=np.round(XX[0:len(ht_list)]) #To make sure there is no cheating, round the discrete variables before calling the function
+		#print(XX)
+		#print(rosen(XX))
+		#input('..')
+		a = 20
+		b = 0.2
+		c = 2*np.pi
+		sum_sq_term = -a * np.exp(-b * np.sqrt(np.sum(np.square(XX))/53))
+		cos_term = -1*np.exp(np.sum(np.cos(c*np.copy(XX))/53))
+		result = a + np.exp(1) + sum_sq_term + cos_term
+		return result + 1e-6 * np.random.rand()
+		
+		
 def dim238Rosenbrock(ht_list,x):
 		XX = []
 		assert len(ht_list) == 119

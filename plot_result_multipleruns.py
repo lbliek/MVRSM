@@ -27,13 +27,14 @@ from scipy.optimize import rosen
 #folder = 'O:\Postdoc\Code\MVDONE_data\dim10Rosenbrock_fromCluster'
 #folder = 'O:\Postdoc\Code\MVDONE_data\\func3C_fromCluster'
 #folder = 'O:\Postdoc\Code\MVDONE_data\\func2C_fromCluster'
-folder = 'O:\Postdoc\Code\MVDONE_data\linearmivabo_fromCluster'
+#folder = 'O:\Postdoc\Code\MVDONE_data\linearmivabo_fromCluster'
+folder = 'O:\Postdoc\Code\MVDONE_data\dim53Rosenbrock'
 #folder = os.path.join(os.path.curdir, 'data',  'syntheticFns', 'dim53Rosenbrock')
 rand_evals = 24
-n_itrs = 100
+n_itrs = 1000
 
-separateruns = 8
-n_sep = 16
+separateruns = 1
+n_sep = 1
 n_trials = n_sep*separateruns
 max_evals = rand_evals+n_itrs
 
@@ -213,7 +214,8 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand
 	import matplotlib.pyplot as plt
 	MVDONE_ev, MVtimes=read_logs_MVDONE(folderMVDONE)
 	MVDONE_ev = MVDONE_ev.astype(float)
-	#print('hoi', MVDONE_ev.shape)
+	print('hoi', MVDONE_ev.shape)
+	print(MVDONE_ev[0:3,60:66])
 	MVtimes = MVtimes.astype(float)
 	
 	rand_iters = rand_evals
@@ -259,10 +261,10 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand
 	print("MVDONE total time: ", np.sum(avs_Mtime), " +- ", np.sum(stds_Mtime))
 	print("COCABO total time: ", np.sum(avs_Ctime), " +- ", np.sum(stds_Ctime))
 	
+	print(stds_M)
 	
-	
-	errorevery = 10
-	markevery = 10
+	errorevery = int(n_itrs/10)
+	markevery = int(n_itrs/10)
 	plt.subplot(121)
 	plt.errorbar(range(0,n_itrs,1), avs_RS[np.arange(rand_iters,total_iters,1)], yerr=stds_RS[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='o', capsize=5, label='RS')
 	plt.errorbar(range(0,n_itrs,1), avs_HO[np.arange(rand_iters,total_iters,1)], yerr=stds_HO[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='d', capsize=5, label='HO')
@@ -286,7 +288,7 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand
 	plt.xlabel('Iteration')
 	plt.ylabel('Computation time per iteration [s]')
 	plt.yscale('log')
-	#plt.ylim((1e-1,1e2))
+	plt.ylim((1e-3,1e4))
 	plt.grid()
 	plt.legend()
 	leg = plt.legend()

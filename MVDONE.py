@@ -53,7 +53,7 @@ def MVDONE_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
 		
 		# Add basis functions dependent on one integer variable
 		for k in range(num_int): 
-			for i in range(lb[k],ub[k]+1):
+			for i in range(int(lb[k]),int(ub[k])+1):
 				if i == lb[k]:
 					temp = [0]*d
 					temp[k] = 1
@@ -76,7 +76,7 @@ def MVDONE_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
 					
 		# Add basis functions dependent on two subsequent integer variables
 		for k in range(1,num_int): 
-			for i in range(lb[k]-ub[k-1],ub[k]-lb[k-1]+1):
+			for i in range(int(lb[k])-int(ub[k-1]),int(ub[k])-int(lb[k-1])+1):
 				if i == lb[k]-ub[k-1]:
 					temp = [0]*d
 					temp[k] = 1
