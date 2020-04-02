@@ -552,7 +552,7 @@ if __name__ == '__main__':
 		with open(logRStimeperiteration, 'a') as f: 
 			for i in range(0,max_evals):
 				if i==0:
-					print(trials_RS.trials[i]['book_time'].timestamp()+3600- time_start, file=f) #something wrong with my clock which causes 1 hour difference
+					print(trials_RS.trials[i]['book_time'].timestamp()+3600- time_start, file=f) #something wrong with my clock which causes 1 hour difference, but not with daylight saving time...
 				else:
 					print((trials_RS.trials[i]['book_time']- trials_RS.trials[i-1]['book_time']).total_seconds(), file=f)
 	

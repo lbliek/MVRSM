@@ -28,12 +28,14 @@ from scipy.optimize import rosen
 #folder = 'O:\Postdoc\Code\MVDONE_data\\func3C_fromCluster'
 #folder = 'O:\Postdoc\Code\MVDONE_data\\func2C_fromCluster'
 #folder = 'O:\Postdoc\Code\MVDONE_data\linearmivabo_fromCluster'
-folder = 'O:\Postdoc\Code\MVDONE_data\dim53Rosenbrock'
+#folder = 'O:\Postdoc\Code\MVDONE_data\dim53Rosenbrock'
+folder = 'O:\Postdoc\Code\MVDONE_data\dim53Ackley'
+#folder = 'O:\Postdoc\Code\MVDONE_data\dim238Rosenbrock'
 #folder = os.path.join(os.path.curdir, 'data',  'syntheticFns', 'dim53Rosenbrock')
 rand_evals = 24
 n_itrs = 1000
 
-separateruns = 1
+separateruns = 3
 n_sep = 1
 n_trials = n_sep*separateruns
 max_evals = rand_evals+n_itrs
@@ -244,6 +246,10 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand
 	
 	
 	cocabodata, ctimes = read_cocabo(folderCoCaBO,n_trials,n_itrs)
+	#print(np.copy(cocabodata).shape, np.copy(ctimes).shape)
+	#print(cocabodata[0:3][0:3], ctimes[0:3][0:3])
+	#cocabodata = np.copy(cocabodata)
+	#print(cocabodata[0:3,566:569])
 	avs_C = np.mean(cocabodata,0)	
 	stds_C = np.std(cocabodata,0)
 	avs_Ctime = np.mean(ctimes,0)
@@ -255,21 +261,39 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand
 	#print('hoi', avs_Ctime.shape)
 	
 	
+	Rosenbrock238=False #don't plot CoCaBO for Rosenbrock238
+	
+	if not Rosenbrock238:
+		cocabodata, ctimes = read_cocabo(folderCoCaBO,n_trials,n_itrs)
+		avs_C = np.mean(cocabodata,0)	
+		stds_C = np.std(cocabodata,0)
+		avs_Ctime = np.mean(ctimes,0)
+		stds_Ctime = np.std(ctimes,0)
+		#C_iters = len(avs_C)-1
+		C_iters = n_itrs
+		#print(len(avs_C), len(avs_M), len(avs_Ctime))
+		#print(avs_Ctime[np.arange(0,C_iters,1)])
+		#print('hoi', avs_Ctime.shape)
 	
 	print("RS total time: ", np.sum(avs_RStime), " +- ", np.sum(stds_RStime))
 	print("HO total time: ", np.sum(avs_HOtime), " +- ", np.sum(stds_HOtime))
 	print("MVDONE total time: ", np.sum(avs_Mtime), " +- ", np.sum(stds_Mtime))
-	print("COCABO total time: ", np.sum(avs_Ctime), " +- ", np.sum(stds_Ctime))
+	if not Rosenbrock238:
+		print("COCABO total time: ", np.sum(avs_Ctime), " +- ", np.sum(stds_Ctime))
 	
 	print(stds_M)
+	
+	plt.figure(figsize=(7,3.5))
 	
 	errorevery = int(n_itrs/10)
 	markevery = int(n_itrs/10)
 	plt.subplot(121)
+	plt.subplots_adjust(left=0.11, bottom=0.16, right=0.96, top=0.90, wspace=0.41, hspace=0.2)
 	plt.errorbar(range(0,n_itrs,1), avs_RS[np.arange(rand_iters,total_iters,1)], yerr=stds_RS[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='o', capsize=5, label='RS')
 	plt.errorbar(range(0,n_itrs,1), avs_HO[np.arange(rand_iters,total_iters,1)], yerr=stds_HO[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='d', capsize=5, label='HO')
-	plt.errorbar(range(0,n_itrs,1), avs_M[np.arange(rand_iters,total_iters,1)], yerr=stds_M[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='s', capsize=5, label='MVDONE')
-	plt.errorbar(range(0,n_itrs,1), avs_C[np.arange(0,n_itrs,1)], yerr=stds_C[np.arange(0,n_itrs,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='^', capsize=5, label='CoCaBO')
+	plt.errorbar(range(0,n_itrs,1), avs_M[np.arange(rand_iters,total_iters,1)], yerr=stds_M[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='s', capsize=5, label='MVRSM')
+	if not Rosenbrock238:
+		plt.errorbar(range(0,n_itrs,1), avs_C[np.arange(0,n_itrs,1)], yerr=stds_C[np.arange(0,n_itrs,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='^', capsize=5, label='CoCaBO')
 	plt.xlabel('Iteration')
 	plt.ylabel('Objective')
 	#plt.ylim((-20,0))
@@ -283,12 +307,13 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand
 	plt.subplot(122)
 	plt.errorbar(range(0,n_itrs,1), avs_RStime[np.arange(rand_iters,total_iters,1)], yerr=stds_RStime[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='o', capsize=5, label='RS')
 	plt.errorbar(range(0,n_itrs,1), avs_HOtime[np.arange(rand_iters,total_iters,1)], yerr=stds_HOtime[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='d', capsize=5, label='HO')
-	plt.errorbar(range(0,n_itrs,1), avs_Mtime[np.arange(rand_iters,total_iters,1)], yerr=stds_Mtime[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='s', capsize=5, label='MVDONE')
-	plt.errorbar(range(0,n_itrs,1), avs_Ctime[np.arange(0,n_itrs,1)], yerr=stds_Ctime[np.arange(0,n_itrs,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='^', capsize=5, label='CoCaBO')
+	plt.errorbar(range(0,n_itrs,1), avs_Mtime[np.arange(rand_iters,total_iters,1)], yerr=stds_Mtime[np.arange(rand_iters,total_iters,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='s', capsize=5, label='MVRSM')
+	if not Rosenbrock238:
+		plt.errorbar(range(0,n_itrs,1), avs_Ctime[np.arange(0,n_itrs,1)], yerr=stds_Ctime[np.arange(0,n_itrs,1)], errorevery=errorevery, markevery=markevery, linestyle='-', linewidth=2.0, marker='^', capsize=5, label='CoCaBO')
 	plt.xlabel('Iteration')
 	plt.ylabel('Computation time per iteration [s]')
 	plt.yscale('log')
-	plt.ylim((1e-3,1e4))
+	plt.ylim((1e-4,1e4)) #only needed for Ackley53
 	plt.grid()
 	plt.legend()
 	leg = plt.legend()

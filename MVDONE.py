@@ -359,11 +359,6 @@ def MVDONE_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
 							a -= 1
 					r = r*2
 				next_X[j]=a
-				# print('j', j)
-				# print('bef', next_X_before_exploration[j])
-				# print('ne', next_X[j])
-				# print('a', a)
-				# input('...')
 			# Continuous exploration
 			for j in range(num_int, d):
 				r = np.random.normal()*(ub[j]-lb[j])*0.1*1/(math.sqrt(d)) #choose a variance that scales inversely with the total number of variables
@@ -372,11 +367,6 @@ def MVDONE_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
 					r = np.random.normal()*(ub[j]-lb[j])*0.1*1/(math.sqrt(d)) #out of bounds so repeat
 				a += r
 				next_X[j]=a
-				# print('j', j)
-				# print('bef', next_X_before_exploration[j])
-				# print('ne', next_X[j])
-				# print('a', a)
-				# input('...')
 					
 			
 		#print('Exploration: from ', next_X_before_exploration, 'to ', next_X)
