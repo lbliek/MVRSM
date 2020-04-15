@@ -1,6 +1,10 @@
-# MVDONE on 10-dimensional Rosenbrock example
+# MVRSM demo
 # By Laurens Bliek, 16-03-2020
-
+# Supported functions: 'func2C', 'func3C', 'dim10Rosenbrock',
+# 'linearmivabo', 'dim53Rosenbrock', 'dim53Ackley', 'dim238Rosenbrock'
+# Example: python demo.py -f dim10Rosenbrock  -n 10 -tl 4
+# Here, -f is the function to be optimised, -n is the number of iterations, and -tl is the total number of runs.
+# Afterward, use plot_result.py for visualisation.
 
 import sys
 # sys.path.append('../bayesopt')
@@ -13,13 +17,13 @@ import time
 import testFunctions.syntheticFunctions
 from methods.CoCaBO import CoCaBO
 from methods.BatchCoCaBO import BatchCoCaBO
-import MVDONE
+import MVRSM
 from hyperopt import fmin, tpe, rand, hp, STATUS_OK, Trials
 from functools import partial
 
+
 from scipy.optimize import rosen
 from linear_MIVABOfunction import Linear
-
 
 # CoCaBO code taken from:
 # -*- coding: utf-8 -*-
@@ -60,7 +64,7 @@ def CoCaBO_Exps(obj_func, budget, initN=24 ,trials=40, kernel_mix = 0.5, batch=N
 			{'name': 'h3', 'type': 'categorical', 'domain': (0, 1, 2, 3)},
 			{'name': 'x1', 'type': 'continuous', 'domain': (-1, 1)},
 			{'name': 'x2', 'type': 'continuous', 'domain': (-1, 1)}]
-	#Laurens
+	#Adapted
 	elif obj_func == 'highdimRosenbrock':
 		f = testFunctions.syntheticFunctions.highdimRosenbrock
 		categories = [5,5,5,5,5]
@@ -91,8 +95,6 @@ def CoCaBO_Exps(obj_func, budget, initN=24 ,trials=40, kernel_mix = 0.5, batch=N
 			{'name': 'x20', 'type': 'continuous', 'domain': (-2, 2)}]
 	elif obj_func == 'dim10Rosenbrock':
 		f = testFunctions.syntheticFunctions.dim10Rosenbrock
-		
-			
 		categories = [5,5,5]
 		bounds = [{'name': 'h1', 'type': 'categorical', 'domain': (0, 1, 2, 3, 4)},
 			{'name': 'h2', 'type': 'categorical', 'domain': (0, 1, 2, 3, 4)},
@@ -104,6 +106,82 @@ def CoCaBO_Exps(obj_func, budget, initN=24 ,trials=40, kernel_mix = 0.5, batch=N
 			{'name': 'x5', 'type': 'continuous', 'domain': (-2, 2)},
 			{'name': 'x6', 'type': 'continuous', 'domain': (-2, 2)},
 			{'name': 'x7', 'type': 'continuous', 'domain': (-2, 2)}]
+	elif obj_func == 'dim53Rosenbrock':
+		f = testFunctions.syntheticFunctions.dim53Rosenbrock
+		categories = []
+		for i in range(50):
+			categories.append(2)
+		bounds = [{'name': 'h1', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h2', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h3', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h4', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h5', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h6', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h7', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h8', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h9', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h10', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h11', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h12', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h13', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h14', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h15', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h16', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h17', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h18', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h19', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h20', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h21', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h22', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h23', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h24', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h25', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h26', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h27', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h28', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h29', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h30', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h31', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h32', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h33', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h34', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h35', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h36', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h37', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h38', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h39', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h40', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h41', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h42', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h43', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h44', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h45', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h46', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h47', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h48', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h49', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'h50', 'type': 'categorical', 'domain': (0, 1)},
+			{'name': 'x1', 'type': 'continuous', 'domain': (-2, 2)},
+			{'name': 'x2', 'type': 'continuous', 'domain': (-2, 2)},
+			{'name': 'x3', 'type': 'continuous', 'domain': (-2, 2)}]
+	elif obj_func == 'dim238Rosenbrock':
+		f = testFunctions.syntheticFunctions.dim238Rosenbrock
+		categories = []
+		bounds = []
+		for i in range(119):
+			categories.append(5)
+			bounds.append({'name': f"h{i}", 'type': 'categorical', 'domain': (0, 1, 2, 3, 4)})
+		for i in range(119,238):
+			bounds.append({'name': f"x{i-119+1}", 'type': 'continuous', 'domain': (-2,2)})
+	elif obj_func == 'dim53Ackley':
+		f = testFunctions.syntheticFunctions.dim53Ackley
+		categories = []
+		bounds = []
+		for i in range(50):
+			categories.append(2)
+			bounds.append({'name': f"h{i}", 'type': 'categorical', 'domain': (0, 1)})
+		for i in range(50,53):
+			bounds.append({'name': f"x{i-50+1}", 'type': 'continuous', 'domain': (-1, 1)})
 	elif obj_func == 'linearmivabo':
 		
 		ftemp = LM.objective_function
@@ -131,7 +209,7 @@ def CoCaBO_Exps(obj_func, budget, initN=24 ,trials=40, kernel_mix = 0.5, batch=N
 			{'name': 'x6', 'type': 'continuous', 'domain': (0, 3)},
 			{'name': 'x7', 'type': 'continuous', 'domain': (0, 3)},
 			{'name': 'x8', 'type': 'continuous', 'domain': (0, 3)},]
-	#/Laurens
+	#/Adapted
 	else:
 		raise NotImplementedError
 
@@ -153,204 +231,6 @@ def CoCaBO_Exps(obj_func, budget, initN=24 ,trials=40, kernel_mix = 0.5, batch=N
 
 
 
-def read_cocabo(folder, num_runs,num_iters):
-	cocabodata = []
-	for i in range(num_runs):
-
-		filename = os.path.join(folder,'CoCaBO_1_best_vals_LCB_ARD_False_mix_0.5_df_s' + str(i))
-		f = open(filename,'rb')
-		cl = pickle.load(f)
-		cocabodata.append(cl.best_value)
-		#outname = 'run' + str(i) + '.xlsx'
-		#cl.to_excel(outname)
-	filename = os.path.join(folder, 'Cocabo_timeperiteration.txt')
-	with open(filename, 'r') as f:
-		Ctimes = f.readlines()
-		Ctimes = np.copy(Ctimes[0:num_iters*num_runs+1])
-		Ctimes = Ctimes.astype(float)
-	#print(Ctimes.shape)
-	Ctimes = Ctimes.reshape((num_runs,num_iters))
-	return cocabodata, Ctimes
-
-
-
-# Read data from log file (this reads the best found objective values at each iteration)
-def read_logs_MVDONE(folder):
-	#folder = 'MVDONE/'
-	allfiles = os.listdir(folder)
-	logfilesMV = [f for f in allfiles if ('.log' in f and 'MVDONE' in f)]
-	MVbests = []
-	MVtimes = []
-	for log in logfilesMV:
-		with open(os.path.join(folder,log),'r') as f:
-			MVDONEfile = f.readlines()
-			MVDONE_best = []
-			MVDONE_time = []
-			for i, lines in enumerate(MVDONEfile):
-				searchterm = 'Best data point according to the model and predicted value'
-				if searchterm in lines:
-					#print('Hello', MVDONEfile)
-					temp = MVDONEfile[i-1]
-					temp = temp.split('] , ')
-					temp = temp[1]
-					MVDONE_best.append(float(temp))
-				searchterm2 = 'Total computation time for this iteration:	 '
-				if searchterm2 in lines:
-					#print('Hello', MVDONEfile)
-					temp = MVDONEfile[i]
-					temp = temp.split(':')
-					temp = temp[1]
-					if temp[0]:
-						MVDONE_time.append(float(temp))
-		MVbests.append(MVDONE_best)
-		# print(np.copy(allbests))
-		# print(np.copy(allbests).shape)
-		# exit()
-		MVtimes.append(MVDONE_time)
-	return np.copy(MVbests), np.copy(MVtimes)
-	
-	
-# Read data from log file (this reads the best found objective values at each iteration)
-def read_logs_HO(folder, num_runs,num_iters):
-	allfiles = os.listdir(folder)
-	logfilesHO = [f for f in allfiles if ('.log' in f and 'HypOpt' in f)]
-	HObests = []
-	for log in logfilesHO:
-		with open(os.path.join(folder,log),'r') as f:
-			best = 10e9
-			HOfile = f.readlines()
-			HOfile = HOfile[0]
-			HOfile = HOfile.split(',')
-			HO_ev = []
-			for i, lines in enumerate(HOfile):
-				searchterm1 = "'result': {'loss': "
-				if searchterm1 in lines:
-					temp1 = lines
-					temp1 = temp1.split(searchterm1)
-					temp1 = temp1[1]
-					temp1 = float(temp1)
-					if temp1 < best:
-						best = temp1
-						HO_ev.append(temp1)
-					else:
-						HO_ev.append(best)
-		HObests.append(HO_ev)
-						
-	filename = os.path.join(folder, 'HO_timeperiteration.txt')
-	with open(filename, 'r') as f:
-		HOtimes = f.readlines()
-		HOtimes = np.copy(HOtimes[0:num_iters*num_runs+1])
-		HOtimes = HOtimes.astype(float)
-	HOtimes = HOtimes.reshape((num_runs,num_iters))
-	return HObests, HOtimes
-	
-def read_logs_RS(folder, num_runs,num_iters):
-	allfiles = os.listdir(folder)
-	logfilesRS = [f for f in allfiles if ('.log' in f and 'RS' in f)]
-	RSbests = []
-	for log in logfilesRS:
-		with open(os.path.join(folder,log),'r') as f:
-			best = 10e9
-			RSfile = f.readlines()
-			RSfile = RSfile[0]
-			RSfile = RSfile.split(',')
-			RS_ev = []
-			for i, lines in enumerate(RSfile):
-				searchterm1 = "'result': {'loss': "
-				if searchterm1 in lines:
-					temp1 = lines
-					temp1 = temp1.split(searchterm1)
-					temp1 = temp1[1]
-					temp1 = float(temp1)
-					if temp1 < best:
-						best = temp1
-						RS_ev.append(temp1)
-					else:
-						RS_ev.append(best)
-		RSbests.append(RS_ev)
-						
-	filename = os.path.join(folder, 'RS_timeperiteration.txt')
-	with open(filename, 'r') as f:
-		RStimes = f.readlines()
-		RStimes = np.copy(RStimes[0:num_iters*num_runs+1])
-		RStimes = RStimes.astype(float)
-	RStimes = RStimes.reshape((num_runs,num_iters))
-	return RSbests, RStimes
-	
-	
-# Plot the best found objective values at each iteration
-def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS):
-	import matplotlib.pyplot as plt
-	MVDONE_ev, MVtimes=read_logs_MVDONE(folderMVDONE)
-	MVDONE_ev = MVDONE_ev.astype(float)
-	MVtimes = MVtimes.astype(float)
-	
-	rand_iters = rand_evals
-	total_iters = max_evals
-	avs_M = -np.mean(MVDONE_ev,0)
-	avs_Mtime = np.mean(MVtimes,0)
-	stds_M = np.std(MVDONE_ev,0)
-	stds_Mtime = np.std(MVtimes,0)
-	
-	
-	HO_ev, HOtimes = read_logs_HO(folderHO,n_trials,n_itrs)
-	avs_HO = -np.mean(HO_ev,0)
-	avs_HOtime = np.std(HOtimes,0)
-	stds_HO = np.std(HO_ev,0)
-	stds_HOtime = np.std(HOtimes,0)
-	
-	
-	
-	RS_ev, RStimes = read_logs_RS(folderRS,n_trials,n_itrs)
-	avs_RS = -np.mean(RS_ev,0)
-	avs_RStime = np.std(RStimes,0)
-	stds_RS = np.std(RS_ev,0)
-	stds_RStime = np.std(RStimes,0)
-	
-	#print(MVtimes.shape)
-	
-	
-	cocabodata, ctimes = read_cocabo(folderCoCaBO,n_trials,n_itrs)
-	avs_C = np.mean(cocabodata,0)	
-	stds_C = np.std(cocabodata,0)
-	avs_Ctime = np.mean(ctimes,0)
-	stds_Ctime = np.std(ctimes,0)
-	C_iters = len(avs_C)-1
-	#print(len(avs_C), len(avs_M), len(avs_Ctime))
-	#print(avs_Ctime[np.arange(0,C_iters,1)])
-	#print('hoi', avs_Ctime.shape)
-	
-	plt.subplot(121)
-	plt.errorbar(range(0,n_itrs,1), avs_RS[np.arange(0,n_itrs,1)], yerr=stds_RS[np.arange(0,n_itrs,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='o', capsize=5, label='RS')
-	plt.errorbar(range(0,n_itrs,1), avs_HO[np.arange(0,n_itrs,1)], yerr=stds_HO[np.arange(0,n_itrs,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='d', capsize=5, label='HO')
-	plt.errorbar(range(0,total_iters-rand_iters,1), avs_M[np.arange(rand_iters,total_iters,1)], yerr=stds_M[np.arange(rand_iters,total_iters,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='s', capsize=5, label='MVDONE')
-	
-	plt.errorbar(range(0,C_iters,1), avs_C[np.arange(0,C_iters,1)], yerr=stds_C[np.arange(0,C_iters,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='^', capsize=5, label='CoCaBO')
-	plt.xlabel('Iteration')
-	plt.ylabel('Objective')
-	#plt.ylim((-20,0))
-	plt.grid()
-	leg = plt.legend()
-	if leg:
-		leg.set_draggable(True)
-	
-	plt.subplot(122)
-	plt.errorbar(range(0,n_itrs,1), avs_RStime[np.arange(0,n_itrs,1)], yerr=stds_RStime[np.arange(0,n_itrs,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='o', capsize=5, label='RS')
-	plt.errorbar(range(0,n_itrs,1), avs_HOtime[np.arange(0,n_itrs,1)], yerr=stds_HOtime[np.arange(0,n_itrs,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='d', capsize=5, label='HO')
-	plt.errorbar(range(0,total_iters-rand_iters,1), avs_Mtime[np.arange(rand_iters,total_iters,1)], yerr=stds_Mtime[np.arange(rand_iters,total_iters,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='s', capsize=5, label='MVDONE')
-	plt.errorbar(range(0,C_iters,1), avs_Ctime[np.arange(0,C_iters,1)], yerr=stds_Ctime[np.arange(0,C_iters,1)], errorevery=50, markevery=50, linestyle='-', linewidth=2.0, marker='^', capsize=5, label='CoCaBO')
-	plt.xlabel('Iteration')
-	plt.ylabel('Computation time per iteration [s]')
-	plt.yscale('log')
-	#plt.ylim((1e-1,1e2))
-	plt.grid()
-	plt.legend()
-	leg = plt.legend()
-	if leg:
-		leg.set_draggable(True)
-	plt.show()
-	
-
 
 
 
@@ -358,16 +238,19 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS):
 
 if __name__ == '__main__':
 
+	# Read arguments
+	
 	parser = argparse.ArgumentParser(description="Run BayesOpt Experiments")
 	parser.add_argument('-f', '--func', help='Objective function',
-						default='linearmivabo', type=str)
+						default='dim10Rosenbrock', type=str)   # Supported functions: 'func2C', 'func3C', 'dim10Rosenbrock',
+														       # 'linearmivabo', 'dim53Rosenbrock', 'dim53Ackley', 'dim238Rosenbrock'
 	parser.add_argument('-mix', '--kernel_mix',
 						help='Mixture weight for production and summation kernel. Default = 0.0', default=0.5,
 						type=float)
 	parser.add_argument('-n', '--max_itr', help='Max Optimisation iterations. Default = 100',
-						default=2, type=int)
+						default=10, type=int)
 	parser.add_argument('-tl', '--trials', help='Number of random trials. Default = 20',
-						default=2, type=int)
+						default=1, type=int)
 	parser.add_argument('-b', '--batch', help='Batch size (>1 for batch CoCaBO and =1 for sequential CoCaBO). Default = 1',
 						default=1, type=int)
 
@@ -381,35 +264,88 @@ if __name__ == '__main__':
 	
 	
 
-	if obj_func == 'dim10Rosenbrock':
-		ff = testFunctions.syntheticFunctions.dim10Rosenbrock
-	elif obj_func == 'func3C':
-		ff = testFunctions.syntheticFunctions.func3C
-	elif obj_func == 'func2C':
-		ff = testFunctions.syntheticFunctions.func2C
-	elif obj_func == 'linearmivabo':
-		LM = Linear(laplace=False)
-		ff = LM.objective_function
-		
-	CoCaBO_Exps(obj_func=obj_func, budget=n_itrs,trials=n_trials, kernel_mix = kernel_mix, batch=batch)
 	
 	
 	folder = os.path.join(os.path.curdir, 'data',  'syntheticFns', obj_func)
 	
+	if obj_func == 'dim10Rosenbrock':
+		ff = testFunctions.syntheticFunctions.dim10Rosenbrock
+		d = 10 # Total number of variables
+		lb = -2*np.ones(d).astype(int) # Lower bound
+		ub = 2*np.ones(d).astype(int) # Upper bound
+		num_int = 3 # number of integer variables
+		lb[0:num_int] = 0
+		ub[0:num_int] = num_int+1
+	elif obj_func == 'func3C':
+		ff = testFunctions.syntheticFunctions.func3C
+		d = 5 # Total number of variables			
+		lb = -1*np.ones(d).astype(int) # Lower bound for continuous variables
+		ub = 1*np.ones(d).astype(int) # Upper bound for continuous variables
+		num_int = 3 # number of integer variables
+		lb[0:num_int] = 0
+		ub[0]=2
+		ub[1]=4
+		ub[2]=3
+	elif obj_func == 'func2C':
+		ff = testFunctions.syntheticFunctions.func2C
+		d = 4 # Total number of variables			
+		lb = -1*np.ones(d).astype(int) # Lower bound for continuous variables
+		ub = 1*np.ones(d).astype(int) # Upper bound for continuous variables
+		num_int = 2 # number of integer variables
+		lb[0:num_int] = 0
+		ub[0]=2
+		ub[1]=4
+	elif obj_func == 'linearmivabo':
+		LM = Linear(laplace=False)
+		ff = LM.objective_function
+		d = 16 # Total number of variables			
+		lb = 0*np.ones(d).astype(int) # Lower bound for continuous variables
+		ub = 3*np.ones(d).astype(int) # Upper bound for continuous variables
+		num_int = 8 # number of integer variables
+		lb[0:num_int] = 0
+		ub[0:num_int]=3
+	elif obj_func == 'dim53Rosenbrock':
+		ff = testFunctions.syntheticFunctions.dim53Rosenbrock
+		d = 53 # Total number of variables
+		lb = -2*np.ones(d).astype(int) # Lower bound
+		ub = 2*np.ones(d).astype(int) # Upper bound
+		num_int = 50 # number of integer variables
+		lb[0:num_int] = 0
+		ub[0:num_int] = 1
+	elif obj_func == 'dim53Ackley':
+		ff = testFunctions.syntheticFunctions.dim53Ackley
+		d = 53 # Total number of variables
+		lb = -1*np.ones(d).astype(float) # Lower bound
+		ub = 1*np.ones(d).astype(float) # Upper bound
+		num_int = 50 # number of integer variables
+		lb[0:num_int] = 0
+		ub[0:num_int] = 1
+	elif obj_func == 'dim238Rosenbrock':
+		ff = testFunctions.syntheticFunctions.dim238Rosenbrock
+		d = 238 # Total number of variables
+		lb = -2*np.ones(d).astype(int) # Lower bound
+		ub = 2*np.ones(d).astype(int) # Upper bound
+		num_int = 119 # number of integer variables
+		lb[0:num_int] = 0
+		ub[0:num_int] = 4
+	else:
+		raise NotImplementedError
 	
 	
-	d = 16 # Total number of variables			
-	lb = 0*np.ones(d).astype(int) # Lower bound for continuous variables
-	ub = 3*np.ones(d).astype(int) # Upper bound for continuous variables
-	num_int = 8 # number of integer variables
-	lb[0:num_int] = 0
-	ub[0:num_int]=3
-	x0 =np.zeros(d)
+	x0 =np.zeros(d) # Initial guess
 	x0[0:num_int] = np.round(np.random.rand(num_int)*(ub[0:num_int]-lb[0:num_int]) + lb[0:num_int]) # Random initial guess (integer)
 	x0[num_int:d] = np.random.rand(d-num_int)*(ub[num_int:d]-lb[num_int:d]) + lb[num_int:d] # Random initial guess (continuous)
+	
+	
 	rand_evals = 24 # Number of random iterations, same as initN above (24)
-	max_evals = n_itrs+rand_evals # Maximum number of MVDONE iterations
-	def obj_MVDONE(x):
+	max_evals = n_itrs+rand_evals # Maximum number of MVRSM iterations, the first <rand_evals> are random
+	
+	
+	###########
+	## MVRSM ##
+	###########
+	
+	def obj_MVRSM(x):
 		#print(x[0:num_int])
 		h = np.copy(x[0:num_int]).astype(int)
 		if obj_func == 'func3C' or obj_func == 'func2C':
@@ -419,27 +355,30 @@ if __name__ == '__main__':
 		else:
 			result = ff(h,x[num_int:])
 		return result
-	def run_MVDONE():
-		solX, solY, model, logfile = MVDONE.MVDONE_minimize(obj_MVDONE, x0, lb, ub, num_int, max_evals, rand_evals)
+	def run_MVRSM():
+		solX, solY, model, logfile = MVRSM.MVRSM_minimize(obj_MVRSM, x0, lb, ub, num_int, max_evals, rand_evals)
 		os.rename(logfile, os.path.join(folder,logfile))
 		print("Solution found: ")
 		print(f"X = {solX}")
 		print(f"Y = {solY}")
 	for i in range(n_trials):
-		print(f"Testing MVDONE on the {d}-dimensional Rosenbrock function with integer constraints.")
-		print("The known global minimum is f(1,1,...,1)=0")
-		run_MVDONE()
+		if obj_func == 'dim10Rosenbrock' or obj_func == 'dim53Rosenbrock' or obj_func == 'dim238Rosenbrock':
+			print(f"Testing MVRSM on the {d}-dimensional Rosenbrock function with integer constraints.")
+			print("The known global minimum is f(1,1,...,1)=0")
+		else:
+			print("Start MVRSM trials")
+		run_MVRSM()
 		
 		
-	############
-	# HyperOpt #
-	############
+	##############
+	## HyperOpt ##
+	##############
 	
 	
 	
 	# HyperOpt and RS objective
 	def hyp_obj(x):
-		f = obj_MVDONE(x)
+		f = obj_MVRSM(x)
 		#print('Objective value: ', f)
 		return {'loss': f, 'status': STATUS_OK }
 	
@@ -477,14 +416,17 @@ if __name__ == '__main__':
 		with open(logHOtimeperiteration, 'a') as f: 
 			for i in range(0,max_evals):
 				if i==0:
-					print(trials_HO.trials[i]['book_time'].timestamp()+3600- time_start, file=f) #something wrong with my clock which causes 1 hour difference
+					#print(trials_HO.trials[i]['book_time'].timestamp()+3600- time_start, file=f) #something wrong with my clock which causes 1 hour difference
+					print(trials_HO.trials[i]['book_time'].timestamp()- time_start, file=f) #no 1 hour difference
 				else:
 					print((trials_HO.trials[i]['book_time']- trials_HO.trials[i-1]['book_time']).total_seconds(), file=f)
 
 	
 
+	###################
+	## Random search ##
+	###################
 	
-	## Random search
 	print("Start Random Search trials")
 	for i in range(n_trials):
 		current_time = time.time() # time when starting the HO and RS algorithm
@@ -503,15 +445,18 @@ if __name__ == '__main__':
 		with open(logRStimeperiteration, 'a') as f: 
 			for i in range(0,max_evals):
 				if i==0:
-					print(trials_RS.trials[i]['book_time'].timestamp()+3600- time_start, file=f) #something wrong with my clock which causes 1 hour difference
+					#print(trials_RS.trials[i]['book_time'].timestamp()+3600- time_start, file=f) #something wrong with my clock which causes 1 hour difference, but not with daylight saving time...
+					print(trials_RS.trials[i]['book_time'].timestamp()- time_start, file=f) #no 1 hour difference
 				else:
 					print((trials_RS.trials[i]['book_time']- trials_RS.trials[i-1]['book_time']).total_seconds(), file=f)
+	
+	############
+	## CoCaBO ##
+	############
+	
+	print("Start CoCaBO trials")
+	CoCaBO_Exps(obj_func=obj_func, budget=n_itrs,trials=n_trials, kernel_mix = kernel_mix, batch=batch)
+	
+	
 
-	####################
-	# Plot results
-	#plot_results(folder, folder, folder, folder)
 		
-
-# Visualise the results
-#MVDONE.plot_results(logfile)
-#input('...')

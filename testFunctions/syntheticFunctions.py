@@ -1,3 +1,5 @@
+# Adapted from:
+#
 # -*- coding: utf-8 -*-
 #==========================================
 # Title:  syntheticFunctions.py
@@ -25,12 +27,11 @@ def myrosenbrock(X):
 	fx = 100 * (x2 - x1 ** 2) ** 2 + (x1 - 1) ** 2
 	return fx.reshape(-1, 1) / 300
 
-#Laurens
+#Adapted
 def highdimRosenbrock(ht_list,x):
 		XX = []
 		assert len(ht_list) == 5
 		h2 = [-2, -1, 0, 1, 2] #convert to these categories, as Cocabo assumes categories in (0,1,2,3,etc.)
-		#print(ht_list)
 		for i in ht_list:
 			if i:
 				XX.append(h2[i])
@@ -38,21 +39,13 @@ def highdimRosenbrock(ht_list,x):
 				XX.append(h2[0])
 		for i in x:
 			XX.append(i)
-		#print(XX)
-		#input('..')
 		XX[0:len(ht_list)]=np.round(XX[0:len(ht_list)]) #To make sure there is no cheating, round the discrete variables before calling the function
-		#print(XX)
-		#print(rosen(XX))
-		#input('..')
 		return rosen(XX)/300 + 1e-6 * np.random.rand()
-#/Laurens
 
-#Laurens
 def dim10Rosenbrock(ht_list,x):
 		XX = []
 		assert len(ht_list) == 3
 		h2 = [-2, -1, 0, 1, 2] #convert to these categories, as Cocabo assumes categories in (0,1,2,3,etc.)
-		#print(ht_list)
 		for i in ht_list:
 			if i:
 				XX.append(h2[i])
@@ -60,21 +53,13 @@ def dim10Rosenbrock(ht_list,x):
 				XX.append(h2[0])
 		for i in x:
 			XX.append(i)
-		#print(XX)
-		#input('..')
 		XX[0:len(ht_list)]=np.round(XX[0:len(ht_list)]) #To make sure there is no cheating, round the discrete variables before calling the function
-		#print(XX)
-		#print(rosen(XX))
-		#input('..')
 		return rosen(XX)/300 + 1e-6 * np.random.rand()
-#/Laurens
 
-#Laurens
 def dim53Rosenbrock(ht_list,x):
 		XX = []
 		assert len(ht_list) == 50
 		h2 = [1, 2] #convert to these categories, as Cocabo assumes categories in (0,1,2,3,etc.)
-		#print(ht_list)
 		for i in ht_list:
 			if i:
 				XX.append(h2[i])
@@ -82,19 +67,13 @@ def dim53Rosenbrock(ht_list,x):
 				XX.append(h2[0])
 		for i in x:
 			XX.append(i)
-		#print(XX)
-		#input('..')
 		XX[0:len(ht_list)]=np.round(XX[0:len(ht_list)]) #To make sure there is no cheating, round the discrete variables before calling the function
-		#print(XX)
-		#print(rosen(XX))
-		#input('..')
 		return rosen(XX)/20000 + 1e-6 * np.random.rand()
 		
 def dim53Ackley(ht_list,x):
 		XX = []
 		assert len(ht_list) == 50
 		h2 = [0, 1] #convert to these categories, as Cocabo assumes categories in (0,1,2,3,etc.)
-		#print(ht_list)
 		
 		for i in ht_list:
 			if i:
@@ -103,12 +82,7 @@ def dim53Ackley(ht_list,x):
 				XX.append(h2[0])
 		for i in x:
 			XX.append(i)
-		#print(XX)
-		#input('..')
 		XX[0:len(ht_list)]=np.round(XX[0:len(ht_list)]) #To make sure there is no cheating, round the discrete variables before calling the function
-		#print(XX)
-		#print(rosen(XX))
-		#input('..')
 		a = 20
 		b = 0.2
 		c = 2*np.pi
@@ -122,7 +96,6 @@ def dim238Rosenbrock(ht_list,x):
 		XX = []
 		assert len(ht_list) == 119
 		h2 = [-2, -1, 0, 1, 2] #convert to these categories, as Cocabo assumes categories in (0,1,2,3,etc.)
-		#print(ht_list)
 		for i in ht_list:
 			if i:
 				XX.append(h2[i])
@@ -130,14 +103,9 @@ def dim238Rosenbrock(ht_list,x):
 				XX.append(h2[0])
 		for i in x:
 			XX.append(i)
-		#print(XX)
-		#input('..')
 		XX[0:len(ht_list)]=np.round(XX[0:len(ht_list)]) #To make sure there is no cheating, round the discrete variables before calling the function
-		#print(XX)
-		#print(rosen(XX))
-		#input('..')
 		return rosen(XX)/50000 + 1e-6 * np.random.rand()
-#/Laurens
+#/Adapted
 
 
 # =============================================================================
@@ -202,38 +170,7 @@ def func2C(ht_list, X):
 
 	y = f + 1e-6 * np.random.rand(f.shape[0], f.shape[1])
 	return y.astype(float)
-	
-#Laurens
-def shifted_rosenbrock(ht_list, X):
-	# ht is a categorical index
-	# X is a continuous variable
-	X = X * 2
 
-	assert len(ht_list) == 2
-	ht1 = ht_list[0]
-	ht2 = ht_list[1]
-	
-	f = myrosenbrock(X-[ht1, ht2])
-	
-
-	y = f + 1e-6 * np.random.rand(f.shape[0], f.shape[1])
-	return y.astype(float)
-	
-def shifted_rosenbrock2(ht_list, X):
-	# ht is a categorical index
-	# X is a continuous variable
-	X = X * 2
-
-	assert len(ht_list) == 2
-	ht1 = ht_list[0]
-	ht2 = ht_list[1]
-	
-	f = myrosenbrock(0.1*(0.25*X-[ht1, ht2]))
-	
-
-	y = f + 1e-6 * np.random.rand(f.shape[0], f.shape[1])
-	return y.astype(float)
-#/Laurens
 
 def func3C(ht_list, X):
 	# ht is a categorical index
