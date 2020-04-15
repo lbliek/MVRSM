@@ -1,4 +1,4 @@
-# MVDONE on 10-dimensional Rosenbrock example
+# MVRSM on 10-dimensional Rosenbrock example
 # By Laurens Bliek, 16-03-2020
 
 
@@ -13,27 +13,16 @@ import time
 import testFunctions.syntheticFunctions
 from methods.CoCaBO import CoCaBO
 from methods.BatchCoCaBO import BatchCoCaBO
-import MVDONE
+import MVRSM
 from hyperopt import fmin, tpe, rand, hp, STATUS_OK, Trials
 from functools import partial
 
 from scipy.optimize import rosen
 
-#from compare_Rosenbrock_10dim import plot_results
 
-
-
-#folder = os.path.join(os.path.curdir, 'data',  'syntheticFns', 'dim10Rosenbrock')
-#folder = 'O:\Postdoc\Code\MVDONE_data\dim10Rosenbrock'
-#folder = 'O:\Postdoc\Code\MVDONE_data\\func3C_fromCluster'
-#folder = 'O:\Postdoc\Code\MVDONE_data\\func2C_fromCluster'
-#folder = 'O:\Postdoc\Code\MVDONE_data\linearmivabo_fromCluster'
-#folder = os.path.join(os.path.curdir, 'data',  'syntheticFns', 'dim53Rosenbrock')
-#folder =  "O:\Postdoc\Code\MVDONE_data\dim53Rosenbrock\\run1"
-folder =  "O:\Postdoc\Code\MVDONE_data\dim238Rosenbrock"
-#folder =  "O:\Postdoc\Code\MVDONE_data\dim53Ackley\\run1"
+folder = ".\\data\\syntheticFns\\dim10Rosenbrock"
 rand_evals = 24
-n_itrs = 2000
+n_itrs = 10
 n_trials = 1
 max_evals = rand_evals+n_itrs
 
@@ -60,38 +49,40 @@ def read_cocabo(folder, num_runs,num_iters):
 
 
 # Read data from log file (this reads the best found objective values at each iteration)
-def read_logs_MVDONE(folder):
-	#folder = 'MVDONE/'
+def read_logs_MVRSM(folder):
+	#folder = 'MVRSM/'
 	allfiles = os.listdir(folder)
-	logfilesMV = [f for f in allfiles if ('.log' in f and 'MVDONE' in f)]
+	logfilesMV = [f for f in allfiles if ('.log' in f and 'MVRSM' in f)]
 	MVbests = []
 	MVtimes = []
 	for log in logfilesMV:
 		with open(os.path.join(folder,log),'r') as f:
-			MVDONEfile = f.readlines()
-			MVDONE_best = []
-			MVDONE_time = []
-			for i, lines in enumerate(MVDONEfile):
+			MVRSMfile = f.readlines()
+			MVRSM_best = []
+			MVRSM_time = []
+			for i, lines in enumerate(MVRSMfile):
 				searchterm = 'Best data point according to the model and predicted value'
 				if searchterm in lines:
-					#print('Hello', MVDONEfile)
-					temp = MVDONEfile[i-1]
+					#print('Hello', MVRSMfile)
+					temp = MVRSMfile[i-1]
 					temp = temp.split('] , ')
-					temp = temp[1]
-					MVDONE_best.append(float(temp))
+					temp = temp[1].strip()
+					temp = temp.strip('[')
+					temp = temp.strip(']')
+					MVRSM_best.append(float(temp))
 				searchterm2 = 'Total computation time for this iteration:	 '
 				if searchterm2 in lines:
-					#print('Hello', MVDONEfile)
-					temp = MVDONEfile[i]
+					#print('Hello', MVRSMfile)
+					temp = MVRSMfile[i]
 					temp = temp.split(':')
 					temp = temp[1]
 					if temp[0]:
-						MVDONE_time.append(float(temp))
-		MVbests.append(MVDONE_best)
+						MVRSM_time.append(float(temp))
+		MVbests.append(MVRSM_best)
 		# print(np.copy(allbests))
 		# print(np.copy(allbests).shape)
 		# exit()
-		MVtimes.append(MVDONE_time)
+		MVtimes.append(MVRSM_time)
 	return np.copy(MVbests), np.copy(MVtimes)
 	
 	
@@ -131,7 +122,7 @@ def read_logs_HO(folder, num_runs,num_iters):
 	
 def read_logs_RS(folder, num_runs,num_iters):
 	allfiles = os.listdir(folder)
-	logfilesRS = [f for f in allfiles if ('.log' in f and 'RS' in f)]
+	logfilesRS = [f for f in allfiles if ('.log' in f and 'RS_' in f)]
 	RSbests = []
 	for log in logfilesRS:
 		with open(os.path.join(folder,log),'r') as f:
@@ -164,17 +155,17 @@ def read_logs_RS(folder, num_runs,num_iters):
 	
 	
 # Plot the best found objective values at each iteration
-def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand_evals, n_itrs=n_itrs, n_trials=n_trials):
+def plot_results(folderCoCaBO, folderMVRSM, folderHO, folderRS, rand_evals=rand_evals, n_itrs=n_itrs, n_trials=n_trials):
 	import matplotlib.pyplot as plt
-	MVDONE_ev, MVtimes=read_logs_MVDONE(folderMVDONE)
-	MVDONE_ev = MVDONE_ev.astype(float)
+	MVRSM_ev, MVtimes=read_logs_MVRSM(folderMVRSM)
+	MVRSM_ev = MVRSM_ev.astype(float)
 	MVtimes = MVtimes.astype(float)
 	
 	rand_iters = rand_evals
 	total_iters = max_evals
-	avs_M = -np.mean(MVDONE_ev,0)
+	avs_M = -np.mean(MVRSM_ev,0)
 	avs_Mtime = np.mean(MVtimes,0)
-	stds_M = np.std(MVDONE_ev,0)
+	stds_M = np.std(MVRSM_ev,0)
 	stds_Mtime = np.std(MVtimes,0)
 	
 	
@@ -195,7 +186,7 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand
 	
 	#print(MVtimes.shape)
 	
-	Rosenbrock238=True #don't plot CoCaBO for Rosenbrock238
+	Rosenbrock238=False #don't plot CoCaBO for Rosenbrock238
 	
 	if not Rosenbrock238:
 		cocabodata, ctimes = read_cocabo(folderCoCaBO,n_trials,n_itrs)
@@ -211,7 +202,7 @@ def plot_results(folderCoCaBO, folderMVDONE, folderHO, folderRS, rand_evals=rand
 	
 	print("RS total time: ", np.sum(avs_RStime), " +- ", np.sum(stds_RStime))
 	print("HO total time: ", np.sum(avs_HOtime), " +- ", np.sum(stds_HOtime))
-	print("MVDONE total time: ", np.sum(avs_Mtime), " +- ", np.sum(stds_Mtime))
+	print("MVRSM total time: ", np.sum(avs_Mtime), " +- ", np.sum(stds_Mtime))
 	if not Rosenbrock238:
 		print("COCABO total time: ", np.sum(avs_Ctime), " +- ", np.sum(stds_Ctime))
 	

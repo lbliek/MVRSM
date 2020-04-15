@@ -1,7 +1,7 @@
-### MVDONE uses a piece-wise linear surrogate model for optimization of
+### MVRSM uses a piece-wise linear surrogate model for optimization of
 ### expensive cost functions with mixed-integer variables.
 ###
-### MVDONE_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals) solves the minimization problem
+### MVRSM_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals) solves the minimization problem
 ###
 ### min f(x)
 ### st. lb<=x<=ub, the first num_int variables of x are integer
@@ -21,7 +21,7 @@ import numpy as np
 
 from scipy.optimize import minimize, Bounds
 
-def MVDONE_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
+def MVRSM_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
 	d = len(x0) # dimension, number of variables
 	current_time = time.time() # time when starting the algorithm
 	next_X = [] # candidate solution presented by the algorithm
@@ -114,10 +114,8 @@ def MVDONE_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
 			
 			#Check for the range in which B needs to lie by moving orthogonal to W
 			
-			#print(W)
 			signs = np.sign(tempW[k,:])
-			#print(signs)
-			#input('hoi')
+
 			
 				
 			# Find relevant corner points of the [lb, ub] hypercube
@@ -127,9 +125,7 @@ def MVDONE_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
 				if signs[j]<0:
 					cornerpoint1[j] = ub[j]
 					cornerpoint2[j] = lb[j]
-			#print('cornerpoint1', cornerpoint1)
-			#print('cornerpoint2', cornerpoint2)
-			#input('hoi2')
+
 			
 			# Calculate minimal distance from hyperplane to corner points
 			b1 = np.dot(tempW[k,:],cornerpoint1)
@@ -138,39 +134,21 @@ def MVDONE_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
 			if b1>b2:
 				print('Warning: b1>b2. This may lead to problems.')
 			
-			#add around 10*d of these basis functions in total, of which dx are linearly independent and the rest are parallel
-			#for j in range(math.ceil(10*d/float(d-num_int))):
-			#or add the same number of basis functions as for the discrete variables
+
+			#Add the same number of basis functions as for the discrete variables
 			for j in range(math.ceil(num_discr_basisfunctions/num_int)):
 			#or just add 1000 of them
-			#for j in range(500):
-				#print(math.ceil(10*d/float(d-num_int)))
+			#for j in range(1000):
 				b = (b2-b1)*np.random.random()+b1
 				W.append(np.copy(tempW[k,:]))
 				B.append([-float(b)])
 				
-		
-			
-			#print('W', W)
-			#print('B', B)
-			#input('hoi3')
-			
-			
-			
 			
 			
 		
 		W = np.asarray(W)	
 		B = np.asarray(B)	
 		
-		# print('W has shape ', np.shape(W))
-		# print('B has shape ', np.shape(B))
-		# input(',,,')
-		# import matplotlib.pyplot as plt
-		#plt.imshow(np.concatenate((W, B), axis=1), aspect=0.05)
-		# plt.imshow(W, aspect=0.05)
-		# plt.colorbar()
-		# plt.show()
 		
 		# Transform input into model basis functions Z=ReLU(W*x+B)
 		def Z(x): 
@@ -236,7 +214,7 @@ def MVDONE_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
 	## Iteratively evaluate the objective, update the model, find the minimum of the model, and explore the search space
 	time_start1 = time.time()
 	for ii in range(0,max_evals):
-		print(f"Starting MVDONE iteration {ii}/{max_evals}")
+		print(f"Starting MVRSM iteration {ii}/{max_evals}")
 		x = np.copy(next_X).astype(float)
 		if ii==0:
 			y = obj(x) # Evaluate the objective
@@ -335,7 +313,7 @@ def MVDONE_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
 		
 		# Check if minimizer really gives better result
 		#if model['out'](next_X) > model['out'](x) + 1e-8:
-			#print('Warning: minimization of the surrogate model in MVDONE yielded a worse solution, maybe something went wrong.')
+			#print('Warning: minimization of the surrogate model in MVRSM yielded a worse solution, maybe something went wrong.')
 		
 		## Exploration step (else the algorithm gets stuck in the local minimum of the surrogate model)
 		next_X_before_exploration = np.copy(next_X)
@@ -368,8 +346,6 @@ def MVDONE_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
 				a += r
 				next_X[j]=a
 					
-			
-		#print('Exploration: from ', next_X_before_exploration, 'to ', next_X)
 		
 		
 		# Just to be sure, clip to the bounds again
@@ -384,9 +360,9 @@ def MVDONE_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
 		time_per_iteration = time.time() - time_start1
 		
 		# Save data to log file
-		filename = 'log_MVDONE_'+ str(current_time) + ".log"
+		filename = 'log_MVRSM_'+ str(current_time) + ".log"
 		with open(filename, 'a') as f:
-			print('\n\n MVDONE iteration: ', ii, file=f)
+			print('\n\n MVRSM iteration: ', ii, file=f)
 			print('Time spent training the model:				 ', update_time, file=f)
 			print('Time spent finding the minimum of the model: ', minimization_time, file=f)
 			print('Total computation time for this iteration:	', time_per_iteration, file=f)
@@ -412,24 +388,24 @@ def MVDONE_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
 # Read data from log file (this reads the best found objective values at each iteration)
 def read_log(filename):
 	with open(filename,'r') as f:
-			MVDONEfile = f.readlines()
-			MVDONE_best = []
-			for i, lines in enumerate(MVDONEfile):
+			MVRSMfile = f.readlines()
+			MVRSM_best = []
+			for i, lines in enumerate(MVRSMfile):
 				searchterm = 'Best data point according to the model and predicted value'
 				if searchterm in lines:
-					#print('Hello', MVDONEfile)
-					temp = MVDONEfile[i-1]
+					#print('Hello', MVRSMfile)
+					temp = MVRSMfile[i-1]
 					temp = temp.split('] , ')
 					temp = temp[1]
-					MVDONE_best.append(float(temp))
-	return MVDONE_best
+					MVRSM_best.append(float(temp))
+	return MVRSM_best
 
 # Plot the best found objective values at each iteration
 def plot_results(filename):
 	import matplotlib.pyplot as plt
 	fig = plt.figure(1)
-	MVDONE_ev=read_log(filename)
-	plt.plot(MVDONE_ev)
+	MVRSM_ev=read_log(filename)
+	plt.plot(MVRSM_ev)
 	plt.xlabel('Iteration')
 	plt.ylabel('Objective')
 	plt.grid()
