@@ -31,17 +31,10 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
 		next_X = np.copy(x0)
 		
 		def ReLU(x): # Rectified Linear Unit
-			temp = np.copy(x)
-			for i, xx in enumerate(x):
-				temp[i] = [max(0,xx[0])]
-			return np.asarray(temp)
-		
+			return np.maximum(0,x)
 
 		def ReLUderiv(x): # Derivative of Rectified Linear Unit
-			temp = np.copy(x)
-			for i, xx in enumerate(x):
-				temp[i] = [0.5*(xx[0]==0) + (xx[0]>0)]
-			return np.asarray(temp)
+			return (x > 0) + 0.5 * (x == 0)
 		
 		# Define basis functions Z=ReLU(W*x+B)
 		W = [] # Basis function weights

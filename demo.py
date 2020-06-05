@@ -267,6 +267,8 @@ if __name__ == '__main__':
 	
 	
 	folder = os.path.join(os.path.curdir, 'data',  'syntheticFns', obj_func)
+	if not os.path.isdir(folder):
+		os.mkdir(folder)
 	
 	if obj_func == 'dim10Rosenbrock':
 		ff = testFunctions.syntheticFunctions.dim10Rosenbrock
@@ -356,7 +358,7 @@ if __name__ == '__main__':
 			result = ff(h,x[num_int:])
 		return result
 	def run_MVRSM():
-		solX, solY, model, logfile = MVRSM.MVRSM_minimize(obj_MVRSM, x0, lb, ub, num_int, max_evals, rand_evals)
+		solX, solY, model, logfile = MVRSM.MVRSM_minimize(obj_MVRSM, x0, lb, ub, num_int, max_evals, rand_evals)		
 		os.rename(logfile, os.path.join(folder,logfile))
 		print("Solution found: ")
 		print(f"X = {solX}")
