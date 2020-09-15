@@ -16,7 +16,7 @@ are random evaluations).
 It is the mixed-variable version that is related to the [DONE algorithm](https://bitbucket.org/csi-dcsc/donecpp/src/master/), 
 meant for problems with both continuous and discrete variables.
 
-Laurens Bliek, 06-03-2019
+Laurens Bliek, 06-03-2020
 
 ## Dependencies ##
 
