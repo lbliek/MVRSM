@@ -39,4 +39,4 @@ Currently the following test functions are already supported:
 
 Afterward, use `plot_result.py` for visualisation (set the correct folder and other parameters inside the file).
 
-Please contact l.bliek@tudelft.nl if you have any questions.
+Please contact l.bliek@tue.nl if you have any questions.
