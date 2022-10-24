@@ -347,7 +347,7 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
         # plt.show()
 
         # Just to be sure, clip the decision variables to the bounds.
-        np.clip(next_x, lb, ub)
+        np.clip(next_x, lb, ub, out=next_x)
 
         # Check if minimizer really gives better result
         # if model.g(next_X) > model.g(x) + 1e-8:
@@ -393,7 +393,7 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
                         break
 
             # Just to be sure, clip the decision variables to the bounds again.
-            np.clip(next_x, lb, ub)
+            np.clip(next_x, lb, ub, out=next_x)
 
         iter_time = time.time() - iter_start
 
