@@ -299,9 +299,9 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
         update_time = time.time() - update_start
 
         # Minimize surrogate model
-        update_start = time.time()
+        min_start = time.time()
         next_x = model.minimum(best_x)
-        minimization_time = time.time() - update_start
+        minimization_time = time.time() - min_start
 
         # Round discrete variables to the nearest integer.
         next_x_before_rounding = np.copy(next_x)
