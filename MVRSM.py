@@ -359,8 +359,8 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
         next_x = np.copy(next_x)
         if i < rand_evals:
             # Perform random search
-            next_x[0:num_int] = np.random.randint(lb[0:num_int], ub[0:num_int] + 1)  # integer variables
-            next_x[num_int:d] = np.random.uniform(lb[num_int:d], ub[num_int:d])  # continuous variables
+            next_x[0:num_int] = np.random.randint(lb[0:num_int], ub[0:num_int] + 1)  # high is exclusive
+            next_x[num_int:d] = np.random.uniform(lb[num_int:d], ub[num_int:d])
         # Skip exploration in the last iteration (to end at the exact minimum of the surrogate model).
         elif i < max_evals - 2:
             # Randomly perturb the discrete variables. Each x_i is shifted n units
@@ -369,6 +369,7 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
             int_pert_prob = 1 / d  # probability that x_i is permuted
             for j in range(num_int):
                 r = random.random()  # determines n
+                direction = random.getrandbits(1)  # whether to explore towards -∞ or +∞
                 original = next_x[j]
                 while r < int_pert_prob:
                     if lb[j] == original < ub[j]:
@@ -376,21 +377,19 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
                     elif lb[j] < original == ub[j]:
                         next_x[j] -= 1
                     elif lb[j] < original < ub[j]:
-                        direction = random.getrandbits(1)  # whether to explore towards -∞ or +∞
                         next_x[j] += 1 if direction else -1
                     r *= 2
 
             # Continuous exploration
             for j in range(num_int, d):
-                # Note that Var(tX) = t^2 Var(X) for any random variable.
-                perturb = True  # emulate a do-while loop.
-                while perturb:
+                original = next_x[j]
+                while True:  # re-sample while out of bounds.
                     # Choose a variance that scales inversely with the number of decision variables.
+                    # Note that Var(aX) = a^2 Var(X) for any random variable.
                     delta = np.random.normal() * (ub[j] - lb[j]) * 0.1 / math.sqrt(d)
-                    next_x[j] += delta
-                    if lb[j] < next_x[j] < ub[j]:
-                        # Repeat while out of bounds.
-                        perturb = False
+                    if lb[j] <= original + delta <= ub[j]:
+                        next_x[j] += delta
+                        break
 
             # Just to be sure, clip the decision variables to the bounds again.
             np.clip(next_x, lb, ub)
