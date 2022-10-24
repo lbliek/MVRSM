@@ -222,9 +222,8 @@ class SurrogateModel:
         :param x: the decision variable values.
         """
         phi_prime = self.phi_deriv(x)
-        D = np.diag(phi_prime)
-        DW = np.matmul(D, self.W)
-        return np.transpose(np.matmul(self.c, DW))  # todo: optimize
+        W_scaled = phi_prime[:, None] * self.W
+        return np.matmul(self.c, W_scaled)
 
     def minimum(self, x0):
         """
