@@ -36,7 +36,7 @@ def relu(x):
 def relu_deriv(x):
     """
     The derivative of the rectified linear unit function,
-    defined with `reluDeriv(0) = 0.5`.
+    defined with `relu_deriv(0) = 0.5`.
     :param x: the input
     """
     return (x > 0) + 0.5 * (x == 0)
@@ -305,7 +305,7 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
         minimization_time = time.time() - update_start
 
         # Round discrete variables to the nearest integer.
-        next_x_before_rounding = np.copy(next_x)  # used for debugging
+        next_x_before_rounding = np.copy(next_x)
         next_x[0:num_int].round(out=next_x[0:num_int])
 
         # Visualize model
@@ -368,7 +368,7 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
             # The bounds of each variable are respected.
             int_pert_prob = 1 / d  # probability that x_i is permuted
             for j in range(num_int):
-                r = 1 / d  # determines n
+                r = random.random()  # determines n
                 original = next_x[j]
                 while r < int_pert_prob:
                     if lb[j] == original < ub[j]:
@@ -376,7 +376,7 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
                     elif lb[j] < original == ub[j]:
                         next_x[j] -= 1
                     elif lb[j] < original < ub[j]:
-                        direction = random.random() > 0.5  # whether to explore towards -∞ or +∞
+                        direction = random.getrandbits(1)  # whether to explore towards -∞ or +∞
                         next_x[j] += 1 if direction else -1
                     r *= 2
 
