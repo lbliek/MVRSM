@@ -171,7 +171,7 @@ class SurrogateModel:
 
         c = np.zeros(m)  # the model weights
         # Set model weights corresponding to discrete basis functions to 1, stimulates convexity.
-        c[1:int_basis_count] = 1
+        c[1:int_basis_count + 1] = 1
 
         # The regularization parameter. 1e-8 is good for the noiseless case,
         # replace by ≈1e-3 if there is noise.
