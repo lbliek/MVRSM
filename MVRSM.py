@@ -216,9 +216,9 @@ class SurrogateModel:
         phi = self.phi(x)
         return np.inner(self.c, phi)
 
-    def g_deriv(self, x):
+    def g_jac(self, x):
         """
-        Evaluates the derivation of the model at `x`.
+        Evaluates the Jacobian of the model at `x`.
         :param x: the decision variable values.
         """
         phi_prime = self.phi_deriv(x)
@@ -231,7 +231,7 @@ class SurrogateModel:
         Find a minimum of the surrogate model approximately.
         :param x0: the initial guess.
         """
-        res = minimize(self.g, x0, method='L-BFGS-B', bounds=self.bounds, jac=self.g_deriv,
+        res = minimize(self.g, x0, method='L-BFGS-B', bounds=self.bounds, jac=self.g_jac,
                        options={'maxiter': 20, 'maxfun': 20})
         return res.x
 
