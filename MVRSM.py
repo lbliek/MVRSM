@@ -370,24 +370,25 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
             for j in range(num_int):
                 r = random.random()  # determines n
                 direction = random.getrandbits(1)  # whether to explore towards -∞ or +∞
-                original = next_x[j]
+                value = next_x[j]
                 while r < int_pert_prob:
-                    if lb[j] == original < ub[j]:
-                        next_x[j] += 1
-                    elif lb[j] < original == ub[j]:
-                        next_x[j] -= 1
-                    elif lb[j] < original < ub[j]:
-                        next_x[j] += 1 if direction else -1
+                    if lb[j] == value < ub[j]:
+                        value += 1
+                    elif lb[j] < value == ub[j]:
+                        value -= 1
+                    elif lb[j] < value < ub[j]:
+                        value += 1 if direction else -1
                     r *= 2
+                next_x[j] = value
 
             # Continuous exploration
             for j in range(num_int, d):
-                original = next_x[j]
+                value = next_x[j]
                 while True:  # re-sample while out of bounds.
                     # Choose a variance that scales inversely with the number of decision variables.
                     # Note that Var(aX) = a^2 Var(X) for any random variable.
                     delta = np.random.normal() * (ub[j] - lb[j]) * 0.1 / math.sqrt(d)
-                    if lb[j] <= original + delta <= ub[j]:
+                    if lb[j] <= value + delta <= ub[j]:
                         next_x[j] += delta
                         break
 
