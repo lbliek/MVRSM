@@ -222,6 +222,8 @@ class SurrogateModel:
         :param x: the decision variable values.
         """
         phi_prime = self.phi_deriv(x)
+        # Treat phi_prime as a column vector to scale the rows w_1, ..., w_m
+        # of W by Φ'_1, ..., Φ'_m, respectively.
         W_scaled = phi_prime[:, None] * self.W
         return np.matmul(self.c, W_scaled)
 
