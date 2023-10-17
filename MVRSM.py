@@ -360,7 +360,7 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int, max_evals, rand_evals=0):
         next_x = np.copy(next_x)
         if i < rand_evals:
             # Perform random search
-            next_x[0:num_int] = np.random.randint(lb[0:num_int], ub[0:num_int] + 1)  # high is exclusive
+            next_x[0:num_int] = np.random.randint(lb[0:num_int], np.add(ub[0:num_int], [1] * num_int))  # high is exclusive
             next_x[num_int:d] = np.random.uniform(lb[num_int:d], ub[num_int:d])
         # Skip exploration in the last iteration (to end at the exact minimum of the surrogate model).
         elif i < max_evals - 2:

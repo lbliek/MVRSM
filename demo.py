@@ -268,7 +268,7 @@ if __name__ == '__main__':
 	
 	folder = os.path.join(os.path.curdir, 'data',  'syntheticFns', obj_func)
 	if not os.path.isdir(folder):
-		os.mkdir(folder)
+		os.makedirs(folder)
 	
 	if obj_func == 'dim10Rosenbrock':
 		ff = testFunctions.syntheticFunctions.dim10Rosenbrock
