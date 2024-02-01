@@ -18,6 +18,26 @@ meant for problems with both continuous and discrete variables.
 
 Laurens Bliek, 06-03-2020
 
+## How to cite ##
+
+```bibtex
+@inproceedings{10.1145/3449726.3463136,
+author = {Bliek, Laurens and Guijt, Arthur and Verwer, Sicco and de Weerdt, Mathijs},
+title = {Black-box mixed-variable optimisation using a surrogate model that satisfies integer constraints},
+year = {2021},
+isbn = {9781450383516},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3449726.3463136},
+doi = {10.1145/3449726.3463136},
+booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference Companion},
+pages = {1851–1859},
+numpages = {9},
+location = {Lille, France},
+series = {GECCO '21}
+}
+```
+
 ## Dependencies ##
 
 * numpy
