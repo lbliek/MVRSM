@@ -10,6 +10,7 @@
 
 import numpy as np
 from scipy.optimize import rosen
+import math
 
 # =============================================================================
 # Rosenbrock Function (f_min = 0)
@@ -106,6 +107,24 @@ def dim238Rosenbrock(ht_list,x):
 		XX[0:len(ht_list)]=np.round(XX[0:len(ht_list)]) #To make sure there is no cheating, round the discrete variables before calling the function
 		return rosen(XX)/50000 + 1e-6 * np.random.rand()
 #/Adapted
+
+
+def Kursawe1(x):
+	f = -10*math.exp(-0.2*math.sqrt(x[0]**2+x[1]**2)) + -10*math.exp(-0.2*math.sqrt(x[1]**2+x[2]**2))
+	return f
+def Kursawe2(x):
+	f = abs(x[0])**0.8 + 5*math.sin(x[0]**3) + abs(x[1])**0.8 + 5*math.sin(x[1]**3) + abs(x[2])**0.8 + 5*math.sin(x[2]**3)
+	return f
+
+def ZDT3_1(x):
+	f = x[0]
+	return f
+def ZDT3_2(x):
+	g = 1+9/29*sum(x[1:30])
+	h = 1-math.sqrt(x[0]/g) - (x[0]/g)*math.sin(10*3.1415926535*x[0])
+	f = g*h
+	return f
+
 
 
 # =============================================================================

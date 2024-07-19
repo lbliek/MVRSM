@@ -160,12 +160,19 @@ class SurrogateModel:
                 print('Warning: b1>b2. This may lead to problems.')
 
             # Add the same number of basis functions as for the discrete variables.
-            for j in range(math.ceil(int_basis_count / num_int)):
-                # or just add 1000 of them
-                # for j in range(1000):
-                b_j = (b2 - b1) * np.random.random() + b1
-                W.append(W_cont[k])
-                b.append(-float(b_j))
+            if num_int>0:
+
+                for j in range(math.ceil(int_basis_count / num_int)):
+                    # or just add 1000 of them
+                    # for j in range(1000):
+                    b_j = (b2 - b1) * np.random.random() + b1
+                    W.append(W_cont[k])
+                    b.append(-float(b_j))
+            else:
+                for j in range(500):
+                    b_j = (b2 - b1) * np.random.random() + b1
+                    W.append(W_cont[k])
+                    b.append(-float(b_j))
 
         W = np.asarray(W)
         b = np.asarray(b)
@@ -240,11 +247,17 @@ class SurrogateModel:
         # single_obj = inner product between scalarization_weights and vector of g
         # or: single_obj = sum of scalarization_weights[obj_index]*g[obj_index]
         # return single_obj
-        print('hoi', self.g(x))
-        print('hoi2', scalarization_weights)
-        print('hoi2', self.g(x) @ scalarization_weights)
         return self.g(x) @ scalarization_weights
 
+    def g_scalarize_max(self, x, scalarization_weights):
+        """
+        Evaluates the basis functions at `x`.
+        :param x: the decision variable values
+        :param scalarization_weights: vector of size n_obj
+        """
+        # worst objective after multiplying with weight
+        mul = np.multiply(self.g(x), scalarization_weights)
+        return np.max(mul)
 
 
     def g_scalarize_jac(self, x, scalarization_weights):
@@ -253,10 +266,17 @@ class SurrogateModel:
         :param x: the decision variable values
         :param scalarization_weights: vector of size n_obj
         """
-        # print('hoi', self.g(x))
-        # print('hoi2', scalarization_weights)
-        # print('hoi2', self.g(x) @ scalarization_weights)
-        return np.matmul(self.g_jac(x), scalarization_weights)
+        return np.matmul(scalarization_weights,self.g_jac(x))
+
+    def g_scalarize_max_jac(self, x, scalarization_weights):
+        """
+        Evaluates the basis functions at `x`.
+        :param x: the decision variable values
+        :param scalarization_weights: vector of size n_obj
+        """
+        mul = np.multiply(self.g(x), scalarization_weights)
+        j = np.argmax(mul)
+        return self.g_jac(x)[j,:]
 
     # We need to also calculate the Jacobian of the scalarized single_obj,
     # But we can ignore it for now
@@ -271,9 +291,18 @@ class SurrogateModel:
         :return minimization evaluation
         """
         #To do: calculate Jacobian
-        print('ho', self.g_scalarize(x0,scalarization_weights))
-        res = minimize(self.g_scalarize, x0, args=(scalarization_weights,), method='L-BFGS-B', bounds=self.bounds, #jac=self.g_scalarize_jac,
-                       options={'maxiter': 20, 'maxfun': 20})
+        scalarization_type = 0 #0=linear, 1=max
+
+        if scalarization_type==0:
+            # with linear scalarization
+            res = minimize(self.g_scalarize, x0, args=(scalarization_weights,), method='L-BFGS-B', bounds=self.bounds,
+                           jac=self.g_scalarize_jac,
+                            options={'maxiter': 20, 'maxfun': 20})
+        elif scalarization_type==1:
+            #with max scalarization
+            res = minimize(self.g_scalarize_max, x0, args=(scalarization_weights,), method='L-BFGS-B', bounds=self.bounds,
+                           jac=self.g_scalarize_max_jac,
+                           options={'maxiter': 20, 'maxfun': 20})
         return res.x
 
 
@@ -307,7 +336,7 @@ def inv_scale(y_scaled, y0, SCALE_THRESHOLD = 1e-8):
     :param y0: the initial objective function value, `y(x0)`.
     :return: the value `y` such that `scale(y, y0) = y_scaled`.
     """
-    for i in range(len(y)):
+    for i in range(len(y0)):
         if abs(y0[i]) > SCALE_THRESHOLD:
             y_scaled[i] *= abs(y0[i])
     return y_scaled + y0
@@ -368,7 +397,6 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int: int, max_evals: int, rand_evals: in
         # Get scalarization weights
         rnd_weights = np.random.rand(n_objectives)
         scalarization_weights = rnd_weights / rnd_weights.sum()
-        print('hoi', scalarization_weights)
         # Minimize surrogate model
         min_start = time.time()
         next_x = model.minimum(x, scalarization_weights)

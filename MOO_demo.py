@@ -21,10 +21,16 @@ import MVRSM
 import MOO_MVRSM
 from hyperopt import fmin, tpe, rand, hp, STATUS_OK, Trials
 from functools import partial
+import matplotlib.pyplot as plt
+import matplotlib
 
 
 from scipy.optimize import rosen
 from linear_MIVABOfunction import Linear
+
+
+
+matplotlib.use('TkAgg')
 
 # CoCaBO code taken from:
 # -*- coding: utf-8 -*-
@@ -342,6 +348,24 @@ if __name__ == '__main__':
 		num_int = 50  # number of integer variables
 		lb[0:num_int] = 0
 		ub[0:num_int] = 1
+	elif obj_func == 'MO_Kursawe':
+		ff1 = testFunctions.syntheticFunctions.Kursawe1
+		ff2 = testFunctions.syntheticFunctions.Kursawe2
+		num_objectives = 2
+		d = 3  # Total number of variables
+		lb = -5 * np.ones(d).astype(int)  # Lower bound
+		ub = 5 * np.ones(d).astype(int)  # Upper bound
+		num_int = 0  # number of integer variables
+		#lb[0:num_int] = 0
+		#ub[0:num_int] = 1
+	elif obj_func == 'MO_ZDT3':
+		ff1 = testFunctions.syntheticFunctions.ZDT3_1
+		ff2 = testFunctions.syntheticFunctions.ZDT3_2
+		num_objectives = 2
+		d = 30  # Total number of variables
+		lb = 0 * np.ones(d).astype(int)  # Lower bound
+		ub = 1 * np.ones(d).astype(int)  # Upper bound
+		num_int = 0  # number of integer variables
 
 
 	else:
@@ -387,6 +411,9 @@ if __name__ == '__main__':
 		print("Solution found: ")
 		print(f"X = {solX}")
 		print(f"Y = {solY}")
+
+
+
 	for i in range(n_trials):
 		if obj_func == 'dim10Rosenbrock' or obj_func == 'dim53Rosenbrock' or obj_func == 'dim238Rosenbrock':
 			print(f"Testing MVRSM on the {d}-dimensional Rosenbrock function with integer constraints.")
@@ -403,79 +430,79 @@ if __name__ == '__main__':
 	
 	
 	# HyperOpt and RS objective
-	def hyp_obj(x):
-		f = obj_MVRSM(x)
-		#print('Objective value: ', f)
-		return {'loss': f, 'status': STATUS_OK }
-	
-	# Two algorithms used within HyperOpt framework (random search and TPE)
-	algo = rand.suggest
-	algo2 = partial(tpe.suggest, n_startup_jobs=rand_evals)
-	
-	# Define search space for HyperOpt
-	var = [ None ] * d #variable for hyperopt and random search
-	for i in list(range(0,d)):
-		if i<num_int:
-			var[i] = hp.quniform('var_d'+str(i), lb[i], ub[i], 1) # Integer variables
-		else:
-			var[i] = hp.uniform('var_c'+str(i), lb[i], ub[i]) # Continuous variables
-	
-	
-	
-	print("Start HyperOpt trials")
-	for i in range(n_trials):
-		current_time = time.time() # time when starting the HO and RS algorithm
-		
-		
-		trials_HO = Trials()
-		time_start = time.time() # Start timer
-		hypOpt = fmin(hyp_obj, var, algo2, max_evals=max_evals, trials=trials_HO) # Run HyperOpt
-		total_time_HypOpt = time.time()-time_start # End timer
-
-		logfileHO = os.path.join(folder, 'log_HypOpt_'+ str(current_time) + ".log")
-		with open(logfileHO, 'a') as f:
-			print(trials_HO.trials, file=f) # Save log
-	
-	
-		#write times per iteration to log
-		logHOtimeperiteration = os.path.join(folder, 'HO_timeperiteration.txt')
-		with open(logHOtimeperiteration, 'a') as f: 
-			for i in range(0,max_evals):
-				if i==0:
-					#print(trials_HO.trials[i]['book_time'].timestamp()+3600- time_start, file=f) #something wrong with my clock which causes 1 hour difference
-					print(trials_HO.trials[i]['book_time'].timestamp()- time_start, file=f) #no 1 hour difference
-				else:
-					print((trials_HO.trials[i]['book_time']- trials_HO.trials[i-1]['book_time']).total_seconds(), file=f)
+	# def hyp_obj(x):
+	# 	f = obj_MVRSM(x)
+	# 	#print('Objective value: ', f)
+	# 	return {'loss': f, 'status': STATUS_OK }
+	#
+	# # Two algorithms used within HyperOpt framework (random search and TPE)
+	# algo = rand.suggest
+	# algo2 = partial(tpe.suggest, n_startup_jobs=rand_evals)
+	#
+	# # Define search space for HyperOpt
+	# var = [ None ] * d #variable for hyperopt and random search
+	# for i in list(range(0,d)):
+	# 	if i<num_int:
+	# 		var[i] = hp.quniform('var_d'+str(i), lb[i], ub[i], 1) # Integer variables
+	# 	else:
+	# 		var[i] = hp.uniform('var_c'+str(i), lb[i], ub[i]) # Continuous variables
+	#
+	#
+	#
+	# print("Start HyperOpt trials")
+	# for i in range(n_trials):
+	# 	current_time = time.time() # time when starting the HO and RS algorithm
+	#
+	#
+	# 	trials_HO = Trials()
+	# 	time_start = time.time() # Start timer
+	# 	hypOpt = fmin(hyp_obj, var, algo2, max_evals=max_evals, trials=trials_HO) # Run HyperOpt
+	# 	total_time_HypOpt = time.time()-time_start # End timer
+	#
+	# 	logfileHO = os.path.join(folder, 'log_HypOpt_'+ str(current_time) + ".log")
+	# 	with open(logfileHO, 'a') as f:
+	# 		print(trials_HO.trials, file=f) # Save log
+	#
+	#
+	# 	#write times per iteration to log
+	# 	logHOtimeperiteration = os.path.join(folder, 'HO_timeperiteration.txt')
+	# 	with open(logHOtimeperiteration, 'a') as f:
+	# 		for i in range(0,max_evals):
+	# 			if i==0:
+	# 				#print(trials_HO.trials[i]['book_time'].timestamp()+3600- time_start, file=f) #something wrong with my clock which causes 1 hour difference
+	# 				print(trials_HO.trials[i]['book_time'].timestamp()- time_start, file=f) #no 1 hour difference
+	# 			else:
+	# 				print((trials_HO.trials[i]['book_time']- trials_HO.trials[i-1]['book_time']).total_seconds(), file=f)
 
 	
 
 	###################
 	## Random search ##
 	###################
-	
-	print("Start Random Search trials")
-	for i in range(n_trials):
-		current_time = time.time() # time when starting the HO and RS algorithm
-		trials_RS = Trials()
-
-		time_start = time.time()
-		RS = fmin(hyp_obj, var, algo, max_evals=max_evals, trials = trials_RS)
-		total_time_RS = time.time()-time_start
-
-		logfileRS = os.path.join(folder, 'log_RS_'+ str(current_time) + ".log")
-		with open(logfileRS, 'a') as f:
-			print(trials_RS.trials, file=f) # Save log
-			
-		#write times per iteration to log
-		logRStimeperiteration = os.path.join(folder, 'RS_timeperiteration.txt')
-		with open(logRStimeperiteration, 'a') as f: 
-			for i in range(0,max_evals):
-				if i==0:
-					#print(trials_RS.trials[i]['book_time'].timestamp()+3600- time_start, file=f) #something wrong with my clock which causes 1 hour difference, but not with daylight saving time...
-					print(trials_RS.trials[i]['book_time'].timestamp()- time_start, file=f) #no 1 hour difference
-				else:
-					print((trials_RS.trials[i]['book_time']- trials_RS.trials[i-1]['book_time']).total_seconds(), file=f)
-	
+	#
+	# print("Start Random Search trials")
+	# for i in range(n_trials):
+	# 	current_time = time.time() # time when starting the HO and RS algorithm
+	# 	trials_RS = Trials()
+	#
+	# 	time_start = time.time()
+	# 	RS = fmin(hyp_obj, var, algo, max_evals=max_evals, trials = trials_RS)
+	# 	total_time_RS = time.time()-time_start
+	#
+	# 	logfileRS = os.path.join(folder, 'log_RS_'+ str(current_time) + ".log")
+	# 	with open(logfileRS, 'a') as f:
+	# 		print(trials_RS.trials, file=f) # Save log
+	#
+	# 	#write times per iteration to log
+	# 	logRStimeperiteration = os.path.join(folder, 'RS_timeperiteration.txt')
+	# 	with open(logRStimeperiteration, 'a') as f:
+	# 		for i in range(0,max_evals):
+	# 			if i==0:
+	# 				#print(trials_RS.trials[i]['book_time'].timestamp()+3600- time_start, file=f) #something wrong with my clock which causes 1 hour difference, but not with daylight saving time...
+	# 				print(trials_RS.trials[i]['book_time'].timestamp()- time_start, file=f) #no 1 hour difference
+	# 			else:
+	# 				print((trials_RS.trials[i]['book_time']- trials_RS.trials[i-1]['book_time']).total_seconds(), file=f)
+	#
 	############
 	## CoCaBO ##
 	############
