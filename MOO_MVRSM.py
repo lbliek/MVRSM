@@ -291,7 +291,7 @@ class SurrogateModel:
         :return minimization evaluation
         """
         #To do: calculate Jacobian
-        scalarization_type = 0 #0=linear, 1=max
+        scalarization_type = 1 #0=linear, 1=max, max seems to capture the shape of nonconvex pareto front better (also according to theory)
 
         if scalarization_type==0:
             # with linear scalarization

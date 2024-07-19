@@ -249,7 +249,7 @@ if __name__ == '__main__':
 	
 	parser = argparse.ArgumentParser(description="Run BayesOpt Experiments")
 	parser.add_argument('-f', '--func', help='Objective function',
-						default='dim10Rosenbrock', type=str)   # Supported functions: 'func2C', 'func3C', 'dim10Rosenbrock',
+						default='MO_Kursawe', type=str)   # Supported functions: 'func2C', 'func3C', 'dim10Rosenbrock',
 														       # 'linearmivabo', 'dim53Rosenbrock', 'dim53Ackley', 'dim238Rosenbrock'
 	parser.add_argument('-mix', '--kernel_mix',
 						help='Mixture weight for production and summation kernel. Default = 0.0', default=0.5,
