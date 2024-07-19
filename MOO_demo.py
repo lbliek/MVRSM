@@ -18,6 +18,7 @@ import testFunctions.syntheticFunctions
 # from methods.CoCaBO import CoCaBO
 # from methods.BatchCoCaBO import BatchCoCaBO
 import MVRSM
+import MOO_MVRSM
 from hyperopt import fmin, tpe, rand, hp, STATUS_OK, Trials
 from functools import partial
 
@@ -269,7 +270,8 @@ if __name__ == '__main__':
 	folder = os.path.join(os.path.curdir, 'data',  'syntheticFns', obj_func)
 	if not os.path.isdir(folder):
 		os.makedirs(folder)
-	
+
+	num_objectives = 1
 	if obj_func == 'dim10Rosenbrock':
 		ff = testFunctions.syntheticFunctions.dim10Rosenbrock
 		d = 10 # Total number of variables
@@ -330,6 +332,18 @@ if __name__ == '__main__':
 		num_int = 119 # number of integer variables
 		lb[0:num_int] = 0
 		ub[0:num_int] = 4
+	elif obj_func == 'MO_dim53Rosenbrock_Ackley':
+		ff1 = testFunctions.syntheticFunctions.dim53Rosenbrock
+		ff2 = testFunctions.syntheticFunctions.dim53Ackley
+		num_objectives = 2
+		d = 53  # Total number of variables
+		lb = -2 * np.ones(d).astype(int)  # Lower bound
+		ub = 2 * np.ones(d).astype(int)  # Upper bound
+		num_int = 50  # number of integer variables
+		lb[0:num_int] = 0
+		ub[0:num_int] = 1
+
+
 	else:
 		raise NotImplementedError
 	
@@ -349,16 +363,26 @@ if __name__ == '__main__':
 	
 	def obj_MVRSM(x):
 		#print(x[0:num_int])
-		h = np.copy(x[0:num_int]).astype(int)
-		if obj_func == 'func3C' or obj_func == 'func2C':
-			result = ff(h,x[num_int:])[0][0]
-		elif obj_func == 'linearmivabo':
-			result = ff(x)
-		else:
-			result = ff(h,x[num_int:])
+		if num_objectives == 1:
+			h = np.copy(x[0:num_int]).astype(int)
+			if obj_func == 'func3C' or obj_func == 'func2C':
+				result = ff(h,x[num_int:])[0][0]
+			elif obj_func == 'linearmivabo':
+				result = ff(x)
+			else:
+				result = ff(h,x[num_int:])
+		elif num_objectives == 2:
+			h = np.copy(x[0:num_int]).astype(int)
+			if obj_func == 'MO_dim53Rosenbrock_Ackley':
+				result = [ff1(h,x[num_int:]), ff2(h,x[num_int:])]
+			else:
+				result = [ff1(x), ff2(x)]
 		return result
 	def run_MVRSM():
-		solX, solY, model, logfile = MVRSM.MVRSM_minimize(obj_MVRSM, x0, lb, ub, num_int, max_evals, rand_evals)		
+		if num_objectives ==1:
+			solX, solY, model, logfile = MVRSM.MVRSM_minimize(obj_MVRSM, x0, lb, ub, num_int, max_evals, rand_evals)
+		else:
+			solX, solY, model, logfile = MOO_MVRSM.MVRSM_minimize(obj_MVRSM, x0, lb, ub, num_int, max_evals, rand_evals, num_objectives)
 		os.rename(logfile, os.path.join(folder,logfile))
 		print("Solution found: ")
 		print(f"X = {solX}")

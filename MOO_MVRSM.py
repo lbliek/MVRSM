@@ -212,7 +212,7 @@ class SurrogateModel:
         for i in range(self.n_obj):
             self.c[i, :] += (y[i] - np.inner(phi, self.c[i, :])) * g
 
-    def g(self, x):
+    def graag(self, x):
         """
         Evaluates the surrogate model at `x`.
         :param x: the decision variable values.
@@ -240,21 +240,40 @@ class SurrogateModel:
         # single_obj = inner product between scalarization_weights and vector of g
         # or: single_obj = sum of scalarization_weights[obj_index]*g[obj_index]
         # return single_obj
+        print('hoi', self.g(x))
+        print('hoi2', scalarization_weights)
+        print('hoi2', self.g(x) @ scalarization_weights)
         return self.g(x) @ scalarization_weights
+
+
+
+    def g_scalarize_jac(self, x, scalarization_weights):
+        """
+        Evaluates the basis functions at `x`.
+        :param x: the decision variable values
+        :param scalarization_weights: vector of size n_obj
+        """
+        # print('hoi', self.g(x))
+        # print('hoi2', scalarization_weights)
+        # print('hoi2', self.g(x) @ scalarization_weights)
+        return np.matmul(self.g_jac(x), scalarization_weights)
 
     # We need to also calculate the Jacobian of the scalarized single_obj,
     # But we can ignore it for now
     # def scalarized_jac
     # Probably just scalarization_weights[obj_index]*g_jac[obj_index]
 
-    def minimum(self, x0):
+    def minimum(self, x0, scalarization_weights):
         """
         Find a minimum of the surrogate model approximately.
         :param x0: the initial guess.
+        :param scalarization_weights: weights for the scalarization of multiple objectives
+        :return minimization evaluation
         """
         #To do: calculate Jacobian
-        res = minimize(self.g, x0, args=(scalarization_weights,), method='L-BFGS-B', bounds=self.bounds, #jac=self.g_jac,
-                       options={'maxiter': 20, 'maxfun': 20})
+        print('ho', self.g_scalarize(x0,scalarization_weights))
+        #res = minimize(self.g_scalarize, x0, args=(scalarization_weights,), method='L-BFGS-B', bounds=self.bounds, #jac=self.g_scalarize_jac,
+        #               options={'maxiter': 20, 'maxfun': 20})
         return res.x
 
 
@@ -299,13 +318,17 @@ def inv_scale(y_scaled, y0, SCALE_THRESHOLD = 1e-8):
 
 
 
-def MVRSM_minimize(obj, x0, lb, ub, num_int: int, max_evals: int, rand_evals: int=0, n_objectives: int):
+def MVRSM_minimize(obj, x0, lb, ub, num_int: int, max_evals: int, rand_evals: int=0, n_objectives: int=1):
     start_time = time.time()
     log_filename = f'log_MVRSM_{str(start_time)}.log'
     d = len(x0)  # number of decision variables
 
     model = SurrogateModel.init(d, lb, ub, num_int, n_objectives)
     next_x = x0  # candidate solution
+
+
+
+
     best_x = np.copy(next_x)  # best candidate solution found so far
     best_y = math.inf  # least objective function value found so far, equal to obj(best_x).
 
@@ -317,6 +340,8 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int: int, max_evals: int, rand_evals: in
     for i in range(0, max_evals):
         iter_start = time.time()
         print(f'Starting MVRSM iteration {i}/{max_evals}')
+
+        print('sfas', g_scalarize_jac(next_x))
 
         # Evaluate the objective and scale it.
         x = np.copy(next_x).astype(float)
@@ -343,10 +368,10 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int: int, max_evals: int, rand_evals: in
         # Get scalarization weights
         rnd_weights = np.random.rand(n_objectives)
         scalarization_weights = rnd_weights / rnd_weights.sum()
-
+        print('hoi', scalarization_weights)
         # Minimize surrogate model
         min_start = time.time()
-        next_x = model.minimum(x)
+        next_x = model.minimum(x, scalarization_weights)
         minimization_time = time.time() - min_start
 
         # Round discrete variables to the nearest integer.
