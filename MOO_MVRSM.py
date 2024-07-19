@@ -212,7 +212,7 @@ class SurrogateModel:
         for i in range(self.n_obj):
             self.c[i, :] += (y[i] - np.inner(phi, self.c[i, :])) * g
 
-    def graag(self, x):
+    def g(self, x):
         """
         Evaluates the surrogate model at `x`.
         :param x: the decision variable values.
@@ -272,8 +272,8 @@ class SurrogateModel:
         """
         #To do: calculate Jacobian
         print('ho', self.g_scalarize(x0,scalarization_weights))
-        #res = minimize(self.g_scalarize, x0, args=(scalarization_weights,), method='L-BFGS-B', bounds=self.bounds, #jac=self.g_scalarize_jac,
-        #               options={'maxiter': 20, 'maxfun': 20})
+        res = minimize(self.g_scalarize, x0, args=(scalarization_weights,), method='L-BFGS-B', bounds=self.bounds, #jac=self.g_scalarize_jac,
+                       options={'maxiter': 20, 'maxfun': 20})
         return res.x
 
 
@@ -341,7 +341,7 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int: int, max_evals: int, rand_evals: in
         iter_start = time.time()
         print(f'Starting MVRSM iteration {i}/{max_evals}')
 
-        print('sfas', g_scalarize_jac(next_x))
+        #print('sfas', g_scalarize_jac(next_x))
 
         # Evaluate the objective and scale it.
         x = np.copy(next_x).astype(float)
