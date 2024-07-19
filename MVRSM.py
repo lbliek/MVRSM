@@ -167,7 +167,7 @@ class SurrogateModel:
                     W.append(W_cont[k])
                     b.append(-float(b_j))
             else:
-                for j in range(1000):
+                for j in range(500):
                     b_j = (b2 - b1) * np.random.random() + b1
                     W.append(W_cont[k])
                     b.append(-float(b_j))
