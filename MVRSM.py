@@ -158,12 +158,19 @@ class SurrogateModel:
                 print('Warning: b1>b2. This may lead to problems.')
 
             # Add the same number of basis functions as for the discrete variables.
-            for j in range(math.ceil(int_basis_count / num_int)):
-                # or just add 1000 of them
-                # for j in range(1000):
-                b_j = (b2 - b1) * np.random.random() + b1
-                W.append(W_cont[k])
-                b.append(-float(b_j))
+            if num_int > 0:
+
+                for j in range(math.ceil(int_basis_count / num_int)):
+                    # or just add 1000 of them
+                    # for j in range(1000):
+                    b_j = (b2 - b1) * np.random.random() + b1
+                    W.append(W_cont[k])
+                    b.append(-float(b_j))
+            else:
+                for j in range(1000):
+                    b_j = (b2 - b1) * np.random.random() + b1
+                    W.append(W_cont[k])
+                    b.append(-float(b_j))
 
         W = np.asarray(W)
         b = np.asarray(b)
