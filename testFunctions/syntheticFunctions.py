@@ -124,7 +124,79 @@ def ZDT3_2(x):
 	h = 1-math.sqrt(x[0]/g) - (x[0]/g)*math.sin(10*3.1415926535*x[0])
 	f = g*h
 	return f
+def ZDT6_1(x):
+	#from pymoo
+	f1 = 1 - math.exp(-4 * x[0]) * np.power(math.sin(6 * 3.1415926535 * x[0]), 6)
+	#g = 1 + 9.0 * math.power(anp.sum(x[:, 1:], axis=1) / (self.n_var - 1.0), 0.25)
+	#f2 = g * (1 - math.power(f1 / g, 2))
+	return f1
+def ZDT6_2(x):
+	#from pymoo
+	f1 = 1 - math.exp(-4 * x[0]) * np.power(math.sin(6 * 3.1415926535 * x[0]), 6)
+	g = 1 + 9.0 * np.power(np.sum(x[1:]) / (10 - 1.0), 0.25)
+	f2 = g * (1 - np.power(f1 / g, 2))
+	return f2
+def Poloni_1(x):
+	A1 = 0.5*math.sin(1) -2*math.cos(1)+ math.sin(2) - 1.5*math.cos(2)
+	A2 = 1.5 * math.sin(1) - math.cos(1) + 2*math.sin(2) - 0.5 * math.cos(2)
+	B1 = 0.5 * math.sin(x[0]) - 2 * math.cos(x[0]) + math.sin(x[1]) - 1.5 * math.cos(x[1])
+	B2 = 1.5 * math.sin(x[0]) - math.cos(x[0]) + 2*math.sin(x[1]) - 0.5 * math.cos(x[1])
+	f1 = 1+(A1-B1)**2 +(A2-B2)**2
+	return f1
+def Poloni_2(x):
+	f2 = (x[0]+3)**2 + (x[1]+1)**2
+	return f2
+def Schaffer2_1(x):
+	if x[0] <= 1:
+		f1 = -x[0]
+	elif x[0]<=3:
+		f1 = x[0]-2
+	elif x[0]<=4:
+		f1 = 4-x[0]
+	elif x[0]>4:
+		f1 = x[0]-4
+	else:
+		print('Warning: no value for x found')
+	return f1
+def Schaffer2_2(x):
+	f2 = (x[0]-5)**2
+	return f2
+def SymPart_1(x):
+	X1 = x[0]
+	X2 = x[1]
+	a = 1
+	b = 10
+	c = 10
+	w = np.pi/4
+	t1_hat = np.sign(X1) * np.ceil((np.abs(X1) - a - c / 2) / (2 * a + c))
+	t2_hat = np.sign(X2) * np.ceil((np.abs(X2) - b / 2) / b)
+	one = 1 #np.ones(len(X))
+	t1 = np.sign(t1_hat) * np.min(np.vstack((np.abs(t1_hat), one)), axis=0)
+	t2 = np.sign(t2_hat) * np.min(np.vstack((np.abs(t2_hat), one)), axis=0)
+	p1 = X1 - t1 * c
+	p2 = X2 - t2 * b
 
+	f1 = (p1 + a) ** 2 + p2 ** 2
+	f2 = (p1 - a) ** 2 + p2 ** 2
+	return f1[0]
+def SymPart_2(x):
+	X1 = x[0]
+	X2 = x[1]
+	a = 1
+	b = 10
+	c = 10
+	w = np.pi/4
+	t1_hat = np.sign(X1) * np.ceil((np.abs(X1) - a - c / 2) / (2 * a + c))
+	t2_hat = np.sign(X2) * np.ceil((np.abs(X2) - b / 2) / b)
+	one = 1 #np.ones(len(X))
+	t1 = np.sign(t1_hat) * np.min(np.vstack((np.abs(t1_hat), one)), axis=0)
+	t2 = np.sign(t2_hat) * np.min(np.vstack((np.abs(t2_hat), one)), axis=0)
+	p1 = X1 - t1 * c
+	p2 = X2 - t2 * b
+
+	f1 = (p1 + a) ** 2 + p2 ** 2
+	f2 = (p1 - a) ** 2 + p2 ** 2
+	return f2[0]
 
 
 # =============================================================================

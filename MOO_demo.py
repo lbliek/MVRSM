@@ -366,6 +366,38 @@ if __name__ == '__main__':
 		lb = 0 * np.ones(d).astype(int)  # Lower bound
 		ub = 1 * np.ones(d).astype(int)  # Upper bound
 		num_int = 0  # number of integer variables
+	elif obj_func == 'MO_ZDT6':
+		ff1 = testFunctions.syntheticFunctions.ZDT6_1
+		ff2 = testFunctions.syntheticFunctions.ZDT6_2
+		num_objectives = 2
+		d = 10  # Total number of variables
+		lb = 0 * np.ones(d).astype(int)  # Lower bound
+		ub = 1 * np.ones(d).astype(int)  # Upper bound
+		num_int = 0  # number of integer variables
+	elif obj_func == 'MO_Poloni':
+		ff1 = testFunctions.syntheticFunctions.Poloni_1
+		ff2 = testFunctions.syntheticFunctions.Poloni_2
+		num_objectives = 2
+		d = 2  # Total number of variables
+		lb = -1*np.pi * np.ones(d).astype(float)  # Lower bound
+		ub = np.pi * np.ones(d).astype(float)  # Upper bound
+		num_int = 0  # number of integer variables
+	elif obj_func == 'MO_Schaffer2':
+		ff1 = testFunctions.syntheticFunctions.Schaffer2_1
+		ff2 = testFunctions.syntheticFunctions.Schaffer2_2
+		num_objectives = 2
+		d = 1  # Total number of variables
+		lb = -5 * np.ones(d).astype(float)  # Lower bound
+		ub = 10 * np.ones(d).astype(float)  # Upper bound
+		num_int = 0  # number of integer variables
+	elif obj_func == 'MO_SymPart':
+		ff1 = testFunctions.syntheticFunctions.SymPart_1
+		ff2 = testFunctions.syntheticFunctions.SymPart_2
+		num_objectives = 2
+		d = 2  # Total number of variables
+		lb = -10 * np.ones(d).astype(float)  # Lower bound
+		ub = 10 * np.ones(d).astype(float)  # Upper bound
+		num_int = 0  # number of integer variables
 
 
 	else:

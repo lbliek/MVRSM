@@ -291,18 +291,38 @@ class SurrogateModel:
         :return minimization evaluation
         """
         #To do: calculate Jacobian
-        scalarization_type = 1 #0=linear, 1=max, max seems to capture the shape of nonconvex pareto front better (also according to theory)
+        scalarization_type = 0.5 #0=linear, 1=max, 0.5 is a mix. max seems to capture the shape of nonconvex pareto front better (also according to theory) but has worse performance
 
         if scalarization_type==0:
             # with linear scalarization
+            print('Using linear scalarization')
             res = minimize(self.g_scalarize, x0, args=(scalarization_weights,), method='L-BFGS-B', bounds=self.bounds,
                            jac=self.g_scalarize_jac,
                             options={'maxiter': 20, 'maxfun': 20})
         elif scalarization_type==1:
             #with max scalarization
+            print('Using max scalarization')
             res = minimize(self.g_scalarize_max, x0, args=(scalarization_weights,), method='L-BFGS-B', bounds=self.bounds,
                            jac=self.g_scalarize_max_jac,
                            options={'maxiter': 20, 'maxfun': 20})
+        elif scalarization_type==0.5:
+            #with mix scalarization
+            r = random.random()
+            if r>0.5:
+                print('Using mixed scalarization (now max)')
+                res = minimize(self.g_scalarize_max, x0, args=(scalarization_weights,), method='L-BFGS-B', bounds=self.bounds,
+                           jac=self.g_scalarize_max_jac,
+                           options={'maxiter': 20, 'maxfun': 20})
+            elif r<=0.5:
+                print('Using mixed scalarization (now linear)')
+                res = minimize(self.g_scalarize, x0, args=(scalarization_weights,), method='L-BFGS-B',
+                               bounds=self.bounds,
+                               jac=self.g_scalarize_jac,
+                               options={'maxiter': 20, 'maxfun': 20})
+            else:
+                print('Warning: wrong random number generated')
+        else:
+            print('Warning: wrong scalarization chosen-')
         return res.x
 
 
