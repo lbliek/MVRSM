@@ -290,7 +290,6 @@ class SurrogateModel:
         :param scalarization_weights: weights for the scalarization of multiple objectives
         :return minimization evaluation
         """
-        #To do: calculate Jacobian
         scalarization_type = 0.5 #0=linear, 1=max, 0.5 is a mix. max seems to capture the shape of nonconvex pareto front better (also according to theory) but has worse performance
 
         if scalarization_type==0:
@@ -301,6 +300,8 @@ class SurrogateModel:
                             options={'maxiter': 20, 'maxfun': 20})
         elif scalarization_type==1:
             #with max scalarization
+            #Similar to:
+            #Golovin, Daniel and Qiuyi Zhang. “Random Hypervolume Scalarizations for Provable Multi-Objective Black Box Optimization.” ArXiv abs/2006.04655 (2020): n. pag.
             print('Using max scalarization')
             res = minimize(self.g_scalarize_max, x0, args=(scalarization_weights,), method='L-BFGS-B', bounds=self.bounds,
                            jac=self.g_scalarize_max_jac,
@@ -322,7 +323,7 @@ class SurrogateModel:
             else:
                 print('Warning: wrong random number generated')
         else:
-            print('Warning: wrong scalarization chosen-')
+            print('Warning: wrong scalarization chosen.')
         return res.x
 
 
@@ -479,8 +480,8 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int: int, max_evals: int, rand_evals: in
             # Perform random search
             next_x[0:num_int] = np.random.randint(lb[0:num_int], np.add(ub[0:num_int], [1] * num_int))  # high is exclusive
             next_x[num_int:d] = np.random.uniform(lb[num_int:d], ub[num_int:d])
-        # Skip exploration in the last iteration (to end at the exact minimum of the surrogate model).
-        elif i < max_evals - 2:
+        # Skip exploration in the last 50 iterations (to end at the exact Pareto Front of the surrogate model).
+        elif i < max_evals - 50:
             # Randomly perturb the discrete variables. Each x_i is shifted n units
             # to the left (if dir is False) or to the right (if dir is True).
             # The bounds of each variable are respected.
