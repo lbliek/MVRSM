@@ -18,6 +18,8 @@ meant for problems with both continuous and discrete variables.
 
 Laurens Bliek, 06-03-2020
 
+UPDATE: MVRSM now contains a multi-objective version to deal with more than one objective, see the branch 'multi-objective'
+
 ## How to cite ##
 
 ```bibtex
