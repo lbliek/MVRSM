@@ -217,7 +217,7 @@ class SurrogateModel:
         self.P -= np.outer(g, v)
 
         for i in range(self.n_obj):
-            self.c[i, :] += (y[i] - np.inner(phi, self.c[i, :])) * g
+            self.c[i, :] = self.c[i, :] + (y[i] - np.inner(phi, self.c[i, :])) * g
 
     def g(self, x):
         """
@@ -225,6 +225,7 @@ class SurrogateModel:
         :param x: the decision variable values.
         """
         phi = self.phi(x)
+        #print(self.c @ phi)
         return self.c @ phi
 
     def g_jac(self, x):
@@ -257,7 +258,8 @@ class SurrogateModel:
         """
         # worst objective after multiplying with weight
         mul = np.multiply(self.g(x), scalarization_weights)
-        return np.max(mul)
+        j = np.argmax(mul)
+        return self.g(x)[j]
 
 
     def g_scalarize_jac(self, x, scalarization_weights):
@@ -278,6 +280,23 @@ class SurrogateModel:
         j = np.argmax(mul)
         return self.g_jac(x)[j,:]
 
+    def augmented_Tchebycheff(selfself, x, scalarization_weights):
+        """
+        Evaluates the basis functions at `x`.
+        :param x: the decision variable values
+        :param scalarization_weights: vector of size n_obj
+        """
+        #Augmented Tchebycheff scalarization from ``ParEGO: A Hybrid Algorithm With On-Line Landscape Approximation for Expensive Multiobjective Optimization Problems''
+        return g_scalarize_max(x, scalarization_weights) + 0.05*g_scalarize(x, scalarization_weights)
+
+    def augmented_Tchebycheff_jac(selfself, x, scalarization_weights):
+        """
+        Evaluates the basis functions at `x`.
+        :param x: the decision variable values
+        :param scalarization_weights: vector of size n_obj
+        """
+        return g_scalarize_max_jac(x, scalarization_weights) + 0.05*g_scalarize_jac(x, scalarization_weights)
+
     # We need to also calculate the Jacobian of the scalarized single_obj,
     # But we can ignore it for now
     # def scalarized_jac
@@ -290,7 +309,8 @@ class SurrogateModel:
         :param scalarization_weights: weights for the scalarization of multiple objectives
         :return minimization evaluation
         """
-        scalarization_type = 0.5 #0=linear, 1=max, 0.5 is a mix. max seems to capture the shape of nonconvex pareto front better (also according to theory) but has worse performance
+        scalarization_type = 1 #0=linear, 1=max, 0.5 is a mix, 2 is Augmented Tchebycheff. max seems to capture the shape of nonconvex pareto front better (also according to theory) but has worse performance
+        # Warning: type 2 Augmented Tchebycheff is untested!!!
 
         if scalarization_type==0:
             # with linear scalarization
@@ -322,9 +342,16 @@ class SurrogateModel:
                                options={'maxiter': 20, 'maxfun': 20})
             else:
                 print('Warning: wrong random number generated')
+        elif scalarization_type==2:
+            #with augmented Tchebycheff scalarization (from ``ParEGO: A Hybrid Algorithm With On-Line Landscape Approximation for Expensive Multiobjective Optimization Problems'')
+            # Warning: type 2 Augmented Tchebycheff is untested!!!
+            print('Using augmented Tchebycheff scalarization')
+            res = minimize(self.augmented_Tchebycheff, x0, args=(scalarization_weights,), method='L-BFGS-B', bounds=self.bounds,
+                           jac=self.augmented_Tchebycheff_jac,
+                           options={'maxiter': 20, 'maxfun': 20})
         else:
             print('Warning: wrong scalarization chosen.')
-        return res.x
+        return res.x, res.fun
 
 
 
@@ -378,12 +405,20 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int: int, max_evals: int, rand_evals: in
 
 
 
-
-    best_x = np.copy(next_x)  # best candidate solution found so far
     best_y = math.inf  # least objective function value found so far, equal to obj(best_x).
+    best_x = np.copy(next_x)  # best candidate solution found so far
+    if n_objectives >=2:
+        best_y = [math.inf]*n_objectives  # least objective function value found so far, equal to obj(best_x).
 
-    ylist = []
-    xlist = []
+    ylist = [] # All evaluations
+    xlist = [] # All evaluated solutions
+
+    # ylist_Pareto = [] # Needed to calculate Pareto front
+    # xlist_Pareto = [] # All Pareto optimal solutions
+
+    if n_objectives >= 2:
+        Pareto_index = [] # List of the iterations of which evaluated solutions are currently Pareto optimal
+
 
     # Iteratively evaluate the objective, update the model, find the minimum of the model,
     # and explore the search space.
@@ -404,11 +439,56 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int: int, max_evals: int, rand_evals: in
         y = scale(y_unscaled, y0)
 
 
+        # Keep track of Pareto front
+        # print('Pareto')
+        # print(ylist)
+        if n_objectives >= 2:
+            if i==0:
+                Pareto_index.append(i)
+            else:
+                y_is_dominated = 0 # whether y is dominated by any of the previous Pareto optimal solutions
+                pp_to_remove = [] # Pareto optimal points that should be removed because they are not Pareto optimal anymore due to y
+                for pp in Pareto_index:
+                    y_dominates_pp = 0
+                    pp_dominates_y = 0
+                    TOL = 1e-8 #tolerance level for determining Pareto optimality
+                    y_pp_scaled = scale(ylist[pp],y0)
 
-        # Keep track of the best found objective value and candidate solution so far.
-        # if y < best_y:
-        #     best_x = np.copy(x)
-        #     best_y = y
+                    # Check if y is exactly the same as pp, in which case it is not useful to add it to the list of Pareto optimal solutions
+                    if (y_pp_scaled == y).all():
+                        y_is_dominated = 1
+                        break
+                    for obj_i in range(n_objectives):
+                        #Situation A: y is dominated by pp
+                        diff = y_pp_scaled[obj_i] - y[obj_i]
+                        if diff < -TOL:
+                            pp_dominates_y += 1
+
+
+                        #Situation B: pp dominated by y
+                        if diff > TOL:
+                            y_dominates_pp += 1
+                    # print('pp_dominates_y', pp_dominates_y)
+                    # print('y_dominates_pp', y_dominates_pp)
+                    #Situation A: y is dominated by pp
+                    if pp_dominates_y >= 1 and y_dominates_pp == 0:
+                        #keep list the same, and don't add y
+                        #y is dominated by pp so stop checking other pp
+                        y_is_dominated = 1
+                        #print('A')
+                        break
+
+                    #Situation B: pp dominated by y
+                    if y_dominates_pp >= 1 and pp_dominates_y == 0:
+                        pp_to_remove.append(pp)
+                        #print('B')
+                for pp in pp_to_remove:
+                    Pareto_index.remove(pp)
+                #Situation C: pp and y don't dominate each other, for every pp --> y is then Pareto optimal
+                if y_is_dominated == 0:
+                    Pareto_index.append(i)
+
+        #print(Pareto_index)
 
         # Update the surrogate model
         update_start = time.time()
@@ -418,10 +498,23 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int: int, max_evals: int, rand_evals: in
         # Get scalarization weights
         rnd_weights = np.random.rand(n_objectives)
         scalarization_weights = rnd_weights / rnd_weights.sum()
+
+
+        # Pick a random Pareto optimal x to start optimization from
+        if n_objectives >= 2:
+            rand_pp = np.random.randint(len(Pareto_index))
+            best_x = xlist[Pareto_index[rand_pp]]
+        if n_objectives == 1:
+            if y < best_y:
+                best_x = np.copy(x)
+                best_y = y
+
         # Minimize surrogate model
         min_start = time.time()
-        next_x = model.minimum(x, scalarization_weights)
+        next_x, min_y = model.minimum(best_x, scalarization_weights) #start from best_x, from a random Pareto optimal solution
         minimization_time = time.time() - min_start
+
+
 
         # Round discrete variables to the nearest integer.
         next_x_before_rounding = np.copy(next_x)
@@ -480,12 +573,13 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int: int, max_evals: int, rand_evals: in
             # Perform random search
             next_x[0:num_int] = np.random.randint(lb[0:num_int], np.add(ub[0:num_int], [1] * num_int))  # high is exclusive
             next_x[num_int:d] = np.random.uniform(lb[num_int:d], ub[num_int:d])
-        # Skip exploration in the last 50 iterations (to end at the exact Pareto Front of the surrogate model).
-        elif i < max_evals - 50:
+        # Skip exploration in the last n_objectives iterations (to end at the Pareto Front of the surrogate model).
+        elif i < max_evals - n_objectives:
             # Randomly perturb the discrete variables. Each x_i is shifted n units
             # to the left (if dir is False) or to the right (if dir is True).
             # The bounds of each variable are respected.
             int_pert_prob = 1 / d  # probability that x_i is permuted
+            #int_pert_prob = 0.3  # probability that x_i is permuted
             for j in range(num_int):
                 r = random.random()  # determines n
                 direction = random.getrandbits(1)  # whether to explore towards -∞ or +∞
@@ -527,8 +621,8 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int: int, max_evals: int, rand_evals: in
                   inv_scale(y, y0), file=f)
             print('Predicted value at evaluated data point (after learning)       ', np.copy(x).astype(float), ', ',
                   inv_scale(model.g(x), y0), file=f)
-            # print('Best found data point and evaluation so far:				   ', np.copy(best_x).astype(float),
-            #       ', ', inv_scale(best_y, y0), file=f)
+            print('Best found data point and evaluation so far:				   ', np.copy(best_x).astype(float),
+                  ', ', inv_scale(best_y, y0), file=f)
             print('Best data point according to the model and predicted value:	   ', next_x_before_rounding, ', ',
                   inv_scale(model.g(next_x_before_rounding), y0), file=f)
             print('Best rounded	 point according to the model and predicted value:', next_x_before_exploration, ', ',
@@ -541,8 +635,25 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int: int, max_evals: int, rand_evals: in
                 print('Model W parameters: ', np.transpose(model.W), file=f)
                 print('Model B parameters: ', np.transpose(model.b), file=f)
                 np.set_printoptions(threshold=1000)
-
-    return xlist, ylist, model, log_filename
+    if n_objectives == 1:
+        with open(log_filename, 'a') as f:
+            print("\n\nList of evaluations:", file=f)
+            print(f"X = {xlist}", file=f)
+            print(f"Y = {ylist}", file=f)
+            print("Solution found: ", file=f)
+            print(f"X = {best_x}", file=f)
+            print(f"Y = {inv_scale(best_y, y0)}", file=f)
+        return xlist, ylist, best_x, inv_scale(best_y, y0), model, log_filename
+    if n_objectives >= 2:
+        # return all solutions, and Pareto optimal solutions
+        with open(log_filename, 'a') as f:
+            print("\n\nList of evaluations:", file=f)
+            print(f"X = {xlist}", file=f)
+            print(f"Y = {ylist}", file=f)
+            print("Pareto front found: ", file=f)
+            print(f"X = {[xlist[iii] for iii in Pareto_index]}", file=f)
+            print(f"Y = {[ylist[iii] for iii in Pareto_index]}", file=f)
+        return xlist, ylist, [xlist[iii] for iii in Pareto_index], [ylist[iii] for iii in Pareto_index], model, log_filename
 
 
 def read_log(filename):

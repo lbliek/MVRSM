@@ -136,6 +136,29 @@ def ZDT6_2(x):
 	g = 1 + 9.0 * np.power(np.sum(x[1:]) / (10 - 1.0), 0.25)
 	f2 = g * (1 - np.power(f1 / g, 2))
 	return f2
+def ZDT6_int_1(x):
+	#from pymoo
+	x = x/4 #x normally between 0 and 1, can now be any integer in [0,1,2,3,4]
+	f1 = 1 - math.exp(-4 * x[0]) * np.power(math.sin(6 * 3.1415926535 * x[0]), 6)
+	#g = 1 + 9.0 * math.power(anp.sum(x[:, 1:], axis=1) / (self.n_var - 1.0), 0.25)
+	#f2 = g * (1 - math.power(f1 / g, 2))
+	return f1 #+ 1e-6 * np.random.rand()
+def ZDT6_int_2(x):
+	#from pymoo
+	x = x/4 #x normally between 0 and 1, can now be any integer in [0,1,2,3,4]
+	f1 = 1 - math.exp(-4 * x[0]) * np.power(math.sin(6 * 3.1415926535 * x[0]), 6)
+	g = 1 + 9.0 * np.power(np.sum(x[1:]) / (10 - 1.0), 0.25)
+	f2 = g * (1 - np.power(f1 / g, 2))
+	return f2 #+ 1e-6 * np.random.rand()
+# def ZDT6_int_2_singleobj(ht_list,x):
+# 	#from pymoo
+# 	#single objective
+# 	x = ht_list
+# 	x = x/4 #x normally between 0 and 1, can now be any integer in [0,1,2,3,4]
+# 	f1 = 1 - math.exp(-4 * x[0]) * np.power(math.sin(6 * 3.1415926535 * x[0]), 6)
+# 	g = 1 + 9.0 * np.power(np.sum(x[1:]) / (10 - 1.0), 0.25)
+# 	f2 = g * (1 - np.power(f1 / g, 2))
+# 	return f2
 def Poloni_1(x):
 	A1 = 0.5*math.sin(1) -2*math.cos(1)+ math.sin(2) - 1.5*math.cos(2)
 	A2 = 1.5 * math.sin(1) - math.cos(1) + 2*math.sin(2) - 0.5 * math.cos(2)
@@ -197,6 +220,14 @@ def SymPart_2(x):
 	f1 = (p1 + a) ** 2 + p2 ** 2
 	f2 = (p1 - a) ** 2 + p2 ** 2
 	return f2[0]
+def sphere_1(x):
+	x2 = np.square(x)
+	return sum(x2)
+def sphere_2(x):
+	x2 = x-2
+	x2 = np.square(x2)
+	return sum(x2)
+
 
 
 # =============================================================================

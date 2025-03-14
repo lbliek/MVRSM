@@ -374,6 +374,22 @@ if __name__ == '__main__':
 		lb = 0 * np.ones(d).astype(int)  # Lower bound
 		ub = 1 * np.ones(d).astype(int)  # Upper bound
 		num_int = 0  # number of integer variables
+	elif obj_func == 'MO_ZDT6_int':
+		ff1 = testFunctions.syntheticFunctions.ZDT6_int_1
+		ff2 = testFunctions.syntheticFunctions.ZDT6_int_2
+		num_objectives = 2
+		d = 10  # Total number of variables
+		lb = 0 * np.ones(d).astype(int)  # Lower bound
+		ub = 4 * np.ones(d).astype(int)  # Upper bound
+		num_int = 10  # number of integer variables
+	elif obj_func == 'MO_ZDT6_int_singleobj':
+		#ff1 = testFunctions.syntheticFunctions.ZDT6_int_1
+		ff = testFunctions.syntheticFunctions.ZDT6_int_2_singleobj
+		num_objectives = 1
+		d = 10  # Total number of variables
+		lb = 0 * np.ones(d).astype(int)  # Lower bound
+		ub = 4 * np.ones(d).astype(int)  # Upper bound
+		num_int = 10  # number of integer variables
 	elif obj_func == 'MO_Poloni':
 		ff1 = testFunctions.syntheticFunctions.Poloni_1
 		ff2 = testFunctions.syntheticFunctions.Poloni_2
@@ -398,6 +414,14 @@ if __name__ == '__main__':
 		lb = -10 * np.ones(d).astype(float)  # Lower bound
 		ub = 10 * np.ones(d).astype(float)  # Upper bound
 		num_int = 0  # number of integer variables
+	elif obj_func == 'MO_doublesphere':
+		ff1 = testFunctions.syntheticFunctions.sphere_1
+		ff2 = testFunctions.syntheticFunctions.sphere_2
+		num_objectives = 2
+		d = 15  # Total number of variables
+		lb = 0 * np.ones(d).astype(float)  # Lower bound
+		ub = 4 * np.ones(d).astype(float)  # Upper bound
+		num_int = 10  # number of integer variables
 
 
 	else:
@@ -436,13 +460,40 @@ if __name__ == '__main__':
 		return result
 	def run_MVRSM():
 		if num_objectives ==1:
-			solX, solY, model, logfile = MVRSM.MVRSM_minimize(obj_MVRSM, x0, lb, ub, num_int, max_evals, rand_evals)
+			Xlist, Ylist, solX, solY, model, logfile = MVRSM.MVRSM_minimize(obj_MVRSM, x0, lb, ub, num_int, max_evals, rand_evals)
+			os.rename(logfile, os.path.join(folder,logfile))
+			print("List of evaluations:")
+			print(f"X = {Xlist}")
+			print(f"Y = {Ylist}")
+			print("Solution found: ")
+			print(f"X = {solX}")
+			print(f"Y = {solY}")
+			# with open(logfile, 'a') as f:
+			# 	print("List of evaluations:")
+			# 	print(f"X = {Xlist}")
+			# 	print(f"Y = {Ylist}")
+			# 	print("Solution found: ")
+			# 	print(f"X = {solX}")
+			# 	print(f"Y = {solY}")
 		else:
-			solX, solY, model, logfile = MOO_MVRSM.MVRSM_minimize(obj_MVRSM, x0, lb, ub, num_int, max_evals, rand_evals, num_objectives)
-		os.rename(logfile, os.path.join(folder,logfile))
-		print("Solution found: ")
-		print(f"X = {solX}")
-		print(f"Y = {solY}")
+			Xlist, Ylist, Pareto_X, Pareto_Y, model, logfile = MOO_MVRSM.MVRSM_minimize(obj_MVRSM, x0, lb, ub, num_int, max_evals, rand_evals, num_objectives)
+			os.rename(logfile, os.path.join(folder,logfile))
+			print("List of evaluations:")
+			print(f"X = {Xlist}")
+			print(f"Y = {Ylist}")
+			print("Pareto front found: ")
+			print(f"X = {Pareto_X}")
+			print(f"Y = {Pareto_Y}")
+			# with open(logfile, 'a') as f:
+			# 	print("List of evaluations:")
+			# 	print(f"X = {Xlist}")
+			# 	print(f"Y = {Ylist}")
+			# 	print("Pareto front found: ")
+			# 	print(f"X = {Pareto_X}")
+			# 	print(f"Y = {Pareto_Y}")
+
+
+
 
 
 
