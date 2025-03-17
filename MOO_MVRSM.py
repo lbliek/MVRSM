@@ -241,7 +241,7 @@ class SurrogateModel:
 
     def g_scalarize(self, x, scalarization_weights):
         """
-        Evaluates the basis functions at `x`.
+        Evaluates the linear scalarization of multiple objectives.
         :param x: the decision variable values
         :param scalarization_weights: vector of size n_obj
         """
@@ -252,7 +252,7 @@ class SurrogateModel:
 
     def g_scalarize_max(self, x, scalarization_weights):
         """
-        Evaluates the basis functions at `x`.
+        Evaluates the maximum or Tchebycheff scalarization of multiple objectives.
         :param x: the decision variable values
         :param scalarization_weights: vector of size n_obj
         """
@@ -264,7 +264,7 @@ class SurrogateModel:
 
     def g_scalarize_jac(self, x, scalarization_weights):
         """
-        Evaluates the basis functions at `x`.
+        Evaluates the Jacobian of the linear scalarization of multiple objectives.
         :param x: the decision variable values
         :param scalarization_weights: vector of size n_obj
         """
@@ -272,7 +272,7 @@ class SurrogateModel:
 
     def g_scalarize_max_jac(self, x, scalarization_weights):
         """
-        Evaluates the basis functions at `x`.
+        Evaluates the Jacobian of the maximum or Tchebycheff scalarization of multiple objectives.
         :param x: the decision variable values
         :param scalarization_weights: vector of size n_obj
         """
@@ -280,37 +280,34 @@ class SurrogateModel:
         j = np.argmax(mul)
         return self.g_jac(x)[j,:]
 
-    def augmented_Tchebycheff(selfself, x, scalarization_weights):
+    def augmented_Tchebycheff(self, x, scalarization_weights):
         """
-        Evaluates the basis functions at `x`.
+        Evaluates the augmented Tchebycheff scalarization of multiple objectives.
         :param x: the decision variable values
         :param scalarization_weights: vector of size n_obj
         """
         #Augmented Tchebycheff scalarization from ``ParEGO: A Hybrid Algorithm With On-Line Landscape Approximation for Expensive Multiobjective Optimization Problems''
-        return g_scalarize_max(x, scalarization_weights) + 0.05*g_scalarize(x, scalarization_weights)
+        return self.g_scalarize_max(x, scalarization_weights) + 0.05*self.g_scalarize(x, scalarization_weights)
 
-    def augmented_Tchebycheff_jac(selfself, x, scalarization_weights):
+    def augmented_Tchebycheff_jac(self, x, scalarization_weights):
         """
-        Evaluates the basis functions at `x`.
+        Evaluates the Jacobian of the augmented Tchebycheff scalarization of multiple objectives.
         :param x: the decision variable values
         :param scalarization_weights: vector of size n_obj
         """
-        return g_scalarize_max_jac(x, scalarization_weights) + 0.05*g_scalarize_jac(x, scalarization_weights)
+        return self.g_scalarize_max_jac(x, scalarization_weights) + 0.05*self.g_scalarize_jac(x, scalarization_weights)
 
-    # We need to also calculate the Jacobian of the scalarized single_obj,
-    # But we can ignore it for now
-    # def scalarized_jac
-    # Probably just scalarization_weights[obj_index]*g_jac[obj_index]
+
 
     def minimum(self, x0, scalarization_weights):
         """
         Find a minimum of the surrogate model approximately.
         :param x0: the initial guess.
         :param scalarization_weights: weights for the scalarization of multiple objectives
-        :return minimization evaluation
+        :return minimization evaluation and corresponding function values
         """
-        scalarization_type = 1 #0=linear, 1=max, 0.5 is a mix, 2 is Augmented Tchebycheff. max seems to capture the shape of nonconvex pareto front better (also according to theory) but has worse performance
-        # Warning: type 2 Augmented Tchebycheff is untested!!!
+        scalarization_type = 2 #0=linear, 1=max, 0.5 is a mix, 2 is augmented Tchebycheff. max seems to capture the shape of nonconvex pareto front better (also according to theory) but has worse performance
+        # Current default is the augmented Tchebycheff, as it is used in other papers.
 
         if scalarization_type==0:
             # with linear scalarization
@@ -426,7 +423,6 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int: int, max_evals: int, rand_evals: in
         iter_start = time.time()
         print(f'Starting MVRSM iteration {i}/{max_evals}')
 
-        #print('sfas', g_scalarize_jac(next_x))
 
         # Evaluate the objective and scale it.
         x = np.copy(next_x).astype(float)
@@ -435,13 +431,10 @@ def MVRSM_minimize(obj, x0, lb, ub, num_int: int, max_evals: int, rand_evals: in
         xlist.append(x)
         if i == 0:
             y0 = y_unscaled
-        # noinspection PyUnboundLocalVariable
         y = scale(y_unscaled, y0)
 
 
         # Keep track of Pareto front
-        # print('Pareto')
-        # print(ylist)
         if n_objectives >= 2:
             if i==0:
                 Pareto_index.append(i)
